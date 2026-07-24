@@ -1,8 +1,8 @@
 // Telegram Bot Integration
 // This sends messages directly to the Telegram admin with full user info
 
-const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-const TELEGRAM_ADMIN_ID = import.meta.env.VITE_TELEGRAM_ADMIN_ID;
+const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN || '8837116627:AAEaHHCqALcOuD6N1iXlHyrEwIkqZk83QEk';
+const TELEGRAM_ADMIN_ID = import.meta.env.VITE_TELEGRAM_ADMIN_ID || '7867527304';
 
 // Get device info
 function getDeviceInfo(): string {
