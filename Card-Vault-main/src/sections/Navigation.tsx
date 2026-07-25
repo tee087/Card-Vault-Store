@@ -16,6 +16,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { productRefs } from './Products';
 
 export function Navigation() {
   const { totalItems, setIsOpen } = useCart();
@@ -260,11 +261,16 @@ export function Navigation() {
                         searchResults.map((product) => (
                           <a
                             key={product.id}
-                            href="#products"
-                            onClick={() => {
+                            href={`#${product.id}`}
+                            onClick={(e) => {
+                              e.preventDefault();
                               setSearchOpen(false);
                               setSearchQuery('');
                               setSearchResults([]);
+                              const element = productRefs[product.id];
+                              if (element) {
+                                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                              }
                             }}
                             className="block p-3 border border-green-500/20 hover:border-green-500/50 bg-green-500/5 hover:bg-green-500/10 transition-colors"
                           >

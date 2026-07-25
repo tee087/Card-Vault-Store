@@ -25,6 +25,8 @@ const iconMap: Record<string, React.ElementType> = {
   Zap,
 };
 
+const productRefs: Record<string, HTMLDivElement | null> = {};
+
 function DailyDropsCollection({ products, onProductSold: _onProductSold }: { products: Product[]; onProductSold?: (productName: string, price: number, location: string) => void }) {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const { addToCart } = useCart();
@@ -150,8 +152,14 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
     fullz: 'FULLZ',
   };
 
+  const registerRef = (id: string) => (node: HTMLDivElement | null) => {
+    productRefs[id] = node;
+  };
+
   return (
     <Card 
+      id={product.id}
+      ref={registerRef(product.id)}
       className={`group relative bg-black overflow-hidden rounded-xl transition-all duration-400 shadow-lg shadow-green-900/20 hover:shadow-xl hover:shadow-green-500/20 hover:-translate-y-1`}
     >
       {/* Animated gradient border */}
@@ -927,3 +935,5 @@ export function Products({ onProductSold }: { onProductSold?: (productName: stri
     </section>
   );
 }
+
+export { productRefs };
