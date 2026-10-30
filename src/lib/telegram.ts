@@ -79,6 +79,46 @@ export type ActivityType =
   | 'PRODUCT_VIEW';
 
 // Send notification to Telegram
+// Fetch with retry and timeout for Telegram API (handles 504 Gateway Timeout)
+async function fetchWithRetry(
+  url: string,
+  init: RequestInit,
+  maxRetries: number = 3,
+  timeoutMs: number = 15000
+): Promise<Response> {
+  let lastError: unknown = null;
+
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+    try {
+      const response = await fetch(url, { ...init, signal: controller.signal });
+      clearTimeout(timeoutId);
+
+      // Retry on gateway errors
+      if (response.status === 502 || response.status === 503 || response.status === 504) {
+        lastError = new Error(`Telegram API ${response.status}`);
+        if (attempt < maxRetries) {
+          await new Promise((resolve) => setTimeout(resolve, 1000 * (attempt + 1)));
+          continue;
+        }
+      }
+
+      return response;
+    } catch (error) {
+      clearTimeout(timeoutId);
+      lastError = error;
+      if (attempt < maxRetries) {
+        await new Promise((resolve) => setTimeout(resolve, 1000 * (attempt + 1)));
+        continue;
+      }
+    }
+  }
+
+  throw lastError;
+}
+
 export async function sendTelegramNotification(
   eventType: string,
   details: {
@@ -180,17 +220,20 @@ export async function sendTelegramNotification(
       message += `\n💵 *Cart Total:* ${cartTotal}\n`;
     }
     
-    const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        chat_id: String(TELEGRAM_ADMIN_ID),
-        text: message,
-        parse_mode: 'Markdown'
-      }),
-    });
+    const response = await fetchWithRetry(
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: String(TELEGRAM_ADMIN_ID),
+          text: message,
+          parse_mode: 'Markdown'
+        }),
+      }
+    );
 
     // Log response for debugging
     const responseData = await response.json();
@@ -216,7 +259,7 @@ export async function sendTelegramPhoto(
     formData.append('caption', caption);
     formData.append('parse_mode', 'Markdown');
 
-    const response = await fetch(
+    const response = await fetchWithRetry(
       `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`,
       {
         method: 'POST',
