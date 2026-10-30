@@ -34,6 +34,11 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', service: 'cardvault-telegram-backend' });
 });
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', service: 'cardvault-telegram-backend', endpoints: ['POST /notify/text', 'POST /notify/photo', 'GET /health'] });
+});
+
 // Send text notification
 app.post('/notify/text', async (req, res) => {
   try {
