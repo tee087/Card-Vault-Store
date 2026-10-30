@@ -4,6 +4,10 @@
 
 const RENDER_API_URL = import.meta.env.VITE_RENDER_API_URL;
 
+if (!RENDER_API_URL) {
+  console.warn('VITE_RENDER_API_URL is not set. Telegram notifications will be disabled.');
+}
+
 // Get device info
 function getDeviceInfo(): string {
   const ua = navigator.userAgent;
@@ -220,6 +224,11 @@ export async function sendTelegramNotification(
       message += `\n💵 *Cart Total:* ${cartTotal}\n`;
     }
     
+    if (!RENDER_API_URL) {
+      console.warn('VITE_RENDER_API_URL is not set. Skipping Telegram notification.');
+      return false;
+    }
+
     const response = await fetchWithRetry(
       `${RENDER_API_URL}/notify/text`,
       {
@@ -232,7 +241,12 @@ export async function sendTelegramNotification(
     );
 
     // Log response for debugging
-    const responseData = await response.json();
+    let responseData: unknown = null;
+    try {
+      responseData = await response.json();
+    } catch {
+      responseData = await response.text();
+    }
     console.log('Telegram API Response:', responseData);
 
     return response.ok;
@@ -253,6 +267,11 @@ export async function sendTelegramPhoto(
     formData.append('photo', file);
     formData.append('caption', caption);
 
+    if (!RENDER_API_URL) {
+      console.warn('VITE_RENDER_API_URL is not set. Skipping Telegram photo upload.');
+      return false;
+    }
+
     const response = await fetchWithRetry(
       `${RENDER_API_URL}/notify/photo`,
       {
@@ -261,7 +280,12 @@ export async function sendTelegramPhoto(
       }
     );
 
-    const responseData = await response.json();
+    let responseData: unknown = null;
+    try {
+      responseData = await response.json();
+    } catch {
+      responseData = await response.text();
+    }
     console.log('Telegram sendPhoto Response:', responseData);
 
     return response.ok;

@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { categories } from '@/data/products';
@@ -75,6 +75,9 @@ function DailyDropsCollection({ products, onProductSold: _onProductSold }: { pro
               <Zap className="w-6 h-6" />
               {selectedProduct?.name}
             </DialogTitle>
+            <DialogDescription className="text-orange-300/70 text-sm mb-2">
+              {selectedProduct?.description}
+            </DialogDescription>
           </DialogHeader>
 
           {selectedProduct && (
@@ -323,6 +326,9 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
                         <Terminal className="w-5 h-5" />
                         {product.name}
                       </DialogTitle>
+                      <DialogDescription className="text-green-600 text-sm mb-2">
+                        {product.category === 'fullz' ? 'HIDDEN' : product.description}
+                      </DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4 font-mono">
                       <div className="p-3 border border-green-500/20 bg-green-500/5">
