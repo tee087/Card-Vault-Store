@@ -14,6 +14,7 @@ interface CartContextType {
   setIsOpen: (open: boolean) => void;
   cashoutInstructions: Record<string, boolean>;
   toggleCashoutInstructions: (productId: string) => void;
+  setCashoutInstruction: (productId: string, checked: boolean) => void;
   getCashoutPrice: (category: string) => number;
   usageTypes: Record<string, string>;
   setUsageType: (productId: string, usageType: string) => void;
@@ -101,6 +102,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }));
   }, []);
 
+  const setCashoutInstruction = useCallback((productId: string, checked: boolean) => {
+    setCashoutInstructions(prev => ({ ...prev, [productId]: checked }));
+  }, []);
+
   const getCashoutPrice = useCallback((category: string) => {
     return category === 'tools' ? 8 : 5;
   }, []);
@@ -165,6 +170,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         setIsOpen,
         cashoutInstructions,
         toggleCashoutInstructions,
+        setCashoutInstruction,
         getCashoutPrice,
         usageTypes,
         setUsageType,

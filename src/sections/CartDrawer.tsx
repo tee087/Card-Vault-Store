@@ -16,7 +16,7 @@ import { useStore } from '@/context/StoreContext';
 type DeliveryMethod = 'email' | 'telegram';
 
 export function CartDrawer() {
-  const { items, isOpen, setIsOpen, removeFromCart, updateQuantity, totalPrice, clearCart, cashoutInstructions, toggleCashoutInstructions, getCashoutPrice, usageTypes, setUsageType, getUsageTypeOptions } = useCart();
+  const { items, isOpen, setIsOpen, removeFromCart, updateQuantity, totalPrice, clearCart, cashoutInstructions, toggleCashoutInstructions, setCashoutInstruction, getCashoutPrice, usageTypes, setUsageType, getUsageTypeOptions } = useCart();
   const { reduceOptionStock, restoreOptionStock } = useStore();
   const [paymentOpen, setPaymentOpen] = useState(false);
   const [proofOpen, setProofOpen] = useState(false);
@@ -262,7 +262,7 @@ export function CartDrawer() {
                             <div className="flex items-center gap-2 mb-2">
                               <Checkbox
                                 checked={Boolean(cashoutInstructions[item.id])}
-                                onCheckedChange={() => toggleCashoutInstructions(item.id)}
+                                onCheckedChange={(checked) => setCashoutInstruction(item.id, checked === true)}
                                 className="w-5 h-5 border-green-500/50 rounded data-[state=checked]:bg-green-500 data-[state=checked]:border-green-500 data-[state=checked]:text-black transition-all"
                               />
                               <div className="flex items-center gap-1 cursor-pointer select-none" onClick={() => toggleCashoutInstructions(item.id)}>
