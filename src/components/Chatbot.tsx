@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MessageCircle, X, Send, Bot, User, ChevronDown, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface Message {
@@ -148,25 +148,26 @@ export function Chatbot() {
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-md w-full bg-black border border-green-500/30 font-mono h-[500px] flex flex-col p-0">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-green-500/30 bg-green-500/5">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                <Bot className="w-4 h-4 text-black" />
-              </div>
-              <div>
-                <div className="text-green-400 font-bold text-sm">AI Assistant</div>
-                <div className="text-green-700 text-xs">Online now</div>
-              </div>
+          <DialogTitle className="text-green-400 font-bold text-sm p-4 border-b border-green-500/30 bg-green-500/5 flex items-center gap-3">
+            <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+              <Bot className="w-4 h-4 text-black" />
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-              className="text-green-600 hover:text-green-400"
-            >
-              <X className="w-4 h-4" />
-            </Button>
-          </div>
+            <div className="flex flex-col">
+              <span>AI Assistant</span>
+              <span className="text-green-700 text-xs">Online now</span>
+            </div>
+          </DialogTitle>
+          <DialogDescription className="text-green-600 text-xs p-4 m-0 border-b border-green-500/30">
+            Chat with our AI assistant for help with orders, payments, and delivery.
+          </DialogDescription>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsOpen(false)}
+            className="absolute right-4 top-4 text-green-600 hover:text-green-400 z-10"
+          >
+            <X className="w-4 h-4" />
+          </Button>
 
           {/* Messages */}
           <ScrollArea className="flex-1 p-4">
