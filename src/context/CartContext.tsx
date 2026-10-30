@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useRef } from 'react';
 import type { Product, CartItem } from '@/types';
 import { sendTelegramNotification } from '@/lib/telegram';
 
@@ -28,6 +28,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [cashoutInstructions, setCashoutInstructions] = useState<Record<string, boolean>>({});
   const [usageTypes, setUsageTypes] = useState<Record<string, string>>({});
+  const notifiedProductIds = useRef<Set<string>>(new Set());
+
+// Prevent fast-refresh complaints: useRef of a Set is fine; no module-level side effects
 
   const addToCart = useCallback((product: Product) => {
     setItems(prev => {
@@ -42,22 +45,21 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       return [...prev, { ...product, quantity: 1 }];
     });
     setIsOpen(true);
-    
-    // Send Telegram notification
-    sendTelegramNotification('CART_ITEM_ADDED', {
-      productName: product.name,
-      productPrice: product.price,
-      quantity: 1
-    });
+
+    // Send one Telegram notification per product (not on every quantity bump)
+    if (!notifiedProductIds.current.has(product.id)) {
+      notifiedProductIds.current.add(product.id);
+      sendTelegramNotification('CART_ITEM_ADDED', {
+        productName: product.name,
+        productPrice: product.price,
+        quantity: 1
+      });
+    }
   }, []);
 
   const removeFromCart = useCallback((productId: string) => {
     setItems(prev => prev.filter(item => item.id !== productId));
-    
-    // Send Telegram notification
-    sendTelegramNotification('CART_ITEM_REMOVED', {
-      productName: productId
-    });
+    notifiedProductIds.current.delete(productId);
   }, []);
 
   const updateQuantity = useCallback((productId: string, quantity: number) => {
@@ -73,27 +75,12 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [removeFromCart]);
 
   const clearCart = useCallback(() => {
-    // Get cart items before clearing for notification
-    const cartItems = items.map(item => ({
-      name: item.name,
-      price: item.price,
-      quantity: item.quantity
-    }));
-    
-    if (cartItems.length > 0) {
-      const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-      
-      // Send Telegram notification for checkout
-      sendTelegramNotification('CHECKOUT_COMPLETED', {
-        cartItems: cartItems,
-        total: total
-      });
-    }
-    
+    // Just clear cart state; checkout notification is sent at proof upload in CartDrawer
     setItems([]);
     setCashoutInstructions({});
     setUsageTypes({});
-  }, [items]);
+    notifiedProductIds.current.clear();
+  }, []);
 
   const toggleCashoutInstructions = useCallback((productId: string) => {
     setCashoutInstructions(prev => ({
