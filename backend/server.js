@@ -175,7 +175,30 @@ async function pollTelegramUpdates() {
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({
                     callback_query_id: cq.id,
-                    text: `Order ${orderId} ${action === 'approve' ? 'APPROVED' : 'REJECTED'}`
+                    text: `Order ${orderId} ${action === 'approve' ? '✅ APPROVED SUCCESSFULLY' : '❌ REJECTED SUCCESSFULLY'}`
+                  })
+                }
+              );
+
+              // Confirm decision to admin chat with delivery info
+              const decisionText =
+                `*Payment Decision*\n\n` +
+                `🔖 *Order ID:* ${orderId}\n` +
+                `⚡ *Status:* ${action === 'approve' ? '✅ APPROVED' : '❌ REJECTED'}\n` +
+                `👤 *Admin:* ${cq.from.username || cq.from.first_name || 'admin'}\n` +
+                `📬 *Delivery Method:* ${existing.delivery_method || 'N/A'}\n` +
+                `📧 *Delivery To:* ${existing.delivery_info || 'N/A'}\n` +
+                `⏰ *Time:* ${new Date().toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })}`;
+
+              await fetch(
+                `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+                {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    chat_id: String(TELEGRAM_ADMIN_ID),
+                    text: decisionText,
+                    parse_mode: 'Markdown'
                   })
                 }
               );
