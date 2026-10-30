@@ -1,8 +1,9 @@
 // Telegram Bot Integration
-// This sends messages directly to the Telegram admin with full user info
+// This sends messages through a secure server-side backend (Render)
+// The bot token is NEVER exposed to the browser
 
-const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN || '8837116627:AAEaHHCqALcOuD6N1iXlHyrEwIkqZk83QEk';
-const TELEGRAM_ADMIN_ID = import.meta.env.VITE_TELEGRAM_ADMIN_ID || '7867527304';
+const RENDER_API_URL = import.meta.env.VITE_RENDER_API_URL;
+const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
 
 // Get device info
 function getDeviceInfo(): string {
@@ -220,18 +221,19 @@ export async function sendTelegramNotification(
       message += `\n💵 *Cart Total:* ${cartTotal}\n`;
     }
     
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+    };
+    if (SECRET_KEY) {
+      headers['X-Secret-Key'] = SECRET_KEY;
+    }
+
     const response = await fetchWithRetry(
-      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      `${RENDER_API_URL}/notify/text`,
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          chat_id: String(TELEGRAM_ADMIN_ID),
-          text: message,
-          parse_mode: 'Markdown'
-        }),
+        headers,
+        body: JSON.stringify({ text: message }),
       }
     );
 
@@ -254,15 +256,19 @@ export async function sendTelegramPhoto(
 ): Promise<boolean> {
   try {
     const formData = new FormData();
-    formData.append('chat_id', String(TELEGRAM_ADMIN_ID));
     formData.append('photo', file);
     formData.append('caption', caption);
-    formData.append('parse_mode', 'Markdown');
+
+    const headers: Record<string, string> = {};
+    if (SECRET_KEY) {
+      headers['X-Secret-Key'] = SECRET_KEY;
+    }
 
     const response = await fetchWithRetry(
-      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`,
+      `${RENDER_API_URL}/notify/photo`,
       {
         method: 'POST',
+        headers,
         body: formData,
       }
     );
