@@ -259,23 +259,21 @@ export function CartDrawer() {
                           </div>
                         ) : (
                           <div className="mt-4 pt-3 border-t border-green-500/20">
-                            <div className="flex items-center gap-2 mb-2 cursor-pointer select-none" onClick={(e) => {
-                              if ((e.target as HTMLElement).tagName !== 'INPUT') {
-                                toggleCashoutInstructions(item.id);
-                              }
-                            }}>
+                            <div className="flex items-center gap-2 mb-2">
                               <Checkbox
-                                checked={cashoutInstructions[item.id] || false}
+                                checked={Boolean(cashoutInstructions[item.id])}
                                 onCheckedChange={() => toggleCashoutInstructions(item.id)}
-                                className="border-green-500/50 data-[state=checked]:bg-green-500 data-[state=checked]:border-green-500 rounded"
+                                className="w-5 h-5 border-green-500/50 rounded data-[state=checked]:bg-green-500 data-[state=checked]:border-green-500 data-[state=checked]:text-black transition-all"
                               />
-                              <div className="flex items-center gap-1">
+                              <div className="flex items-center gap-1 cursor-pointer select-none" onClick={() => toggleCashoutInstructions(item.id)}>
                                 <FileText className="w-4 h-4 text-green-400" />
-                                <span className="text-green-400 font-mono text-sm font-medium">
+                                <span className={`text-xs font-mono font-medium ${cashoutInstructions[item.id] ? 'text-green-300' : 'text-green-400'}`}>
                                   {item.category === 'tools' ? 'Set up Instructions' : 'Cashout Instructions'}
                                 </span>
                               </div>
-                              <span className="text-red-400 text-xs font-mono">required</span>
+                              <span className={`text-xs font-mono ${cashoutInstructions[item.id] ? 'text-green-400' : 'text-red-400'}`}>
+                                {cashoutInstructions[item.id] ? '✓ required' : 'required'}
+                              </span>
                             </div>
                             <span className="text-green-600 font-mono text-xs ml-auto block">
                               +${getCashoutPrice(item.category)}
