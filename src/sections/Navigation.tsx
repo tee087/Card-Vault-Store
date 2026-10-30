@@ -180,19 +180,16 @@ export function Navigation() {
                  href={link.href}
                  className="px-3 py-1.5 text-xs font-mono transition-colors rounded border border-transparent hover:border-green-500/30"
                >
-                 <span className="text-cyan-400">.</span>
-                 <span className="text-green-400">/</span>
-                 {link.name.split('').map((char, index) => {
-                   const colors = ['text-red-400', 'text-orange-400', 'text-yellow-400', 'text-green-400', 'text-cyan-400', 'text-blue-400', 'text-purple-400', 'text-pink-400'];
-                   return (
-                     <span key={index} className={`${colors[index % colors.length]} hover:brightness-125 transition-all`}>
-                       {char}
-                     </span>
-                   );
-                 })}
-               </a>
-             ))}
-           </div>
+                  <span className="text-cyan-400">.</span>
+                  <span className="text-green-400">/</span>
+                  {link.name.split('').map((char, index) => (
+                    <span key={index} className="text-green-400 hover:text-green-300 transition-colors">
+                      {char}
+                    </span>
+                  ))}
+                </a>
+              ))}
+            </div>
 
           {/* Right Side */}
           <div className="flex items-center gap-3">
@@ -365,14 +362,11 @@ export function Navigation() {
                       className="px-4 py-3 text-sm hover:bg-green-500/10 border border-transparent hover:border-green-500/30 transition-colors"
                     >
                       <span className="text-green-800 font-mono">[{index + 1}]</span>
-                      {link.name.split('').map((char, charIndex) => {
-                        const colors = ['text-red-400', 'text-orange-400', 'text-yellow-400', 'text-green-400', 'text-cyan-400', 'text-blue-400', 'text-purple-400', 'text-pink-400'];
-                        return (
-                          <span key={charIndex} className={`${colors[charIndex % colors.length]} hover:brightness-125 transition-all`}>
-                            {char}
-                          </span>
-                        );
-                      })}
+                      {link.name.split('').map((char, charIndex) => (
+                        <span key={charIndex} className="text-green-400 hover:text-green-300 transition-colors">
+                          {char}
+                        </span>
+                      ))}
                     </a>
                   ))}
                 </div>
