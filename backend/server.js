@@ -20,7 +20,6 @@ app.use(express.json({ limit: '10mb' }));
 // Telegram config from environment variables (SECRET - never exposed to browser)
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_ADMIN_ID = process.env.TELEGRAM_ADMIN_ID;
-const SECRET_KEY = process.env.SECRET_KEY; // optional shared secret for request validation
 
 if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_ADMIN_ID) {
   console.error('FATAL: TELEGRAM_BOT_TOKEN and TELEGRAM_ADMIN_ID must be set in environment variables');
@@ -30,24 +29,13 @@ if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_ADMIN_ID) {
 // Multer for photo uploads (in-memory, then stream to Telegram)
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
-// Optional: validate shared secret key on requests
-function validateSecret(req, res, next) {
-  if (SECRET_KEY) {
-    const key = req.headers['x-secret-key'];
-    if (key !== SECRET_KEY) {
-      return res.status(401).json({ error: 'Unauthorized' });
-    }
-  }
-  next();
-}
-
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', service: 'cardvault-telegram-backend' });
 });
 
 // Send text notification
-app.post('/notify/text', validateSecret, async (req, res) => {
+app.post('/notify/text', async (req, res) => {
   try {
     const { text, parse_mode = 'Markdown' } = req.body;
 
@@ -83,7 +71,7 @@ app.post('/notify/text', validateSecret, async (req, res) => {
 });
 
 // Send photo notification (payment proof)
-app.post('/notify/photo', validateSecret, upload.single('photo'), async (req, res) => {
+app.post('/notify/photo', upload.single('photo'), async (req, res) => {
   try {
     const { caption, parse_mode = 'Markdown' } = req.body;
 
@@ -125,7 +113,7 @@ app.post('/notify/photo', validateSecret, upload.single('photo'), async (req, re
 });
 
 // Send generic notification (flexible)
-app.post('/notify', validateSecret, async (req, res) => {
+app.post('/notify', async (req, res) => {
   try {
     const { type, ...payload } = req.body;
 

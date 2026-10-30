@@ -3,7 +3,6 @@
 // The bot token is NEVER exposed to the browser
 
 const RENDER_API_URL = import.meta.env.VITE_RENDER_API_URL;
-const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
 
 // Get device info
 function getDeviceInfo(): string {
@@ -221,18 +220,13 @@ export async function sendTelegramNotification(
       message += `\n💵 *Cart Total:* ${cartTotal}\n`;
     }
     
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-    };
-    if (SECRET_KEY) {
-      headers['X-Secret-Key'] = SECRET_KEY;
-    }
-
     const response = await fetchWithRetry(
       `${RENDER_API_URL}/notify/text`,
       {
         method: 'POST',
-        headers,
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({ text: message }),
       }
     );
@@ -259,16 +253,10 @@ export async function sendTelegramPhoto(
     formData.append('photo', file);
     formData.append('caption', caption);
 
-    const headers: Record<string, string> = {};
-    if (SECRET_KEY) {
-      headers['X-Secret-Key'] = SECRET_KEY;
-    }
-
     const response = await fetchWithRetry(
       `${RENDER_API_URL}/notify/photo`,
       {
         method: 'POST',
-        headers,
         body: formData,
       }
     );
