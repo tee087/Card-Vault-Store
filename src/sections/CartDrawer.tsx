@@ -7,10 +7,10 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useCart } from '@/context/CartContext';
-import { useState, useRef, useMemo } from 'react';
+import { useState, useRef, useMemo, useEffect } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { createPaymentDetails } from '@/lib/payment';
-import { sendTelegramPhoto } from '@/lib/telegram';
+import { sendTelegramPhoto, checkOrderStatus } from '@/lib/telegram';
 import { useStore } from '@/context/StoreContext';
 
 type DeliveryMethod = 'email' | 'telegram';
@@ -27,7 +27,15 @@ export function CartDrawer() {
   const [copied, setCopied] = useState(false);
   const [paymentConfirmed, setPaymentConfirmed] = useState<'pending' | 'approved' | 'rejected' | null>(null);
   const [paymentDetails, setPaymentDetails] = useState<{ orderId: string; amountUsd: number; btcAddress: string } | null>(null);
+  const [pollTimer, setPollTimer] = useState<ReturnType<typeof setInterval> | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Cleanup poll timer on unmount
+  useEffect(() => {
+    return () => {
+      if (pollTimer) clearInterval(pollTimer);
+    };
+  }, [pollTimer]);
 
   const itemList = items.map((item, i) => `${i + 1}. ${item.name} - $${item.price.toFixed(2)} x ${item.quantity}`).join('\n');
 
@@ -88,19 +96,45 @@ export function CartDrawer() {
       `💵 *Total:* $${paymentDetails.amountUsd.toFixed(2)}\n` +
       `⏰ *Time:* ${new Date().toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })}`;
 
-    const sent = await sendTelegramPhoto(proofFile, caption);
+    const sent = await sendTelegramPhoto(proofFile, caption, {
+      orderId: paymentDetails.orderId,
+      deliveryMethod,
+      deliveryInfo
+    });
 
     setProcessing(false);
 
     if (sent) {
       setProofOpen(false);
       setPaymentConfirmed('pending');
+      startPolling(paymentDetails.orderId);
     } else {
       alert('Failed to send payment proof. Please try again or contact support.');
     }
   };
 
+  const startPolling = (orderId: string) => {
+    if (pollTimer) clearInterval(pollTimer);
+    const timer = setInterval(async () => {
+      const status = await checkOrderStatus(orderId);
+      if (status && status.status === 'approved') {
+        clearInterval(timer);
+        setPollTimer(null);
+        setPaymentConfirmed('approved');
+      } else if (status && status.status === 'rejected') {
+        clearInterval(timer);
+        setPollTimer(null);
+        setPaymentConfirmed('rejected');
+      }
+    }, 5000);
+    setPollTimer(timer);
+  };
+
   const handleRestoreAndClear = () => {
+    if (pollTimer) {
+      clearInterval(pollTimer);
+      setPollTimer(null);
+    }
     items.forEach((item) => {
       restoreOptionStock(item.id, item.price, item.quantity);
     });
@@ -591,6 +625,10 @@ export function CartDrawer() {
       {/* Payment Confirmation Dialog */}
       <Dialog open={paymentConfirmed !== null} onOpenChange={(open) => {
         if (!open) {
+          if (pollTimer) {
+            clearInterval(pollTimer);
+            setPollTimer(null);
+          }
           setPaymentConfirmed(null);
           setPaymentOpen(false);
           handleRestoreAndClear();
@@ -600,28 +638,62 @@ export function CartDrawer() {
           <DialogHeader>
             <DialogTitle className="text-green-400">
               {paymentConfirmed === 'pending' ? '⏳ Proof Submitted' :
-               paymentConfirmed === 'approved' ? '✅ Payment Received' :
-               paymentConfirmed === 'rejected' ? '❌ Payment Not Received' : 'Payment Status'}
+               paymentConfirmed === 'approved' ? '✅ Payment Approved' :
+               paymentConfirmed === 'rejected' ? '❌ Payment Rejected' : 'Payment Status'}
             </DialogTitle>
             <DialogDescription className="text-green-600 text-sm">
-              {paymentConfirmed === 'pending' && 'Your payment proof has been sent to our Telegram bot for review. Our team will verify and send your product to your chosen delivery method shortly.'}
-              {paymentConfirmed === 'approved' && `Payment confirmed! Your product will be sent to ${deliveryMethod === 'telegram' ? '@' + deliveryInfo : deliveryInfo} shortly.`}
-              {paymentConfirmed === 'rejected' && 'No valid payment received. Please complete your payment and submit proof again.'}
+              {paymentConfirmed === 'pending' && (
+                <>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span className="font-mono">Waiting for admin approval...</span>
+                  </div>
+                  <p className="text-xs text-green-600 font-mono mt-2">
+                    Our team is reviewing your payment proof. You will be notified once approved or rejected.
+                  </p>
+                </>
+              )}
+              {paymentConfirmed === 'approved' && (
+                <>
+                  <p className="text-green-400 font-mono font-bold">✅ Payment Approved!</p>
+                  <p className="text-green-600 font-mono">
+                    Your product will be delivered to{' '}
+                    <span className="text-green-400 font-bold">
+                      {deliveryMethod === 'telegram' ? '@' + deliveryInfo : deliveryInfo}
+                    </span>
+                  </p>
+                  <p className="text-xs text-green-600 font-mono mt-2">
+                    Please check your {deliveryMethod === 'telegram' ? 'Telegram' : 'Email'} for delivery details.
+                  </p>
+                </>
+              )}
+              {paymentConfirmed === 'rejected' && (
+                <>
+                  <p className="text-red-400 font-mono font-bold">❌ Payment Rejected</p>
+                  <p className="text-red-600 font-mono">
+                    No valid payment received. Please complete your payment and submit proof again.
+                  </p>
+                </>
+              )}
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-between gap-3 pt-4">
             <div className="text-xs text-green-600 font-mono">
-              Our team will verify your payment within 5-15 minutes.
+              Order: {paymentDetails?.orderId}
             </div>
             <Button
               onClick={() => {
+                if (pollTimer) {
+                  clearInterval(pollTimer);
+                  setPollTimer(null);
+                }
                 setPaymentConfirmed(null);
                 setPaymentOpen(false);
                 handleRestoreAndClear();
               }}
               className="bg-green-500 text-black hover:bg-green-400 font-bold py-2"
             >
-              OK
+              {paymentConfirmed === 'pending' ? 'Keep Waiting' : 'OK'}
             </Button>
           </div>
         </DialogContent>

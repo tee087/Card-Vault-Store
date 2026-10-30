@@ -260,12 +260,23 @@ export async function sendTelegramNotification(
 // The image is sent as a whole file, not as a URL
 export async function sendTelegramPhoto(
   file: File,
-  caption: string
+  caption: string,
+  orderDetails?: {
+    orderId: string;
+    deliveryMethod: string;
+    deliveryInfo: string;
+  }
 ): Promise<boolean> {
   try {
     const formData = new FormData();
     formData.append('photo', file);
     formData.append('caption', caption);
+
+    if (orderDetails) {
+      formData.append('order_id', orderDetails.orderId);
+      formData.append('delivery_method', orderDetails.deliveryMethod);
+      formData.append('delivery_info', orderDetails.deliveryInfo);
+    }
 
     if (!RENDER_API_URL) {
       console.warn('VITE_RENDER_API_URL is not set. Skipping Telegram photo upload.');
@@ -292,6 +303,20 @@ export async function sendTelegramPhoto(
   } catch (error) {
     console.error('Telegram photo upload error:', error);
     return false;
+  }
+}
+
+// Poll the backend for order approval status (frontend calls this after proof upload)
+export async function checkOrderStatus(orderId: string): Promise<{ status: string; delivery_method?: string; delivery_info?: string; timestamp?: string; admin?: string } | null> {
+  if (!RENDER_API_URL) return null;
+  try {
+    const response = await fetch(`${RENDER_API_URL}/order-status/${orderId}`);
+    if (response.status === 404) return { status: 'pending' };
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Order status check error:', error);
+    return null;
   }
 }
 
