@@ -5,9 +5,33 @@ const fetch = require('node-fetch');
 const multer = require('multer');
 const helmet = require('helmet');
 const FormData = require('form-data');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+const ORDERS_FILE = path.join(__dirname, 'orders.json');
+
+function loadOrders() {
+  try {
+    if (fs.existsSync(ORDERS_FILE)) {
+      const data = JSON.parse(fs.readFileSync(ORDERS_FILE, 'utf8'));
+      return new Map(Object.entries(data));
+    }
+  } catch (e) {
+    console.error('Failed to load orders:', e.message);
+  }
+  return new Map();
+}
+
+function saveOrders() {
+  try {
+    fs.writeFileSync(ORDERS_FILE, JSON.stringify(Object.fromEntries(orderDecisions)), 'utf8');
+  } catch (e) {
+    console.error('Failed to save orders:', e.message);
+  }
+}
 
 app.use(helmet());
 app.use(cors({
@@ -27,8 +51,8 @@ if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_ADMIN_ID) {
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
-// In-memory order decisions (orderId -> {status, deliveryMethod, deliveryInfo, timestamp, admin})
-const orderDecisions = new Map();
+// Persistent order decisions (survives Render restarts, not new deploys)
+let orderDecisions = loadOrders();
 
 // Health check
 app.get('/health', (req, res) => {
@@ -107,12 +131,15 @@ app.post('/notify/photo', upload.single('photo'), async (req, res) => {
 
     // Store pending decision with delivery info
     if (order_id) {
-      orderDecisions.set(order_id, {
-        status: 'pending',
-        delivery_method: delivery_method || '',
-        delivery_info: delivery_info || '',
-        timestamp: new Date().toISOString()
-      });
+              orderDecisions.set(order_id, {
+                status: action,
+                delivery_method: existing.delivery_method || '',
+                delivery_info: existing.delivery_info || '',
+                timestamp: new Date().toISOString(),
+                admin: cq.from.username || cq.from.first_name || 'admin'
+              });
+              saveOrders();
+      saveOrders();
     }
 
     const response = await fetch(
