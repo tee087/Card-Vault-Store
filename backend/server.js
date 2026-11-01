@@ -131,14 +131,12 @@ app.post('/notify/photo', upload.single('photo'), async (req, res) => {
 
     // Store pending decision with delivery info
     if (order_id) {
-              orderDecisions.set(order_id, {
-                status: action,
-                delivery_method: existing.delivery_method || '',
-                delivery_info: existing.delivery_info || '',
-                timestamp: new Date().toISOString(),
-                admin: cq.from.username || cq.from.first_name || 'admin'
-              });
-              saveOrders();
+      orderDecisions.set(order_id, {
+        status: 'pending',
+        delivery_method: delivery_method || '',
+        delivery_info: delivery_info || '',
+        timestamp: new Date().toISOString()
+      });
       saveOrders();
     }
 
