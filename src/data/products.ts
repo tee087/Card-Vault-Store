@@ -1715,8 +1715,77 @@ export const products: Product[] = [
     reviews: 145,
     stockOptions: generateStockOptions(160, 28)
   },
-
-
+  // Residential Proxies Category - All USA States, Cities, Towns, Streets, Apartments
+  {
+    id: 'proxy-residential-usa-state',
+    name: 'USA Residential Proxy - Single State',
+    description: 'Residential proxies covering all cities and towns in one USA state. Real ISP IPs from Comcast, AT&T, Verizon, Cox, Spectrum, Frontier, Optimum, WOW, and more. Perfect for geo-targeted operations within a specific state. Includes apartment and street-level IPs.',
+    price: 20,
+    originalPrice: 30,
+    category: 'proxies',
+    badge: 'Entry',
+    features: ['1 USA State', 'All Cities & Towns', 'Residential ISP IPs', 'Street-Level Targeting', 'Apartment IPs', 'Unlimited Bandwidth', 'HTTP/SOCKS5', 'Instant Delivery', '24/7 Support'],
+    stock: 500,
+    rating: 4.7,
+    reviews: 1234,
+    stockOptions: [
+      { price: 20, balance: 0, stock: 100, quality: '1 State' },
+      { price: 50, balance: 0, stock: 50, quality: '3 States' },
+      { price: 100, balance: 0, stock: 25, quality: '5 States' }
+    ]
+  },
+  {
+    id: 'proxy-residential-usa-region',
+    name: 'USA Residential Proxy - Multi-Region',
+    description: 'Residential proxies covering multiple USA states and regions. All major metro areas, suburbs, towns, and villages included. Real residential ISP IPs with street-level and apartment-level targeting. Ideal for multi-state operations.',
+    price: 75,
+    originalPrice: 120,
+    category: 'proxies',
+    badge: 'Popular',
+    features: ['5 USA States', 'All Major Metro Areas', 'Suburbs & Villages', 'Residential ISP IPs', 'Street & Apartment Level', 'Unlimited Bandwidth', 'HTTP/SOCKS5', 'Instant Delivery', '24/7 Support'],
+    stock: 300,
+    rating: 4.8,
+    reviews: 892,
+    stockOptions: [
+      { price: 75, balance: 0, stock: 75, quality: '5 States' },
+      { price: 150, balance: 0, stock: 40, quality: '10 States' },
+      { price: 250, balance: 0, stock: 20, quality: '15 States' }
+    ]
+  },
+  {
+    id: 'proxy-residential-usa-full',
+    name: 'USA Residential Proxy - Full Nationwide',
+    description: 'Complete USA residential proxy coverage. All 50 states, every city, town, village, street, and apartment. Real ISP IPs from every major and regional provider nationwide. The ultimate residential proxy package for nationwide geo-targeted operations.',
+    price: 200,
+    originalPrice: 350,
+    category: 'proxies',
+    badge: 'Ultimate',
+    features: ['All 50 USA States', 'Every City & Town', 'All Villages & Suburbs', 'Street-Level Targeting', 'Apartment-Level IPs', 'All Major ISPs', 'Unlimited Bandwidth', 'HTTP/SOCKS5', 'Instant Delivery', '24/7 Priority Support'],
+    stock: 100,
+    rating: 4.9,
+    reviews: 678,
+    stockOptions: [
+      { price: 200, balance: 0, stock: 40, quality: 'Nationwide' },
+      { price: 350, balance: 0, stock: 15, quality: 'Nationwide + Premium ISPs' },
+      { price: 500, balance: 0, stock: 5, quality: 'Nationwide + Dedicated IPs' }
+    ]
+  },
+  {
+    id: 'proxy-residential-city',
+    name: 'USA Residential Proxy - Single City',
+    description: 'Residential proxies for one specific USA city. All neighborhoods, districts, streets, and apartments covered. Real residential ISP IPs from the city you choose. Perfect for hyper-local geo-targeted operations.',
+    price: 15,
+    category: 'proxies',
+    features: ['1 USA City', 'All Neighborhoods', 'Residential ISP IPs', 'Street-Level Targeting', 'Apartment IPs', 'Unlimited Bandwidth', 'HTTP/SOCKS5', 'Instant Delivery', '24/7 Support'],
+    stock: 800,
+    rating: 4.6,
+    reviews: 456,
+    stockOptions: [
+      { price: 15, balance: 0, stock: 200, quality: '1 City' },
+      { price: 40, balance: 0, stock: 100, quality: '3 Cities' },
+      { price: 70, balance: 0, stock: 50, quality: '5 Cities' }
+    ]
+  }
 ];
 
 export const testimonials: Testimonial[] = [
@@ -1819,5 +1888,6 @@ export const categories = [
   { id: 'fullz', name: 'Fullz', icon: 'FileText' },
   { id: 'spamming-course', name: 'Spamming Full Course', icon: 'Mail' },
   { id: 'hacking-course', name: 'Advanced Hacking Course', icon: 'Shield' },
-  { id: 'daily-drops', name: 'Daily Drops', icon: 'Zap' }
+  { id: 'daily-drops', name: 'Daily Drops', icon: 'Zap' },
+  { id: 'proxies', name: 'Residential Proxies', icon: 'Globe' }
 ] as const;

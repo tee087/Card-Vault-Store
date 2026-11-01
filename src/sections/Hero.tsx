@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Terminal, Code, ChevronRight, Shield, Zap, Users, Clock, Hash, Key, CreditCard, Database } from 'lucide-react';
+import { Terminal, Code, ChevronRight, Shield, Zap, Users, Clock, Hash, Key, CreditCard, Database, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 function useTypingEffect(text: string, speed: number = 30, startDelay: number = 0) {
@@ -58,6 +58,7 @@ export function Hero() {
     { icon: Database, text: 'Bank Logs', category: 'logs', color: 'border-purple-500 bg-purple-500/10 text-purple-400' },
     { icon: Users, text: 'Verified Accounts', category: 'accounts', color: 'border-amber-500 bg-amber-500/10 text-amber-400' },
     { icon: Zap, text: 'Pro Tools', category: 'tools', color: 'border-red-500 bg-red-500/10 text-red-400' },
+    { icon: Globe, text: 'Residential Proxies', category: 'proxies', color: 'border-indigo-500 bg-indigo-500/10 text-indigo-400' },
     { icon: Shield, text: 'Secure Payments', category: 'all', color: 'border-blue-500 bg-blue-500/10 text-blue-400' },
   ];
 
