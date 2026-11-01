@@ -846,7 +846,6 @@ function ProxyInventory({ onProductSold }: { onProductSold?: (productName: strin
   const { addToCart } = useCart();
   const [selectedPlan, setSelectedPlan] = useState<typeof PROXY_PLANS[0] | null>(null);
   const [form, setForm] = useState({ country: '', state: '', street: '', address: '' });
-  const [showApkNotice, setShowApkNotice] = useState(true);
 
   const handleProxySelect = (plan: typeof PROXY_PLANS[0]) => {
     setSelectedPlan(plan);
@@ -898,8 +897,7 @@ function ProxyInventory({ onProductSold }: { onProductSold?: (productName: strin
       </div>
 
       {/* SocksDroid APK Notice */}
-      {showApkNotice && (
-        <div className="mb-8 p-5 border border-indigo-500/40 bg-indigo-500/10 rounded-lg flex items-start gap-3">
+      <div className="mb-8 p-5 border border-indigo-500/40 bg-indigo-500/10 rounded-lg flex items-start gap-3">
           <div className="w-6 h-6 bg-indigo-500 rounded flex items-center justify-center shrink-0">
             <span className="text-white text-xs font-bold">â¬‡</span>
           </div>
@@ -909,15 +907,16 @@ function ProxyInventory({ onProductSold }: { onProductSold?: (productName: strin
               SocksDroid is a SOCKS5 proxy client for Android. Configure your purchased residential proxy with Server IP, Server Port, Username and Password.
             </p>
             <Button
-              onClick={() => setShowApkNotice(false)}
+              asChild
               className="bg-indigo-500 hover:bg-indigo-400 text-black font-mono text-sm px-4 py-2 flex items-center gap-2"
             >
-              <span className="text-lg">ðŸ“±</span>
-              Download SocksDroid APK
+              <a href="/SocksDroid.apk" download className="text-black">
+                <span className="text-lg">📱</span>
+                Download SocksDroid APK
+              </a>
             </Button>
           </div>
         </div>
-      )}
 
       {/* Proxy Plans */}
       <div className="mb-8">
