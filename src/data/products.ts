@@ -1715,75 +1715,130 @@ export const products: Product[] = [
     reviews: 145,
     stockOptions: generateStockOptions(160, 28)
   },
-  // Residential Proxies Category - All USA States, Cities, Towns, Streets, Apartments
+  // Residential Proxies Category - Gateway-based, host:port:user:pass delivery
   {
-    id: 'proxy-residential-usa-state',
-    name: 'USA Residential Proxy - Single State',
-    description: 'Residential proxies covering all cities and towns in one USA state. Real ISP IPs from Comcast, AT&T, Verizon, Cox, Spectrum, Frontier, Optimum, WOW, and more. Perfect for geo-targeted operations within a specific state. Includes apartment and street-level IPs.',
-    price: 20,
-    originalPrice: 30,
+    id: 'proxy-data-5gb',
+    name: 'Residential Proxy - 5 GB Data Pack',
+    description: 'Pay-as-you-go residential proxy traffic. Real USA residential IPs covering all 50 states, cities, towns, streets, and apartments. Gateway-based: connect to one host:port with username/password. SOCKS5 & HTTP supported. Per-request rotation or sticky sessions. Ideal for light scraping and account work.',
+    price: 10,
     category: 'proxies',
-    badge: 'Entry',
-    features: ['1 USA State', 'All Cities & Towns', 'Residential ISP IPs', 'Street-Level Targeting', 'Apartment IPs', 'Unlimited Bandwidth', 'HTTP/SOCKS5', 'Instant Delivery', '24/7 Support'],
-    stock: 500,
-    rating: 4.7,
-    reviews: 1234,
+    badge: 'Starter',
+    features: ['5 GB bandwidth', 'All 50 USA States', 'City & State targeting', 'Residential ISP IPs', 'SOCKS5 & HTTP', 'Username/Password Auth', 'Per-request rotation', '30-day validity', 'Instant delivery', 'host:port:user:pass format'],
+    stock: 999,
+    rating: 4.6,
+    reviews: 89,
     stockOptions: [
-      { price: 20, balance: 0, stock: 100, quality: '1 State' },
-      { price: 50, balance: 0, stock: 50, quality: '3 States' },
-      { price: 100, balance: 0, stock: 25, quality: '5 States' }
+      { price: 10, balance: 0, stock: 1, quality: '5 GB / 30 days' }
     ]
   },
   {
-    id: 'proxy-residential-usa-region',
-    name: 'USA Residential Proxy - Multi-Region',
-    description: 'Residential proxies covering multiple USA states and regions. All major metro areas, suburbs, towns, and villages included. Real residential ISP IPs with street-level and apartment-level targeting. Ideal for multi-state operations.',
-    price: 75,
-    originalPrice: 120,
+    id: 'proxy-data-20gb',
+    name: 'Residential Proxy - 20 GB Data Pack',
+    description: 'USA residential proxy traffic with volume discount. Real ISP IPs across all states, metro areas, suburbs, towns, and villages. Gateway-based credentials (host:port:user:pass). SOCKS5 & HTTP. Per-request rotation or sticky sessions. Ideal for moderate scraping and multi-account work.',
+    price: 35,
+    originalPrice: 40,
     category: 'proxies',
     badge: 'Popular',
-    features: ['5 USA States', 'All Major Metro Areas', 'Suburbs & Villages', 'Residential ISP IPs', 'Street & Apartment Level', 'Unlimited Bandwidth', 'HTTP/SOCKS5', 'Instant Delivery', '24/7 Support'],
-    stock: 300,
-    rating: 4.8,
-    reviews: 892,
+    features: ['20 GB bandwidth', 'All 50 USA States', 'City & State targeting', 'Residential ISP IPs', 'SOCKS5 & HTTP', 'Username/Password Auth', 'Per-request rotation', '60-day validity', 'Instant delivery', 'host:port:user:pass format'],
+    stock: 999,
+    rating: 4.7,
+    reviews: 156,
     stockOptions: [
-      { price: 75, balance: 0, stock: 75, quality: '5 States' },
-      { price: 150, balance: 0, stock: 40, quality: '10 States' },
-      { price: 250, balance: 0, stock: 20, quality: '15 States' }
+      { price: 35, balance: 0, stock: 1, quality: '20 GB / 60 days' }
     ]
   },
   {
-    id: 'proxy-residential-usa-full',
-    name: 'USA Residential Proxy - Full Nationwide',
-    description: 'Complete USA residential proxy coverage. All 50 states, every city, town, village, street, and apartment. Real ISP IPs from every major and regional provider nationwide. The ultimate residential proxy package for nationwide geo-targeted operations.',
-    price: 200,
-    originalPrice: 350,
+    id: 'proxy-data-100gb',
+    name: 'Residential Proxy - 100 GB Data Pack',
+    description: 'High-volume USA residential proxy traffic. All 50 states, every city, town, village, street, and apartment covered. Real residential ISP IPs. Gateway-based: host:port:username:password. SOCKS5 & HTTP. Per-request rotation or sticky sessions up to 24h. Ideal for large scraping operations.',
+    price: 130,
+    originalPrice: 150,
     category: 'proxies',
-    badge: 'Ultimate',
-    features: ['All 50 USA States', 'Every City & Town', 'All Villages & Suburbs', 'Street-Level Targeting', 'Apartment-Level IPs', 'All Major ISPs', 'Unlimited Bandwidth', 'HTTP/SOCKS5', 'Instant Delivery', '24/7 Priority Support'],
-    stock: 100,
-    rating: 4.9,
-    reviews: 678,
+    badge: 'Bulk',
+    features: ['100 GB bandwidth', 'All 50 USA States', 'City, State & ASN targeting', 'Residential ISP IPs', 'SOCKS5 & HTTP', 'Username/Password Auth', 'Sticky sessions up to 24h', '90-day validity', 'Instant delivery', 'host:port:user:pass format'],
+    stock: 999,
+    rating: 4.8,
+    reviews: 234,
     stockOptions: [
-      { price: 200, balance: 0, stock: 40, quality: 'Nationwide' },
-      { price: 350, balance: 0, stock: 15, quality: 'Nationwide + Premium ISPs' },
-      { price: 500, balance: 0, stock: 5, quality: 'Nationwide + Dedicated IPs' }
+      { price: 130, balance: 0, stock: 1, quality: '100 GB / 90 days' }
     ]
   },
   {
-    id: 'proxy-residential-city',
-    name: 'USA Residential Proxy - Single City',
-    description: 'Residential proxies for one specific USA city. All neighborhoods, districts, streets, and apartments covered. Real residential ISP IPs from the city you choose. Perfect for hyper-local geo-targeted operations.',
+    id: 'proxy-port-5',
+    name: 'Residential Proxy - 5 Concurrent Ports',
+    description: 'Port-based residential proxy subscription. 5 concurrent ports with unlimited bandwidth per port. Real USA residential IPs across all states, cities, towns, streets, and apartments. Each port gets its own host:port:username:password. SOCKS5 & HTTP. Sticky or rotating per port. Ideal for small teams and steady scraping workloads.',
+    price: 52,
+    category: 'proxies',
+    badge: 'Monthly',
+    features: ['5 concurrent ports', 'Unlimited bandwidth per port', 'All 50 USA States', 'City & State targeting', 'Residential ISP IPs', 'SOCKS5 & HTTP', 'Username/Password Auth', 'Sticky or rotating per port', 'Monthly subscription', 'host:port:user:pass per port'],
+    stock: 999,
+    rating: 4.7,
+    reviews: 67,
+    stockOptions: [
+      { price: 52, balance: 0, stock: 1, quality: '5 ports / month' }
+    ]
+  },
+  {
+    id: 'proxy-port-25',
+    name: 'Residential Proxy - 25 Concurrent Ports',
+    description: 'Port-based residential proxy subscription. 25 concurrent ports with unlimited bandwidth per port. Real USA residential IPs across all states, metro areas, suburbs, towns, and villages. Each port gets its own host:port:username:password. SOCKS5 & HTTP. Sticky or rotating per port. Ideal for production pipelines.',
+    price: 183,
+    originalPrice: 220,
+    category: 'proxies',
+    badge: 'Team',
+    features: ['25 concurrent ports', 'Unlimited bandwidth per port', 'All 50 USA States', 'City, State & ASN targeting', 'Residential ISP IPs', 'SOCKS5 & HTTP', 'Username/Password Auth', 'Sticky or rotating per port', 'Monthly subscription', 'host:port:user:pass per port'],
+    stock: 999,
+    rating: 4.8,
+    reviews: 89,
+    stockOptions: [
+      { price: 183, balance: 0, stock: 1, quality: '25 ports / month' }
+    ]
+  },
+  {
+    id: 'proxy-port-100',
+    name: 'Residential Proxy - 100 Concurrent Ports',
+    description: 'Port-based residential proxy subscription. 100 concurrent ports with unlimited bandwidth per port. Complete USA coverage: all 50 states, every city, town, village, street, and apartment. Each port gets its own host:port:username:password. SOCKS5 & HTTP. Sticky or rotating per port. Ideal for 24/7 production traffic.',
+    price: 599,
+    originalPrice: 700,
+    category: 'proxies',
+    badge: 'Enterprise',
+    features: ['100 concurrent ports', 'Unlimited bandwidth per port', 'All 50 USA States', 'City, State & ASN targeting', 'Residential ISP IPs', 'SOCKS5 & HTTP', 'Username/Password Auth', 'Sticky or rotating per port', 'Monthly subscription', 'host:port:user:pass per port', 'Reserved capacity'],
+    stock: 999,
+    rating: 4.9,
+    reviews: 45,
+    stockOptions: [
+      { price: 599, balance: 0, stock: 1, quality: '100 ports / month' }
+    ]
+  },
+  {
+    id: 'proxy-isp-1',
+    name: 'ISP Static Residential Proxy - 1 IP',
+    description: 'Static ISP residential proxy - one fixed IP address that stays yours for the month. Real ISP-registered IP (not datacenter). Ideal for long sessions, account management, and workflows requiring a consistent address. Gateway-based: host:port:username:password. SOCKS5 & HTTP. Unmetered bandwidth.',
     price: 15,
     category: 'proxies',
-    features: ['1 USA City', 'All Neighborhoods', 'Residential ISP IPs', 'Street-Level Targeting', 'Apartment IPs', 'Unlimited Bandwidth', 'HTTP/SOCKS5', 'Instant Delivery', '24/7 Support'],
-    stock: 800,
-    rating: 4.6,
-    reviews: 456,
+    badge: 'Static',
+    features: ['1 static ISP IP', 'Fixed address for 30 days', 'USA location targeting', 'Residential ISP IP', 'SOCKS5 & HTTP', 'Username/Password Auth', 'Unmetered bandwidth', 'Monthly subscription', 'host:port:user:pass format'],
+    stock: 999,
+    rating: 4.7,
+    reviews: 123,
     stockOptions: [
-      { price: 15, balance: 0, stock: 200, quality: '1 City' },
-      { price: 40, balance: 0, stock: 100, quality: '3 Cities' },
-      { price: 70, balance: 0, stock: 50, quality: '5 Cities' }
+      { price: 15, balance: 0, stock: 1, quality: '1 IP / month' }
+    ]
+  },
+  {
+    id: 'proxy-isp-10',
+    name: 'ISP Static Residential Proxy - 10 IPs',
+    description: 'Static ISP residential proxies - 10 fixed IP addresses that stay yours for the month. Real ISP-registered IPs. Ideal for account farms and long-term operations. Gateway-based: host:port:username:password per IP. SOCKS5 & HTTP. Unmetered bandwidth.',
+    price: 130,
+    originalPrice: 150,
+    category: 'proxies',
+    badge: 'Static',
+    features: ['10 static ISP IPs', 'Fixed addresses for 30 days', 'USA location targeting', 'Residential ISP IPs', 'SOCKS5 & HTTP', 'Username/Password Auth', 'Unmetered bandwidth', 'Monthly subscription', 'host:port:user:pass per IP'],
+    stock: 999,
+    rating: 4.8,
+    reviews: 67,
+    stockOptions: [
+      { price: 130, balance: 0, stock: 1, quality: '10 IPs / month' }
     ]
   }
 ];
