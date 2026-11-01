@@ -1933,6 +1933,690 @@ export const faqs: FAQ[] = [
   }
 ];
 
+// ==================== DUMPS ====================
+{
+  id: 'dump-1',
+  name: 'Track 1 Dump USA Premium',
+  description: 'Track 1 magnetic stripe dump from US banks. Full track data with PIN. High success rate at ATMs and POS. Fresh batches updated daily.',
+  price: 150,
+  category: 'dumps',
+  badge: 'Fresh',
+  features: ['Track 1 Data', 'PIN Included', 'US Banks', 'ATM Compatible', 'POS Ready', 'Instant Delivery', 'Replacement Guarantee', '24/7 Support'],
+  stock: 80,
+  rating: 4.8,
+  reviews: 234,
+  stockOptions: [
+    { price: 150, balance: 2000, stock: 10, quality: 'Standard' },
+    { price: 300, balance: 5000, stock: 8, quality: 'High Balance' },
+    { price: 500, balance: 10000, stock: 5, quality: 'Elite' }
+  ]
+},
+{
+  id: 'dump-2',
+  name: 'Track 2 Dump EU Bundle',
+  description: 'Track 2 magnetic stripe dump from European banks. Cloned card ready for ATM cashout. Verified working with chip and PIN bypass.',
+  price: 180,
+  category: 'dumps',
+  badge: 'Popular',
+  features: ['Track 2 Data', 'EU Banks', 'ATM Cashout', 'Chip & PIN Bypass', 'Verified Working', 'Fast Delivery', 'Replacement Policy', 'Support'],
+  stock: 65,
+  rating: 4.7,
+  reviews: 189,
+  stockOptions: [
+    { price: 180, balance: 3000, stock: 8, quality: 'Standard' },
+    { price: 350, balance: 7500, stock: 6, quality: 'Premium' },
+    { price: 600, balance: 15000, stock: 3, quality: 'VIP' }
+  ]
+},
+{
+  id: 'dump-3',
+  name: 'Dump with PIN - Canada',
+  description: 'Canadian bank dump with full PIN. Ready for immediate ATM withdrawal. High limit accounts with verified balances.',
+  price: 200,
+  category: 'dumps',
+  badge: 'Premium',
+  features: ['Track Data', 'PIN Included', 'Canadian Banks', 'ATM Withdrawal', 'High Limits', 'Verified Balance', 'Instant Delivery', 'Support'],
+  stock: 40,
+  rating: 4.9,
+  reviews: 145,
+  stockOptions: [
+    { price: 200, balance: 4000, stock: 5, quality: 'Regular' },
+    { price: 400, balance: 10000, stock: 4, quality: 'Gold' },
+    { price: 700, balance: 20000, stock: 2, quality: 'Platinum' }
+  ]
+},
+{
+  id: 'dump-4',
+  name: 'Dump UK - Contactless',
+  description: 'UK bank dump with contactless payment enabled. Works at contactless POS terminals and ATMs across the United Kingdom.',
+  price: 160,
+  category: 'dumps',
+  features: ['Contactless Enabled', 'UK Banks', 'POS Terminals', 'ATM Access', 'Fresh Stock', 'Quick Delivery', 'Guarantee', 'Support'],
+  stock: 55,
+  rating: 4.6,
+  reviews: 112,
+  stockOptions: [
+    { price: 160, balance: 2500, stock: 7, quality: 'Basic' },
+    { price: 320, balance: 6000, stock: 5, quality: 'Enhanced' },
+    { price: 550, balance: 12000, stock: 3, quality: 'Supreme' }
+  ]
+},
+
+// ==================== CVV / CVV2 ====================
+{
+  id: 'cvv-1',
+  name: 'CVV2 USA Pack',
+  description: 'CVV2 card-not-present data from US banks. Full card details including CVV, expiration, and billing address. Ready for online shopping.',
+  price: 40,
+  category: 'cvv',
+  badge: 'Best Seller',
+  features: ['CVV2 Data', 'US Banks', 'Card Not Present', 'Full Details', 'Billing Address', 'Online Shopping', 'Instant Delivery', 'High Success'],
+  stock: 120,
+  rating: 4.7,
+  reviews: 345,
+  stockOptions: [
+    { price: 40, balance: 1000, stock: 15, quality: 'Standard' },
+    { price: 80, balance: 3000, stock: 12, quality: 'Premium' },
+    { price: 150, balance: 7000, stock: 8, quality: 'Elite' }
+  ]
+},
+{
+  id: 'cvv-2',
+  name: 'CVV2 EU Bundle',
+  description: 'European CVV2 data from multiple EU countries. Verified working for international online transactions. Full cardholder details included.',
+  price: 50,
+  category: 'cvv',
+  badge: 'Popular',
+  features: ['CVV2 Data', 'EU Countries', 'International Use', 'Verified Working', 'Full Cardholder Info', 'Fast Delivery', 'Replacement', 'Support'],
+  stock: 90,
+  rating: 4.6,
+  reviews: 267,
+  stockOptions: [
+    { price: 50, balance: 1500, stock: 12, quality: 'Standard' },
+    { price: 100, balance: 4000, stock: 10, quality: 'Premium' },
+    { price: 180, balance: 9000, stock: 6, quality: 'Elite' }
+  ]
+},
+{
+  id: 'cvv-3',
+  name: 'CVV2 UK Pack',
+  description: 'United Kingdom CVV2 data from major UK banks. High success rate for UK and international e-commerce sites.',
+  price: 45,
+  category: 'cvv',
+  features: ['CVV2 Data', 'UK Banks', 'High Success Rate', 'E-commerce Ready', 'Full Details', 'Instant Delivery', 'Guarantee', '24/7 Support'],
+  stock: 70,
+  rating: 4.5,
+  reviews: 189,
+  stockOptions: [
+    { price: 45, balance: 1200, stock: 10, quality: 'Regular' },
+    { price: 90, balance: 3500, stock: 8, quality: 'Enhanced' },
+    { price: 160, balance: 8000, stock: 5, quality: 'Supreme' }
+  ]
+},
+{
+  id: 'cvv-4',
+  name: 'CVV2 CA / AU Mix',
+  description: 'Canadian and Australian CVV2 data mix. Fresh stock from top financial institutions in CA and AU regions.',
+  price: 55,
+  category: 'cvv',
+  features: ['CVV2 Data', 'CA & AU Banks', 'Fresh Stock', 'Top Institutions', 'Online Ready', 'Quick Delivery', 'Support', 'Replacement'],
+  stock: 50,
+  rating: 4.4,
+  reviews: 134,
+  stockOptions: [
+    { price: 55, balance: 1800, stock: 8, quality: 'Basic' },
+    { price: 110, balance: 4500, stock: 6, quality: 'Standard' },
+    { price: 200, balance: 10000, stock: 4, quality: 'Premium' }
+  ]
+},
+
+// ==================== RDP ====================
+{
+  id: 'rdp-1',
+  name: 'RDP USA - Admin Access',
+  description: 'Remote Desktop Protocol access to USA-based machines with admin privileges. Residential IP, clean history, full control.',
+  price: 80,
+  category: 'rdp',
+  badge: 'Fresh',
+  features: ['Admin Access', 'USA IP', 'Residential', 'Full Control', 'Clean History', 'Persistent', 'Fast Connection', '24/7 Uptime'],
+  stock: 25,
+  rating: 4.9,
+  reviews: 156,
+  stockOptions: [
+    { price: 80, balance: 0, stock: 5, quality: '1 Day' },
+    { price: 150, balance: 0, stock: 8, quality: '3 Days' },
+    { price: 300, balance: 0, stock: 12, quality: '7 Days' }
+  ]
+},
+{
+  id: 'rdp-2',
+  name: 'RDP EU - Corporate',
+  description: 'European corporate RDP access with domain admin privileges. High-speed connection, clean IP, suitable for pivoting.',
+  price: 100,
+  category: 'rdp',
+  badge: 'Premium',
+  features: ['Domain Admin', 'EU Corporate', 'High Speed', 'Clean IP', 'Pivot Ready', 'Persistent Access', 'Secure Tunnel', 'Support'],
+  stock: 15,
+  rating: 4.8,
+  reviews: 89,
+  stockOptions: [
+    { price: 100, balance: 0, stock: 3, quality: '24 Hours' },
+    { price: 200, balance: 0, stock: 5, quality: '3 Days' },
+    { price: 400, balance: 0, stock: 7, quality: '1 Week' }
+  ]
+},
+{
+  id: 'rdp-3',
+  name: 'RDP UK - Home User',
+  description: 'UK home user RDP access. Standard user privileges with ability to escalate. Residential IP for bypassing geo-restrictions.',
+  price: 60,
+  category: 'rdp',
+  features: ['User Access', 'UK Residential', 'Geo Bypass', 'Escalation Possible', 'Stable Connection', 'Instant Access', 'Guarantee', 'Support'],
+  stock: 30,
+  rating: 4.7,
+  reviews: 112,
+  stockOptions: [
+    { price: 60, balance: 0, stock: 6, quality: '1 Day' },
+    { price: 120, balance: 0, stock: 10, quality: '3 Days' },
+    { price: 250, balance: 0, stock: 14, quality: '7 Days' }
+  ]
+},
+{
+  id: 'rdp-4',
+  name: 'RDP CA / AU Mix',
+  description: 'Canadian and Australian RDP access mix. Various privilege levels. Clean residential IPs from tier-1 countries.',
+  price: 70,
+  category: 'rdp',
+  features: ['RDP Access', 'CA & AU IPs', 'Tier-1 Countries', 'Residential', 'Clean History', 'Multiple Privileges', 'Fast Setup', 'Support'],
+  stock: 20,
+  rating: 4.6,
+  reviews: 78,
+  stockOptions: [
+    { price: 70, balance: 0, stock: 4, quality: '24 Hours' },
+    { price: 140, balance: 0, stock: 7, quality: '3 Days' },
+    { price: 280, balance: 0, stock: 9, quality: '1 Week' }
+  ]
+},
+
+// ==================== SHELLS ====================
+{
+  id: 'shell-1',
+  name: 'Web Shell - PHP Backdoor',
+  description: 'PHP web shell backdoor for compromised web servers. Full file system access, command execution, and database access.',
+  price: 30,
+  category: 'shells',
+  badge: 'Popular',
+  features: ['PHP Shell', 'File System Access', 'Command Execution', 'Database Access', 'Persistent', 'Undetectable', 'Easy Upload', 'Support'],
+  stock: 100,
+  rating: 4.5,
+  reviews: 234,
+  stockOptions: [
+    { price: 30, balance: 0, stock: 20, quality: 'Basic' },
+    { price: 60, balance: 0, stock: 15, quality: 'Advanced' },
+    { price: 100, balance: 0, stock: 10, quality: 'Pro' }
+  ]
+},
+{
+  id: 'shell-2',
+  name: 'Web Shell - ASP.NET',
+  description: 'ASP.NET web shell for Windows servers. Full IIS access, PowerShell execution, and .NET framework access.',
+  price: 40,
+  category: 'shells',
+  features: ['ASP.NET Shell', 'IIS Access', 'PowerShell', '.NET Access', 'Windows Server', 'Persistent', 'Stealthy', 'Support'],
+  stock: 60,
+  rating: 4.6,
+  reviews: 189,
+  stockOptions: [
+    { price: 40, balance: 0, stock: 12, quality: 'Standard' },
+    { price: 80, balance: 0, stock: 10, quality: 'Enhanced' },
+    { price: 130, balance: 0, stock: 6, quality: 'Elite' }
+  ]
+},
+{
+  id: 'shell-3',
+  name: 'Web Shell - Python / JSP',
+  description: 'Python and JSP web shells for Linux and Java servers. Full command execution and server control.',
+  price: 35,
+  category: 'shells',
+  features: ['Python/JSP Shell', 'Linux/Java Servers', 'Command Execution', 'Full Server Control', 'Stealth', 'Easy Deploy', 'Guarantee', 'Support'],
+  stock: 80,
+  rating: 4.4,
+  reviews: 156,
+  stockOptions: [
+    { price: 35, balance: 0, stock: 16, quality: 'Basic' },
+    { price: 70, balance: 0, stock: 13, quality: 'Standard' },
+    { price: 120, balance: 0, stock: 9, quality: 'Premium' }
+  ]
+},
+{
+  id: 'shell-4',
+  name: 'Web Shell - All-in-One Pack',
+  description: 'Complete web shell pack with PHP, ASP.NET, Python, JSP, and CGI shells for any server environment.',
+  price: 80,
+  category: 'shells',
+  badge: 'Best Value',
+  features: ['Multi-Language', 'All Server Types', 'Full Control', 'Command Execution', 'Persistent', 'Stealth', 'Comprehensive', 'Support'],
+  stock: 40,
+  rating: 4.8,
+  reviews: 134,
+  stockOptions: [
+    { price: 80, balance: 0, stock: 8, quality: 'Pack' },
+    { price: 150, balance: 0, stock: 6, quality: 'Pro Pack' },
+    { price: 250, balance: 0, stock: 4, quality: 'Ultimate' }
+  ]
+},
+
+// ==================== SMTP / MAILERS ====================
+{
+  id: 'smtp-1',
+  name: 'SMTP Server - Unlimited',
+  description: 'Unlimited SMTP server for bulk email sending. No daily limits, high inbox rate, suitable for mailers and campaigns.',
+  price: 60,
+  category: 'smtp',
+  badge: 'Essential',
+  features: ['Unlimited SMTP', 'No Daily Limit', 'High Inbox Rate', 'Bulk Sending', 'Mailer Compatible', 'Anonymous', 'Fast Setup', 'Support'],
+  stock: 40,
+  rating: 4.7,
+  reviews: 189,
+  stockOptions: [
+    { price: 60, balance: 0, stock: 8, quality: '30 Days' },
+    { price: 120, balance: 0, stock: 10, quality: '90 Days' },
+    { price: 250, balance: 0, stock: 12, quality: '365 Days' }
+  ]
+},
+{
+  id: 'smtp-2',
+  name: 'Mailer Software Pack',
+  description: 'Professional mailer software with SMTP rotation, spintax support, and campaign management. Ready for bulk email operations.',
+  price: 100,
+  category: 'smtp',
+  badge: 'Professional',
+  features: ['Mailer Software', 'SMTP Rotation', 'Spintax Support', 'Campaign Management', 'Bulk Operations', 'GUI Interface', 'Updates', 'Support'],
+  stock: 30,
+  rating: 4.8,
+  reviews: 156,
+  stockOptions: [
+    { price: 100, balance: 0, stock: 6, quality: 'Standard' },
+    { price: 200, balance: 0, stock: 5, quality: 'Pro' },
+    { price: 400, balance: 0, stock: 3, quality: 'Enterprise' }
+  ]
+},
+{
+  id: 'smtp-3',
+  name: 'Spam Leads Database',
+  description: 'Millions of fresh spam leads and email lists. Verified addresses for bulk mailing campaigns. Categorized by region and niche.',
+  price: 40,
+  category: 'smtp',
+  features: ['Millions of Leads', 'Verified Emails', 'Regional Categories', 'Niche Lists', 'Bulk Mailing Ready', 'Fresh Data', 'Instant Download', 'Support'],
+  stock: 100,
+  rating: 4.5,
+  reviews: 312,
+  stockOptions: [
+    { price: 40, balance: 0, stock: 20, quality: '1M Leads' },
+    { price: 80, balance: 0, stock: 18, quality: '5M Leads' },
+    { price: 150, balance: 0, stock: 15, quality: '10M Leads' }
+  ]
+},
+{
+  id: 'smtp-4',
+  name: 'SMTP + Mailer Combo',
+  description: 'Complete SMTP server and mailer software combo. Everything needed for professional bulk email operations.',
+  price: 140,
+  category: 'smtp',
+  badge: 'Complete Package',
+  features: ['SMTP Server', 'Mailer Software', 'Unlimited Sending', 'High Inbox Rate', 'Campaign Tools', 'Anonymous', 'All-in-One', 'Support'],
+  stock: 25,
+  rating: 4.9,
+  reviews: 112,
+  stockOptions: [
+    { price: 140, balance: 0, stock: 5, quality: 'Basic' },
+    { price: 280, balance: 0, stock: 6, quality: 'Pro' },
+    { price: 500, balance: 0, stock: 4, quality: 'Ultimate' }
+  ]
+},
+
+// ==================== STEALERS / MALWARE ====================
+{
+  id: 'stealer-1',
+  name: 'RedLine Stealer Logs',
+  description: 'RedLine infostealer logs with browser credentials, cookies, autofill, and crypto wallets. Fresh logs from infected machines.',
+  price: 50,
+  category: 'stealers',
+  badge: 'Fresh',
+  features: ['RedLine Logs', 'Browser Credentials', 'Cookies', 'Autofill', 'Crypto Wallets', 'Fresh Logs', 'Infected Machines', 'Instant Delivery'],
+  stock: 90,
+  rating: 4.8,
+  reviews: 267,
+  stockOptions: [
+    { price: 50, balance: 0, stock: 15, quality: 'Standard' },
+    { price: 100, balance: 0, stock: 12, quality: 'Premium' },
+    { price: 200, balance: 0, stock: 8, quality: 'Elite' }
+  ]
+},
+{
+  id: 'stealer-2',
+  name: 'Raccoon Stealer Pack',
+  description: 'Raccoon stealer logs with system info, browser data, and cryptocurrency wallets. High-quality logs from global infections.',
+  price: 55,
+  category: 'stealers',
+  badge: 'Popular',
+  features: ['Raccoon Logs', 'System Info', 'Browser Data', 'Crypto Wallets', 'Global Infections', 'High Quality', 'Fast Delivery', 'Support'],
+  stock: 75,
+  rating: 4.7,
+  reviews: 223,
+  stockOptions: [
+    { price: 55, balance: 0, stock: 12, quality: 'Regular' },
+    { price: 110, balance: 0, stock: 10, quality: 'Enhanced' },
+    { price: 220, balance: 0, stock: 7, quality: 'Supreme' }
+  ]
+},
+{
+  id: 'stealer-3',
+  name: 'Cookie Grabber / Session Stealer',
+  description: 'Session stealer and cookie grabber for hijacking web sessions. Steal auth tokens, session cookies, and bypass 2FA.',
+  price: 70,
+  category: 'stealers',
+  features: ['Session Stealer', 'Cookie Grabber', 'Auth Tokens', '2FA Bypass', 'Session Hijack', 'Web Sessions', 'Quick Deploy', 'Support'],
+  stock: 60,
+  rating: 4.6,
+  reviews: 178,
+  stockOptions: [
+    { price: 70, balance: 0, stock: 10, quality: 'Basic' },
+    { price: 140, balance: 0, stock: 8, quality: 'Standard' },
+    { price: 280, balance: 0, stock: 5, quality: 'Pro' }
+  ]
+},
+{
+  id: 'stealer-4',
+  name: 'Crypto Drainer / Wallet Stealer',
+  description: 'Cryptocurrency wallet stealer and drainer. Extracts private keys, seed phrases, and drains wallet balances.',
+  price: 90,
+  category: 'stealers',
+  badge: 'High Risk',
+  features: ['Wallet Stealer', 'Crypto Drainer', 'Private Keys', 'Seed Phrases', 'Balance Drain', 'Multi-Coin', 'Stealth', 'Support'],
+  stock: 45,
+  rating: 4.9,
+  reviews: 145,
+  stockOptions: [
+    { price: 90, balance: 0, stock: 8, quality: 'Basic' },
+    { price: 180, balance: 0, stock: 6, quality: 'Advanced' },
+    { price: 350, balance: 0, stock: 4, quality: 'Elite' }
+  ]
+},
+
+// ==================== FAKE DOCS / IDS ====================
+{
+  id: 'doc-1',
+  name: 'Fake US Driver License',
+  description: 'High-quality fake US driver license with holograms, UV features, and scannable barcode. State-specific templates available.',
+  price: 150,
+  category: 'docs',
+  badge: 'Popular',
+  features: ['Fake DL', 'Holograms', 'UV Features', 'Scannable Barcode', 'State-Specific', 'High Quality', 'Discreet Shipping', 'Guarantee'],
+  stock: 30,
+  rating: 4.7,
+  reviews: 189,
+  stockOptions: [
+    { price: 150, balance: 0, stock: 5, quality: 'Standard' },
+    { price: 250, balance: 0, stock: 4, quality: 'Premium' },
+    { price: 400, balance: 0, stock: 3, quality: 'Elite' }
+  ]
+},
+{
+  id: 'doc-2',
+  name: 'Fake Passport - International',
+  description: 'Fake international passport with biometric page, holograms, and machine-readable zone. Multiple country options available.',
+  price: 300,
+  category: 'docs',
+  badge: 'Premium',
+  features: ['Fake Passport', 'Biometric Page', 'Holograms', 'MRZ', 'Multi-Country', 'High Quality', 'Discreet', 'Support'],
+  stock: 20,
+  rating: 4.8,
+  reviews: 134,
+  stockOptions: [
+    { price: 300, balance: 0, stock: 4, quality: 'Standard' },
+    { price: 500, balance: 0, stock: 3, quality: 'Premium' },
+    { price: 800, balance: 0, stock: 2, quality: 'Diplomatic' }
+  ]
+},
+{
+  id: 'doc-3',
+  name: 'Fake ID - EU / UK',
+  description: 'Fake European and UK identity cards with security features. Valid for age verification and basic ID checks.',
+  price: 120,
+  category: 'docs',
+  features: ['Fake ID', 'EU / UK', 'Security Features', 'Age Verification', 'ID Checks', 'Quality Print', 'Discreet Shipping', 'Support'],
+  stock: 40,
+  rating: 4.6,
+  reviews: 156,
+  stockOptions: [
+    { price: 120, balance: 0, stock: 8, quality: 'Standard' },
+    { price: 200, balance: 0, stock: 6, quality: 'Premium' },
+    { price: 350, balance: 0, stock: 4, quality: 'Elite' }
+  ]
+},
+{
+  id: 'doc-4',
+  name: 'SSN / DOB Full Package',
+  description: 'Complete SSN and date of birth package with full identity details. Suitable for verification and account creation.',
+  price: 80,
+  category: 'docs',
+  features: ['SSN', 'DOB', 'Full Identity', 'Verification Ready', 'Account Creation', 'Fresh Data', 'Instant Delivery', 'Support'],
+  stock: 60,
+  rating: 4.5,
+  reviews: 223,
+  stockOptions: [
+    { price: 80, balance: 0, stock: 12, quality: 'Basic' },
+    { price: 150, balance: 0, stock: 10, quality: 'Standard' },
+    { price: 300, balance: 0, stock: 7, quality: 'Full' }
+  ]
+},
+
+// ==================== DROP ACCOUNTS ====================
+{
+  id: 'drop-1',
+  name: 'Drop Bank Account - USA',
+  description: 'US drop bank account ready for receiving funds. Online banking access, debit card, and account details included.',
+  price: 200,
+  category: 'drops',
+  badge: 'Fresh',
+  features: ['Drop Account', 'USA Bank', 'Online Banking', 'Debit Card', 'Account Details', 'Receive Funds', 'Instant Access', 'Support'],
+  stock: 25,
+  rating: 4.8,
+  reviews: 167,
+  stockOptions: [
+    { price: 200, balance: 0, stock: 5, quality: 'Basic' },
+    { price: 350, balance: 0, stock: 4, quality: 'Verified' },
+    { price: 500, balance: 0, stock: 3, quality: 'Business' }
+  ]
+},
+{
+  id: 'drop-2',
+  name: 'Drop PayPal / CashApp',
+  description: 'Drop PayPal and CashApp accounts for receiving and cashing out funds. Verified with linked bank accounts.',
+  price: 150,
+  category: 'drops',
+  badge: 'Popular',
+  features: ['Drop Account', 'PayPal', 'CashApp', 'Verified', 'Linked Bank', 'Receive Funds', 'Cash Out Ready', 'Support'],
+  stock: 35,
+  rating: 4.7,
+  reviews: 212,
+  stockOptions: [
+    { price: 150, balance: 0, stock: 7, quality: 'Standard' },
+    { price: 280, balance: 0, stock: 6, quality: 'Verified' },
+    { price: 450, balance: 0, stock: 4, quality: 'Premium' }
+  ]
+},
+{
+  id: 'drop-3',
+  name: 'Drop Crypto Wallet',
+  description: 'Cryptocurrency drop wallet for receiving and laundering crypto funds. Multiple coin support with private key access.',
+  price: 180,
+  category: 'drops',
+  features: ['Drop Wallet', 'Crypto', 'Multiple Coins', 'Private Key', 'Receive Funds', 'Laundering Ready', 'Anonymous', 'Support'],
+  stock: 30,
+  rating: 4.6,
+  reviews: 145,
+  stockOptions: [
+    { price: 180, balance: 0, stock: 6, quality: 'Basic' },
+    { price: 320, balance: 0, stock: 5, quality: 'Multi-Coin' },
+    { price: 550, balance: 0, stock: 3, quality: 'Whale' }
+  ]
+},
+{
+  id: 'drop-4',
+  name: 'Drop Account Pack - All-in-One',
+  description: 'Complete drop account pack with bank, PayPal, CashApp, and crypto wallets. Everything for money laundering operations.',
+  price: 450,
+  category: 'drops',
+  badge: 'Complete Package',
+  features: ['All-in-One', 'Bank', 'PayPal', 'CashApp', 'Crypto', 'Money Laundering', 'Complete Setup', 'Support'],
+  stock: 15,
+  rating: 4.9,
+  reviews: 89,
+  stockOptions: [
+    { price: 450, balance: 0, stock: 3, quality: 'Pack' },
+    { price: 800, balance: 0, stock: 2, quality: 'Pro Pack' },
+    { price: 1500, balance: 0, stock: 1, quality: 'Enterprise' }
+  ]
+},
+
+// ==================== GIFT CARDS ====================
+{
+  id: 'gift-1',
+  name: 'Amazon Gift Card Balance',
+  description: 'Amazon gift card with loaded balance. Instant code delivery for online shopping. Various denominations available.',
+  price: 50,
+  category: 'giftcards',
+  badge: 'Best Seller',
+  features: ['Amazon GC', 'Loaded Balance', 'Instant Code', 'Online Shopping', 'Multiple Denominations', 'Fast Delivery', 'Guarantee', 'Support'],
+  stock: 100,
+  rating: 4.8,
+  reviews: 345,
+  stockOptions: [
+    { price: 50, balance: 100, stock: 20, quality: '$100 Balance' },
+    { price: 100, balance: 250, stock: 15, quality: '$250 Balance' },
+    { price: 200, balance: 500, stock: 10, quality: '$500 Balance' }
+  ]
+},
+{
+  id: 'gift-2',
+  name: 'eBay / Walmart Gift Card',
+  description: 'eBay and Walmart gift cards with balance. Ready for immediate use on major e-commerce platforms.',
+  price: 45,
+  category: 'giftcards',
+  badge: 'Popular',
+  features: ['eBay / Walmart GC', 'Loaded Balance', 'Instant Code', 'E-commerce Ready', 'Major Platforms', 'Quick Delivery', 'Support', 'Guarantee'],
+  stock: 85,
+  rating: 4.7,
+  reviews: 267,
+  stockOptions: [
+    { price: 45, balance: 100, stock: 15, quality: '$100 Balance' },
+    { price: 90, balance: 250, stock: 12, quality: '$250 Balance' },
+    { price: 180, balance: 500, stock: 8, quality: '$500 Balance' }
+  ]
+},
+{
+  id: 'gift-3',
+  name: 'Steam / Gaming Gift Card',
+  description: 'Steam and gaming platform gift cards. Loaded balances for game purchases and in-game items.',
+  price: 40,
+  category: 'giftcards',
+  features: ['Steam / Gaming GC', 'Loaded Balance', 'Instant Code', 'Game Purchases', 'In-Game Items', 'Multiple Platforms', 'Fast Delivery', 'Support'],
+  stock: 90,
+  rating: 4.6,
+  reviews: 223,
+  stockOptions: [
+    { price: 40, balance: 50, stock: 20, quality: '$50 Balance' },
+    { price: 75, balance: 100, stock: 18, quality: '$100 Balance' },
+    { price: 150, balance: 250, stock: 12, quality: '$250 Balance' }
+  ]
+},
+{
+  id: 'gift-4',
+  name: 'iTunes / Google Play Gift Card',
+  description: 'Apple iTunes and Google Play gift cards with balance. For app purchases, subscriptions, and digital content.',
+  price: 35,
+  category: 'giftcards',
+  features: ['iTunes / Google Play GC', 'Loaded Balance', 'Instant Code', 'App Purchases', 'Subscriptions', 'Digital Content', 'Quick Delivery', 'Support'],
+  stock: 80,
+  rating: 4.5,
+  reviews: 189,
+  stockOptions: [
+    { price: 35, balance: 25, stock: 20, quality: '$25 Balance' },
+    { price: 60, balance: 50, stock: 18, quality: '$50 Balance' },
+    { price: 120, balance: 100, stock: 14, quality: '$100 Balance' }
+  ]
+},
+
+// ==================== STREAMING / SOCIAL ====================
+{
+  id: 'stream-1',
+  name: 'Netflix / Premium Streaming Account',
+  description: 'Premium streaming accounts including Netflix, Hulu, Disney+. Full access with subscription already paid.',
+  price: 15,
+  category: 'streaming',
+  badge: 'Cheap',
+  features: ['Streaming Account', 'Netflix', 'Hulu', 'Disney+', 'Premium Access', 'Paid Subscription', 'Instant Delivery', 'Support'],
+  stock: 200,
+  rating: 4.4,
+  reviews: 456,
+  stockOptions: [
+    { price: 15, balance: 0, stock: 50, quality: '1 Month' },
+    { price: 40, balance: 0, stock: 40, quality: '3 Months' },
+    { price: 70, balance: 0, stock: 30, quality: '6 Months' }
+  ]
+},
+{
+  id: 'stream-2',
+  name: 'Spotify / Music Streaming Account',
+  description: 'Spotify Premium and music streaming accounts. Ad-free listening with full music library access.',
+  price: 10,
+  category: 'streaming',
+  features: ['Music Account', 'Spotify Premium', 'Ad-Free', 'Full Library', 'Instant Access', 'Cheap', 'Fast Delivery', 'Support'],
+  stock: 150,
+  rating: 4.3,
+  reviews: 378,
+  stockOptions: [
+    { price: 10, balance: 0, stock: 40, quality: '1 Month' },
+    { price: 25, balance: 0, stock: 35, quality: '3 Months' },
+    { price: 45, balance: 0, stock: 30, quality: '6 Months' }
+  ]
+},
+{
+  id: 'stream-3',
+  name: 'Social Media Followers / Engagement',
+  description: 'Instagram, Twitter, TikTok followers and engagement. Real-looking accounts with likes, views, and comments.',
+  price: 25,
+  category: 'streaming',
+  features: ['Social Followers', 'Instagram', 'Twitter', 'TikTok', 'Likes', 'Views', 'Comments', 'Real Accounts'],
+  stock: 300,
+  rating: 4.2,
+  reviews: 523,
+  stockOptions: [
+    { price: 25, balance: 0, stock: 60, quality: '1K Followers' },
+    { price: 50, balance: 0, stock: 50, quality: '5K Followers' },
+    { price: 100, balance: 0, stock: 40, quality: '10K Followers' }
+  ]
+},
+{
+  id: 'stream-4',
+  name: 'Gaming Accounts - Steam / Origin / Epic',
+  description: 'Gaming accounts with game libraries. Steam, Origin, and Epic Games accounts with multiple titles.',
+  price: 30,
+  category: 'streaming',
+  badge: 'Gamer',
+  features: ['Gaming Account', 'Steam', 'Origin', 'Epic Games', 'Game Library', 'Multiple Titles', 'Instant Access', 'Support'],
+  stock: 100,
+  rating: 4.5,
+  reviews: 234,
+  stockOptions: [
+    { price: 30, balance: 0, stock: 20, quality: '5 Games' },
+    { price: 60, balance: 0, stock: 15, quality: '15 Games' },
+    { price: 120, balance: 0, stock: 10, quality: '30+ Games' }
+  ]
+},
+
 export const categories = [
   { id: 'all', name: 'All Products', icon: 'LayoutGrid' },
   { id: 'cards', name: 'Cards', icon: 'CreditCard' },
@@ -1944,5 +2628,15 @@ export const categories = [
   { id: 'spamming-course', name: 'Spamming Full Course', icon: 'Mail' },
   { id: 'hacking-course', name: 'Advanced Hacking Course', icon: 'Shield' },
   { id: 'daily-drops', name: 'Daily Drops', icon: 'Zap' },
-  { id: 'proxies', name: 'Residential Proxies', icon: 'Globe' }
+  { id: 'proxies', name: 'Residential Proxies', icon: 'Globe' },
+  { id: 'dumps', name: 'Dumps Track 1/2', icon: 'CreditCard' },
+  { id: 'cvv', name: 'CVV / CVV2', icon: 'Lock' },
+  { id: 'rdp', name: 'RDP Access', icon: 'Monitor' },
+  { id: 'shells', name: 'Web Shells', icon: 'Terminal' },
+  { id: 'smtp', name: 'SMTP / Mailers', icon: 'Mail' },
+  { id: 'stealers', name: 'Stealers / Malware', icon: 'Zap' },
+  { id: 'docs', name: 'Fake Docs / IDs', icon: 'Id' },
+  { id: 'drops', name: 'Drop Accounts', icon: 'UserPlus' },
+  { id: 'giftcards', name: 'Gift Cards', icon: 'Gift' },
+  { id: 'streaming', name: 'Streaming / Social', icon: 'Play' }
 ] as const;

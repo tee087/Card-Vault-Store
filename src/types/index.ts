@@ -11,7 +11,7 @@ export interface Product {
   description: string;
   price: number;
   originalPrice?: number;
-  category: 'cards' | 'ccs' | 'logs' | 'accounts' | 'tools' | 'fullz' | 'daily-drops' | 'spamming-course' | 'hacking-course' | 'proxies';
+  category: 'cards' | 'ccs' | 'logs' | 'accounts' | 'tools' | 'fullz' | 'daily-drops' | 'spamming-course' | 'hacking-course' | 'proxies' | 'dumps' | 'cvv' | 'rdp' | 'shells' | 'smtp' | 'stealers' | 'docs' | 'drops' | 'giftcards' | 'streaming';
   badge?: string;
   features: string[];
   stock: number;
@@ -58,4 +58,4 @@ export interface Order {
   details?: string;
 }
 
-export type Category = 'all' | 'cards' | 'ccs' | 'logs' | 'accounts' | 'tools' | 'fullz' | 'daily-drops' | 'spamming-course' | 'hacking-course' | 'proxies';
+export type Category = 'all' | 'cards' | 'ccs' | 'logs' | 'accounts' | 'tools' | 'fullz' | 'daily-drops' | 'spamming-course' | 'hacking-course' | 'proxies' | 'dumps' | 'cvv' | 'rdp' | 'shells' | 'smtp' | 'stealers' | 'docs' | 'drops' | 'giftcards' | 'streaming';

@@ -59,6 +59,16 @@ export function Navigation() {
     { name: 'reviews', href: '#testimonials' },
     { name: 'faq', href: '#faq' },
     { name: 'contact', href: '#contact' },
+    { name: 'dumps', href: '#dumps' },
+    { name: 'cvv', href: '#cvv' },
+    { name: 'rdp', href: '#rdp' },
+    { name: 'shells', href: '#shells' },
+    { name: 'smtp', href: '#smtp' },
+    { name: 'stealers', href: '#stealers' },
+    { name: 'docs', href: '#docs' },
+    { name: 'drops', href: '#drops' },
+    { name: 'giftcards', href: '#giftcards' },
+    { name: 'streaming', href: '#streaming' }
   ];
 
   // Search functionality

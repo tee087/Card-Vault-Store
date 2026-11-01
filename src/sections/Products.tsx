@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect } from 'react';
 import {
   ShoppingCart, CreditCard, Link, Database,
-  UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap, Globe
+  UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap, Globe, Lock, Monitor, Mail, Id, UserPlus, Gift, Play
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -23,7 +23,14 @@ const iconMap: Record<string, React.ElementType> = {
   Wrench,
   FileText,
   Zap,
-  Globe
+  Globe,
+  Lock,
+  Monitor,
+  Mail,
+  Id,
+  UserPlus,
+  Gift,
+  Play
 };
 
 const productRefs: Record<string, HTMLDivElement | null> = {};
@@ -154,7 +161,17 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
     accounts: 'ACC',
     tools: 'TOOL',
     fullz: 'FULLZ',
-    proxies: 'PROXY'
+    proxies: 'PROXY',
+    dumps: 'DUMP',
+    cvv: 'CVV',
+    rdp: 'RDP',
+    shells: 'SHELL',
+    smtp: 'SMTP',
+    stealers: 'STEALER',
+    docs: 'DOC',
+    drops: 'DROP',
+    giftcards: 'GIFT',
+    streaming: 'STREAM'
   };
 
   const registerRef = (id: string) => (node: HTMLDivElement | null) => {
@@ -1116,7 +1133,17 @@ export function Products({ onProductSold }: { onProductSold?: (productName: stri
               'accounts': 'border-amber-500 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400',
               'tools': 'border-red-500 bg-red-500/10 hover:bg-red-500/20 text-red-400',
               'fullz': 'border-pink-500 bg-pink-500/10 hover:bg-pink-500/20 text-pink-400',
-              'proxies': 'border-indigo-500 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400'
+              'proxies': 'border-indigo-500 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400',
+              'dumps': 'border-orange-500 bg-orange-500/10 hover:bg-orange-500/20 text-orange-400',
+              'cvv': 'border-yellow-500 bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-400',
+              'rdp': 'border-rose-500 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400',
+              'shells': 'border-slate-500 bg-slate-500/10 hover:bg-slate-500/20 text-slate-400',
+              'smtp': 'border-lime-500 bg-lime-500/10 hover:bg-lime-500/20 text-lime-400',
+              'stealers': 'border-fuchsia-500 bg-fuchsia-500/10 hover:bg-fuchsia-500/20 text-fuchsia-400',
+              'docs': 'border-gray-500 bg-gray-500/10 hover:bg-gray-500/20 text-gray-400',
+              'drops': 'border-stone-500 bg-stone-500/10 hover:bg-stone-500/20 text-stone-400',
+              'giftcards': 'border-violet-500 bg-violet-500/10 hover:bg-violet-500/20 text-violet-400',
+              'streaming': 'border-sky-500 bg-sky-500/10 hover:bg-sky-500/20 text-sky-400'
             };
             const activeColorMap: Record<string, string> = {
               'all': 'bg-blue-500 text-black border-blue-500 shadow-lg shadow-blue-500/50',
@@ -1126,7 +1153,17 @@ export function Products({ onProductSold }: { onProductSold?: (productName: stri
               'accounts': 'bg-amber-500 text-black border-amber-500 shadow-lg shadow-amber-500/50',
               'tools': 'bg-red-500 text-black border-red-500 shadow-lg shadow-red-500/50',
               'fullz': 'bg-pink-500 text-black border-pink-500 shadow-lg shadow-pink-500/50',
-              'proxies': 'bg-indigo-500 text-black border-indigo-500 shadow-lg shadow-indigo-500/50'
+              'proxies': 'bg-indigo-500 text-black border-indigo-500 shadow-lg shadow-indigo-500/50',
+              'dumps': 'bg-orange-500 text-black border-orange-500 shadow-lg shadow-orange-500/50',
+              'cvv': 'bg-yellow-500 text-black border-yellow-500 shadow-lg shadow-yellow-500/50',
+              'rdp': 'bg-rose-500 text-black border-rose-500 shadow-lg shadow-rose-500/50',
+              'shells': 'bg-slate-500 text-black border-slate-500 shadow-lg shadow-slate-500/50',
+              'smtp': 'bg-lime-500 text-black border-lime-500 shadow-lg shadow-lime-500/50',
+              'stealers': 'bg-fuchsia-500 text-black border-fuchsia-500 shadow-lg shadow-fuchsia-500/50',
+              'docs': 'bg-gray-500 text-black border-gray-500 shadow-lg shadow-gray-500/50',
+              'drops': 'bg-stone-500 text-black border-stone-500 shadow-lg shadow-stone-500/50',
+              'giftcards': 'bg-violet-500 text-black border-violet-500 shadow-lg shadow-violet-500/50',
+              'streaming': 'bg-sky-500 text-black border-sky-500 shadow-lg shadow-sky-500/50'
             };
             const colorClass = categoryColors[category.id] || categoryColors['all'];
             const activeClass = activeColorMap[category.id] || activeColorMap['all'];
