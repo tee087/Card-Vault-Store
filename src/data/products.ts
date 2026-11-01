@@ -2636,7 +2636,7 @@ export const categories = [
   { id: 'shells', name: 'Web Shells', icon: 'Terminal' },
   { id: 'smtp', name: 'SMTP / Mailers', icon: 'Mail' },
   { id: 'stealers', name: 'Stealers / Malware', icon: 'Zap' },
-  { id: 'docs', name: 'Fake Docs / IDs', icon: 'Id' },
+  { id: 'docs', name: 'Fake Docs / IDs', icon: 'IdCard' },
   { id: 'drops', name: 'Drop Accounts', icon: 'UserPlus' },
   { id: 'giftcards', name: 'Gift Cards', icon: 'Gift' },
   { id: 'streaming', name: 'Streaming / Social', icon: 'Play' }

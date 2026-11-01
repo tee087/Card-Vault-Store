@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect } from 'react';
 import {
   ShoppingCart, CreditCard, Link, Database,
-  UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap, Globe, Lock, Monitor, Mail, Id, UserPlus, Gift, Play
+  UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap, Globe, Lock, Monitor, Mail, IdCard, UserPlus, Gift, Play
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -27,7 +27,7 @@ const iconMap: Record<string, React.ElementType> = {
   Lock,
   Monitor,
   Mail,
-  Id,
+  IdCard,
   UserPlus,
   Gift,
   Play
