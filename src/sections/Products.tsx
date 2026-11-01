@@ -292,7 +292,7 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
                               <span className="text-[#45B7D1] ml-2">- Balance ${option.balance.toLocaleString()}</span>
                             )}
                             <span className={`ml-2 ${currentOptionStock > 5 ? 'text-[#96CEB4]' : currentOptionStock > 0 ? 'text-[#FFEAA7]' : 'text-[#FF6B6B]'}`}>
-                              ({currentOptionStock} left)
+                              {isTool ? 'Unlimited' : `(${currentOptionStock} left)`}
                             </span>
                           </SelectItem>
                         );
@@ -301,7 +301,7 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
                   </Select>
                 </div>
               ) : (
-                <div className="text-[#95E1D3] text-xs">Stock: {totalOptionStock}</div>
+                <div className="text-[#95E1D3] text-xs">{isTool ? 'Unlimited' : `Stock: ${totalOptionStock}`}</div>
               )}
               <div className="flex items-center gap-1">
                 <Button 
@@ -324,7 +324,7 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
                       }
                     }
                   }}
-                  disabled={totalOptionStock === 0 || (selectedStockOption ? (currentProduct.stockOptions?.find(o => o.price === selectedStockOption.price)?.stock ?? selectedStockOption.stock) === 0 : false)}
+                  disabled={!isTool && (totalOptionStock === 0 || (selectedStockOption ? (currentProduct.stockOptions?.find(o => o.price === selectedStockOption.price)?.stock ?? selectedStockOption.stock) === 0 : false))}
                   className={`bg-green-500/20 border border-green-500 text-green-400 hover:bg-green-500 hover:text-black ${totalOptionStock === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   <ShoppingCart className="w-3 h-3" />
@@ -390,7 +390,13 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
 
                       <div className="flex items-center justify-between pt-4 border-t border-green-500/20">
                         <div className="text-green-700">
-                          stock: <span className="text-green-400">{totalOptionStock} remaining</span>
+                          {isTool ? (
+                            <span>stock: Unlimited</span>
+                          ) : (
+                            <>
+                              stock: <span className="text-green-400">{totalOptionStock} remaining</span>
+                            </>
+                          )}
                         </div>
                         <div>
                           <span className="text-green-700">price: </span>
