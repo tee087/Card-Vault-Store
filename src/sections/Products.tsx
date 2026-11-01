@@ -154,6 +154,7 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
     accounts: 'ACC',
     tools: 'TOOL',
     fullz: 'FULLZ',
+    proxies: 'PROXY'
   };
 
   const registerRef = (id: string) => (node: HTMLDivElement | null) => {
@@ -831,6 +832,29 @@ const USA_STATES = [
   'South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'
 ];
 
+const COUNTRY_STATES: Record<string, string[]> = {
+  USA: USA_STATES,
+  Canada: [
+    'Ontario','British Columbia','Quebec','Alberta','Manitoba','Saskatchewan','Nova Scotia',
+    'New Brunswick','Newfoundland and Labrador','Prince Edward Island','Northwest Territories',
+    'Nunavut','Yukon'
+  ],
+  'United Kingdom': [
+    'England','Scotland','Wales','Northern Ireland','Greater London','West Midlands',
+    'Greater Manchester','West Yorkshire','Kent','Essex'
+  ],
+  EU: [
+    'Germany','France','Italy','Spain','Netherlands','Belgium','Austria','Switzerland',
+    'Sweden','Norway','Denmark','Finland','Poland','Czech Republic','Hungary','Slovakia',
+    'Slovenia','Croatia','Romania','Bulgaria','Greece','Portugal','Ireland'
+  ],
+  Australia: [
+    'New South Wales','Victoria','Queensland','Western Australia','South Australia',
+    'Tasmania','Australian Capital Territory','Northern Territory'
+  ],
+  'Other': ['Any']
+};
+
 const PROXY_PLANS = [
   { id: 'data-5gb', name: '5 GB Data Pack', price: 10, type: 'data' },
   { id: 'data-20gb', name: '20 GB Data Pack', price: 35, type: 'data' },
@@ -846,6 +870,7 @@ function ProxyInventory({ onProductSold }: { onProductSold?: (productName: strin
   const { addToCart } = useCart();
   const [selectedPlan, setSelectedPlan] = useState<typeof PROXY_PLANS[0] | null>(null);
   const [form, setForm] = useState({ country: '', state: '', street: '', address: '' });
+  const availableStates = COUNTRY_STATES[form.country] || COUNTRY_STATES['Other'];
 
   const handleProxySelect = (plan: typeof PROXY_PLANS[0]) => {
     setSelectedPlan(plan);
@@ -867,7 +892,7 @@ function ProxyInventory({ onProductSold }: { onProductSold?: (productName: strin
         'SOCKS5 & HTTP protocols',
         'Username/Password Authentication',
         'Instant delivery',
-        'USA Residential ISP IPs'
+        'Residential ISP IPs for ' + form.country
       ],
       stock: 1,
       rating: 4.8,
@@ -923,10 +948,15 @@ function ProxyInventory({ onProductSold }: { onProductSold?: (productName: strin
         <h3 className="text-indigo-400 font-mono text-sm mb-3">$ select-proxy-plan --plan=</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {PROXY_PLANS.map((plan) => {
-            const planTypeText =
-              plan.type === 'data' ? 'Pay per GB' : plan.type === 'port' ? 'Concurrent ports' : 'Static IP per month';
-            const planIcon =
-              plan.type === 'data' ? 'ðŸ“¦' : plan.type === 'port' ? 'ðŸ”Œ' : 'ðŸ“¶';
+            let planTypeText = 'Pay per GB';
+            let planIcon = '📦';
+            if (plan.type === 'port') {
+              planTypeText = 'Concurrent ports';
+              planIcon = '🔌';
+            } else if (plan.type === 'isp') {
+              planTypeText = 'Static IP per month';
+              planIcon = '📶';
+            }
             return (
             <button
               key={plan.id}
@@ -956,31 +986,41 @@ function ProxyInventory({ onProductSold }: { onProductSold?: (productName: strin
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="col-span-2">
-              <label className="text-indigo-500 font-mono text-xs mb-1 block">Country (e.g. United States)</label>
-              <input
-                className="bg-black border border-indigo-500/40 text-indigo-400 font-mono rounded px-3 py-2 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 w-full"
-                placeholder="e.g. United States"
+              <label className="text-indigo-500 font-mono text-xs mb-1 block">Country</label>
+              <Select
                 value={form.country}
-                onChange={(e) => setForm({ ...form, country: e.target.value })}
-              />
+                onValueChange={(value) => setForm({ ...form, country: value, state: '' })}
+              >
+                <SelectTrigger className="bg-black border-indigo-500/40 text-indigo-400 font-mono rounded px-3 py-2 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 w-full">
+                  <SelectValue placeholder="Select country..." />
+                </SelectTrigger>
+                <SelectContent className="bg-black border-indigo-500/40 text-indigo-400 font-mono">
+                  {Object.keys(COUNTRY_STATES).map((c) => (
+                    <SelectItem key={c} value={c} className="text-indigo-400 font-mono">
+                      {c}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             <div className="col-span-2">
-              <label className="text-indigo-500 font-mono text-xs mb-1 block">State</label>
+              <label className="text-indigo-500 font-mono text-xs mb-1 block">State / Region</label>
               <Select
                 value={form.state}
                 onValueChange={(value) => setForm({ ...form, state: value })}
               >
                 <SelectTrigger className="bg-black border-indigo-500/40 text-indigo-400 font-mono rounded px-3 py-2 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 w-full">
-                  <SelectValue placeholder="Select state..." />
+                  <SelectValue placeholder="Select state/region..." />
                 </SelectTrigger>
                 <SelectContent className="bg-black border-indigo-500/40 text-indigo-400 font-mono">
-                  {USA_STATES.map((state) => (
-                    <SelectItem key={state} value={state} className="text-indigo-400 font-mono">
-                      {state}
+                  {availableStates.map((s) => (
+                    <SelectItem key={s} value={s} className="text-indigo-400 font-mono">
+                      {s}
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
+            </div>
             </div>
             <div>
               <label className="text-indigo-500 font-mono text-xs mb-1 block">Street</label>
@@ -1000,7 +1040,6 @@ function ProxyInventory({ onProductSold }: { onProductSold?: (productName: strin
                 onChange={(e) => setForm({ ...form, address: e.target.value })}
               />
             </div>
-          </div>
           <div className="mt-4 flex justify-end">
             <Button
               onClick={handleCheckout}

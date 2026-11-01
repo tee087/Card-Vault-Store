@@ -41,7 +41,7 @@ export function CartDrawer() {
 
   // Validation: checkout requires usage type for cards/ccs and cashout checkbox for applicable items
   const requiresUsageType = useMemo(() => items.some(i => i.category === 'cards' || i.category === 'ccs'), [items]);
-  const requiresCashout = useMemo(() => items.some(i => i.category !== 'spamming-course' && i.category !== 'hacking-course'), [items]);
+  const requiresCashout = useMemo(() => items.some(i => i.category !== 'spamming-course' && i.category !== 'hacking-course' && i.category !== 'proxies'), [items]);
 
   const usageTypeComplete = useMemo(() => {
     if (!requiresUsageType) return true;
@@ -56,7 +56,7 @@ export function CartDrawer() {
   const cashoutComplete = useMemo(() => {
     if (!requiresCashout) return true;
     return items.every(item => {
-      if (item.category !== 'spamming-course' && item.category !== 'hacking-course') {
+      if (item.category !== 'spamming-course' && item.category !== 'hacking-course' && item.category !== 'proxies') {
         return Boolean(cashoutInstructions[item.id]);
       }
       return true;
@@ -185,6 +185,7 @@ export function CartDrawer() {
                 <div className="space-y-4 py-4">
                   {items.map((item) => {
                     const isCourse = item.category === 'spamming-course' || item.category === 'hacking-course';
+                    const isProxies = item.category === 'proxies';
                     const needsUsageType = item.category === 'cards' || item.category === 'ccs';
 
                     return (
@@ -291,7 +292,7 @@ export function CartDrawer() {
                               </div>
                             </div>
                           </div>
-                        ) : (
+                        ) : isProxies ? null : (
                           <div className="mt-4 pt-3 border-t border-green-500/20">
                             <div className="flex items-center gap-2 mb-2">
                               <Checkbox
