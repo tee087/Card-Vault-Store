@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import type { Product, Order } from '@/types';
-import { products as initialProducts } from '@/data/products';
+import { products as initialProducts, newProducts } from '@/data/products';
 
 interface ProductStore {
   products: Product[];
@@ -22,7 +22,7 @@ const generateRandomStock = () => Math.floor(Math.random() * 41) + 10;
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
   const [products, setProducts] = useState<Product[]>(() => 
-    initialProducts.map(p => ({
+    [...initialProducts, ...newProducts].map(p => ({
       ...p,
       stock: generateRandomStock()
     }))

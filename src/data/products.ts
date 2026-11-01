@@ -1933,6 +1933,7 @@ export const faqs: FAQ[] = [
   }
 ];
 
+export const newProducts: Product[] = [
 // ==================== DUMPS ====================
 {
   id: 'dump-1',
@@ -2615,7 +2616,7 @@ export const faqs: FAQ[] = [
     { price: 60, balance: 0, stock: 15, quality: '15 Games' },
     { price: 120, balance: 0, stock: 10, quality: '30+ Games' }
   ]
-},
+}];
 
 export const categories = [
   { id: 'all', name: 'All Products', icon: 'LayoutGrid' },
