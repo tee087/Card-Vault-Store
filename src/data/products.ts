@@ -2426,9 +2426,9 @@ export const newProducts: Product[] = [
   rating: 4.8,
   reviews: 167,
   stockOptions: [
-    { price: 200, balance: 0, stock: 5, quality: 'Basic' },
-    { price: 350, balance: 0, stock: 4, quality: 'Verified' },
-    { price: 500, balance: 0, stock: 3, quality: 'Business' }
+    { price: 200, balance: 2500, stock: 5, quality: 'Basic' },
+    { price: 350, balance: 5000, stock: 4, quality: 'Verified' },
+    { price: 500, balance: 10000, stock: 3, quality: 'Business' }
   ]
 },
 {
@@ -2443,9 +2443,9 @@ export const newProducts: Product[] = [
   rating: 4.7,
   reviews: 212,
   stockOptions: [
-    { price: 150, balance: 0, stock: 7, quality: 'Standard' },
-    { price: 280, balance: 0, stock: 6, quality: 'Verified' },
-    { price: 450, balance: 0, stock: 4, quality: 'Premium' }
+    { price: 150, balance: 1500, stock: 7, quality: 'Standard' },
+    { price: 280, balance: 3500, stock: 6, quality: 'Verified' },
+    { price: 450, balance: 7000, stock: 4, quality: 'Premium' }
   ]
 },
 {
@@ -2459,9 +2459,9 @@ export const newProducts: Product[] = [
   rating: 4.6,
   reviews: 145,
   stockOptions: [
-    { price: 180, balance: 0, stock: 6, quality: 'Basic' },
-    { price: 320, balance: 0, stock: 5, quality: 'Multi-Coin' },
-    { price: 550, balance: 0, stock: 3, quality: 'Whale' }
+    { price: 180, balance: 3000, stock: 6, quality: 'Basic' },
+    { price: 320, balance: 7500, stock: 5, quality: 'Multi-Coin' },
+    { price: 550, balance: 15000, stock: 3, quality: 'Whale' }
   ]
 },
 {
@@ -2476,9 +2476,9 @@ export const newProducts: Product[] = [
   rating: 4.9,
   reviews: 89,
   stockOptions: [
-    { price: 450, balance: 0, stock: 3, quality: 'Pack' },
-    { price: 800, balance: 0, stock: 2, quality: 'Pro Pack' },
-    { price: 1500, balance: 0, stock: 1, quality: 'Enterprise' }
+    { price: 450, balance: 5000, stock: 3, quality: 'Pack' },
+    { price: 800, balance: 12000, stock: 2, quality: 'Pro Pack' },
+    { price: 1500, balance: 25000, stock: 1, quality: 'Enterprise' }
   ]
 },
 
