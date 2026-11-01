@@ -56,12 +56,17 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     setOrders(prev => [newOrder, ...prev]);
   }, []);
 
-  const reduceStock = useCallback((productId: string, quantity: number) => {
+// Digital goods / software - uncountable, never deplete stock
+const UNCOUNTABLE_CATEGORIES = ['tools', 'rdp', 'shells', 'smtp', 'stealers', 'docs', 'streaming'];
+
+const isUncountable = (category: string) => UNCOUNTABLE_CATEGORIES.includes(category);
+
+const reduceStock = useCallback((productId: string, quantity: number) => {
     setProducts(prev => 
       prev.map(p => {
         if (p.id === productId) {
-          // Tools are uncountable (shared APK file) - never deplete stock
-          if (p.category === 'tools') return p;
+          // Uncountable digital goods - never deplete stock
+          if (isUncountable(p.category)) return p;
           const newStock = Math.max(0, p.stock - quantity);
           return { ...p, stock: newStock };
         }
@@ -86,8 +91,8 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     setProducts(prev => 
       prev.map(p => {
         if (p.id === productId && p.stockOptions) {
-          // Tools are uncountable (shared APK file) - never deplete stock
-          if (p.category === 'tools') return p;
+          // Uncountable digital goods - never deplete stock
+          if (isUncountable(p.category)) return p;
           const newOptions = p.stockOptions.map(opt => {
             if (opt.price === price) {
               return { ...opt, stock: Math.max(0, opt.stock - quantity) };

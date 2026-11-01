@@ -133,7 +133,8 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
   const { addToCart } = useCart();
   const { products: storeProducts, reduceStock, reduceOptionStock } = useStore();
   const currentProduct = storeProducts.find(p => p.id === product.id) || product;
-  const isTool = product.category === 'tools';
+  const UNCOUNTABLE_CATEGORIES = ['tools', 'rdp', 'shells', 'smtp', 'stealers', 'docs', 'streaming'];
+  const isTool = UNCOUNTABLE_CATEGORIES.includes(product.category);
   
   // Calculate total remaining stock from all options
   const totalOptionStock = currentProduct.stockOptions?.reduce((sum, opt) => {
