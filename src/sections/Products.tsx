@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect } from 'react';
 import {
   ShoppingCart, CreditCard, Link, Database,
-  UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap, Globe, Lock, Monitor, Mail, IdCard, UserPlus, Gift, Play
+  UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap, Globe, Lock, Monitor, Mail, IdCard, UserPlus, Gift, Play, Shield
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -467,7 +467,7 @@ const fullzData = [
   {
     id: 'us',
     name: 'United States',
-    flag: 'ðŸ‡ºðŸ‡¸',
+    flag: 'US',
     code: 'US',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['John', 'James', 'Robert', 'Michael', 'William', 'David', 'Richard', 'Joseph', 'Thomas', 'Charles', 'Christopher', 'Daniel', 'Matthew', 'Anthony', 'Donald', 'Mark', 'Paul', 'Steven', 'Andrew', 'Joshua', 'Kenneth', 'Kevin', 'Brian', 'George', 'Edward'];
@@ -514,7 +514,7 @@ const fullzData = [
   {
     id: 'eu',
     name: 'European Union',
-    flag: 'ðŸ‡ªðŸ‡º',
+    flag: 'EU',
     code: 'EU',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['Hans', 'Klaus', 'Franz', 'Wolfgang', 'Heinz', 'Karl', 'Otto', 'GÃ¼nther', 'Dieter', 'Horst', 'JÃ¼rgen', 'Peter', 'Werner', 'Gerhard', 'Walter', 'Heinrich', 'Helmut', 'Fritz', 'Kurt', 'Herbert', 'Johann', 'Rudolf', 'Ernst', 'Willi', 'Alfred'];
@@ -555,7 +555,7 @@ const fullzData = [
   {
     id: 'uk',
     name: 'United Kingdom',
-    flag: 'ðŸ‡¬ðŸ‡§',
+    flag: 'UK',
     code: 'UK',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['James', 'John', 'David', 'Michael', 'Christopher', 'Matthew', 'Daniel', 'Andrew', 'Richard', 'Paul', 'Mark', 'Thomas', 'Stephen', 'Anthony', 'Charles', 'Robert', 'William', 'Joseph', 'Edward', 'George', 'Peter', 'Brian', 'Kevin', 'Patrick', 'Alan'];
@@ -596,7 +596,7 @@ const fullzData = [
   {
     id: 'ca',
     name: 'Canada',
-    flag: 'ðŸ‡¨ðŸ‡¦',
+    flag: 'CA',
     code: 'CA',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['Michael', 'Christopher', 'Matthew', 'David', 'James', 'John', 'Robert', 'Daniel', 'Joseph', 'Andrew', 'Ryan', 'Nicholas', 'Tyler', 'William', 'Jonathan', 'Alexander', 'Brandon', 'Anthony', 'Kevin', 'Thomas', 'Eric', 'Steven', 'Justin', 'Brian', 'Adam'];
@@ -660,6 +660,74 @@ const fullzTableColumns = [
   { key: 'selfies', label: 'Selfies/Facial' }
 ];
 
+// Country flag SVGs (render as real flags on all OS including Windows)
+const CountryFlag = ({ code }: { code: string }) => {
+  const flags: Record<string, React.ReactNode> = {
+    US: (
+      <svg width="28" height="18" viewBox="0 0 28 18" role="img" aria-label="United States">
+        <rect width="28" height="18" fill="#B22234" />
+        <rect width="28" height="18" fill="#FFFFFF" />
+        {[
+          0, 3, 6, 9, 12, 15
+        ].map((y) => (
+          <rect key={y} x="0" y={y} width="28" height="1.33" fill="#B22234" />
+        ))}
+        <rect x="0" y="0" width="11" height="7.6" fill="#3C3B6E" />
+        {[0, 1, 2, 3, 4, 5, 6].map((r) => (
+          <g key={r}>
+            {[0, 1, 2, 3, 4, 5].map((c) => (
+              <rect
+                key={c}
+                x={0.6 + c * 1.7}
+                y={0.6 + r * 1.05}
+                width="0.7"
+                height="0.7"
+                fill="#FFFFFF"
+                rx="0.1"
+              />
+            ))}
+          </g>
+        ))}
+      </svg>
+    ),
+    EU: (
+      <svg width="28" height="18" viewBox="0 0 28 18" role="img" aria-label="European Union">
+        <rect width="28" height="18" fill="#003399" />
+        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => {
+          const angle = (i * 30) * (Math.PI / 180);
+          const cx = 14 + 4.5 * Math.cos(angle);
+          const cy = 9 + 4.5 * Math.sin(angle);
+          return (
+            <circle key={i} cx={cx} cy={cy} r="1" fill="#FFD700" />
+          );
+        })}
+      </svg>
+    ),
+    UK: (
+      <svg width="28" height="18" viewBox="0 0 28 18" role="img" aria-label="United Kingdom">
+        <rect width="28" height="18" fill="#00247D" />
+        <path d="M0 0 L28 18 M28 0 L0 18" stroke="#FFFFFF" strokeWidth="1.5" />
+        <path d="M14 0 L14 18 M0 9 L28 9" stroke="#FFFFFF" strokeWidth="2.5" />
+        <path d="M0 0 L28 18 M28 0 L0 18" stroke="#C8102E" strokeWidth="1" fill="none" />
+        <rect x="11" y="0" width="6" height="18" fill="#C8102E" />
+        <rect x="0" y="7" width="28" height="4" fill="#C8102E" />
+      </svg>
+    ),
+    CA: (
+      <svg width="28" height="18" viewBox="0 0 28 18" role="img" aria-label="Canada">
+        <rect width="28" height="18" fill="#FF0000" />
+        <rect x="7" y="0" width="14" height="18" fill="#FFFFFF" />
+        <path d="M14 2 Q14 2 16 5 Q18 2 18 2 L20 7 L16 9 L14 14 L12 9 L8 7 L10 2 Q10 2 14 2 Z" fill="#FF0000" />
+      </svg>
+    ),
+  };
+  return (
+    <span className="inline-block border border-pink-500/30 rounded px-2 py-0.5">
+      {flags[code] || <span className="text-pink-400 font-mono text-xs">{code}</span>}
+    </span>
+  );
+};
+
 function FullzInventory({ onProductSold }: { onProductSold?: (productName: string, price: number, location: string) => void }) {
   const { addToCart } = useCart();
   const { reduceStock } = useStore();
@@ -710,7 +778,7 @@ function FullzInventory({ onProductSold }: { onProductSold?: (productName: strin
       {/* Info Banner */}
       <div className="mb-8 p-4 border border-pink-500/30 bg-pink-500/5 rounded">
         <div className="flex items-start gap-3">
-          <span className="w-5 h-5 text-pink-400 mt-0.5">ðŸ”’</span>
+          <Shield className="w-5 h-5 text-pink-400 mt-0.5" />
           <div>
             <h3 className="text-pink-300 font-mono text-sm font-semibold mb-1">Premium Identity Packages</h3>
             <p className="text-pink-500 font-mono text-xs">
@@ -733,7 +801,7 @@ function FullzInventory({ onProductSold }: { onProductSold?: (productName: strin
                 : 'border-pink-500/30 bg-black hover:border-pink-400 hover:bg-pink-500/10'
             }`}
           >
-            <span className="text-6xl group-hover:scale-110 transition-transform">{country.flag}</span>
+            <CountryFlag code={country.flag} />
             <span className="text-pink-300 font-mono text-sm">{country.name}</span>
             <span className="text-pink-500 font-mono text-xs">{country.entries.length} entries</span>
           </button>
@@ -745,7 +813,7 @@ function FullzInventory({ onProductSold }: { onProductSold?: (productName: strin
         <div className="border border-pink-500/30 bg-black/50 rounded-lg overflow-hidden">
           <div className="p-4 border-b border-pink-500/30 bg-pink-500/10">
             <h3 className="text-pink-300 font-mono flex items-center gap-2">
-              <span className="text-2xl">{selectedCountry.flag}</span>
+              <CountryFlag code={selectedCountry.flag} />
               {selectedCountry.name} Fullz Database
               <span className="text-pink-500 text-sm ml-2">({selectedCountry.entries.length} entries)</span>
             </h3>
