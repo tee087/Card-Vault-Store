@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import {
   ShoppingCart, CreditCard, Link, Database,
-  UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap
+  UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap, Globe
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -23,6 +23,7 @@ const iconMap: Record<string, React.ElementType> = {
   Wrench,
   FileText,
   Zap,
+  Globe
 };
 
 const productRefs: Record<string, HTMLDivElement | null> = {};
@@ -40,7 +41,7 @@ function DailyDropsCollection({ products, onProductSold: _onProductSold }: { pro
             Daily Drops Collection
           </h3>
           <p className="text-orange-600 font-mono text-sm">
-            ⚡ Fresh daily drops that change frequently when stock is exhausted. Renewed daily with new inventory.
+            âš¡ Fresh daily drops that change frequently when stock is exhausted. Renewed daily with new inventory.
           </p>
         </div>
 
@@ -441,7 +442,7 @@ const fullzData = [
   {
     id: 'us',
     name: 'United States',
-    flag: '🇺🇸',
+    flag: 'ðŸ‡ºðŸ‡¸',
     code: 'US',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['John', 'James', 'Robert', 'Michael', 'William', 'David', 'Richard', 'Joseph', 'Thomas', 'Charles', 'Christopher', 'Daniel', 'Matthew', 'Anthony', 'Donald', 'Mark', 'Paul', 'Steven', 'Andrew', 'Joshua', 'Kenneth', 'Kevin', 'Brian', 'George', 'Edward'];
@@ -488,11 +489,11 @@ const fullzData = [
   {
     id: 'eu',
     name: 'European Union',
-    flag: '🇪🇺',
+    flag: 'ðŸ‡ªðŸ‡º',
     code: 'EU',
     entries: Array.from({ length: 50 }, (_, i) => {
-      const firstNames = ['Hans', 'Klaus', 'Franz', 'Wolfgang', 'Heinz', 'Karl', 'Otto', 'Günther', 'Dieter', 'Horst', 'Jürgen', 'Peter', 'Werner', 'Gerhard', 'Walter', 'Heinrich', 'Helmut', 'Fritz', 'Kurt', 'Herbert', 'Johann', 'Rudolf', 'Ernst', 'Willi', 'Alfred'];
-      const lastNames = ['Müller', 'Schmidt', 'Schneider', 'Fischer', 'Weber', 'Meyer', 'Wagner', 'Becker', 'Schulz', 'Hoffmann', 'Schäfer', 'Koch', 'Bauer', 'Richter', 'Klein', 'Wolf', 'Schröder', 'Neumann', 'Schwarz', 'Zimmermann', 'Braun', 'Krüger', 'Hofmann', 'Hartmann', 'Lange'];
+      const firstNames = ['Hans', 'Klaus', 'Franz', 'Wolfgang', 'Heinz', 'Karl', 'Otto', 'GÃ¼nther', 'Dieter', 'Horst', 'JÃ¼rgen', 'Peter', 'Werner', 'Gerhard', 'Walter', 'Heinrich', 'Helmut', 'Fritz', 'Kurt', 'Herbert', 'Johann', 'Rudolf', 'Ernst', 'Willi', 'Alfred'];
+      const lastNames = ['MÃ¼ller', 'Schmidt', 'Schneider', 'Fischer', 'Weber', 'Meyer', 'Wagner', 'Becker', 'Schulz', 'Hoffmann', 'SchÃ¤fer', 'Koch', 'Bauer', 'Richter', 'Klein', 'Wolf', 'SchrÃ¶der', 'Neumann', 'Schwarz', 'Zimmermann', 'Braun', 'KrÃ¼ger', 'Hofmann', 'Hartmann', 'Lange'];
       const countries = ['Germany', 'France', 'Italy', 'Spain', 'Netherlands', 'Belgium', 'Austria', 'Switzerland', 'Sweden', 'Norway', 'Denmark', 'Finland', 'Poland', 'Czech Republic', 'Hungary', 'Slovakia', 'Slovenia', 'Croatia', 'Romania', 'Bulgaria', 'Greece', 'Portugal', 'Ireland'];
       const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
       const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
@@ -529,7 +530,7 @@ const fullzData = [
   {
     id: 'uk',
     name: 'United Kingdom',
-    flag: '🇬🇧',
+    flag: 'ðŸ‡¬ðŸ‡§',
     code: 'UK',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['James', 'John', 'David', 'Michael', 'Christopher', 'Matthew', 'Daniel', 'Andrew', 'Richard', 'Paul', 'Mark', 'Thomas', 'Stephen', 'Anthony', 'Charles', 'Robert', 'William', 'Joseph', 'Edward', 'George', 'Peter', 'Brian', 'Kevin', 'Patrick', 'Alan'];
@@ -570,7 +571,7 @@ const fullzData = [
   {
     id: 'ca',
     name: 'Canada',
-    flag: '🇨🇦',
+    flag: 'ðŸ‡¨ðŸ‡¦',
     code: 'CA',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['Michael', 'Christopher', 'Matthew', 'David', 'James', 'John', 'Robert', 'Daniel', 'Joseph', 'Andrew', 'Ryan', 'Nicholas', 'Tyler', 'William', 'Jonathan', 'Alexander', 'Brandon', 'Anthony', 'Kevin', 'Thomas', 'Eric', 'Steven', 'Justin', 'Brian', 'Adam'];
@@ -684,7 +685,7 @@ function FullzInventory({ onProductSold }: { onProductSold?: (productName: strin
       {/* Info Banner */}
       <div className="mb-8 p-4 border border-pink-500/30 bg-pink-500/5 rounded">
         <div className="flex items-start gap-3">
-          <span className="w-5 h-5 text-pink-400 mt-0.5">🔒</span>
+          <span className="w-5 h-5 text-pink-400 mt-0.5">ðŸ”’</span>
           <div>
             <h3 className="text-pink-300 font-mono text-sm font-semibold mb-1">Premium Identity Packages</h3>
             <p className="text-pink-500 font-mono text-xs">
@@ -820,6 +821,208 @@ function FullzInventory({ onProductSold }: { onProductSold?: (productName: strin
   );
 }
 
+export { productRefs };
+// Proxy Inventory Component - Fullz-style UI with address form
+const USA_STATES = [
+  'Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia',
+  'Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts',
+  'Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico',
+  'New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina',
+  'South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'
+];
+
+const PROXY_PLANS = [
+  { id: 'data-5gb', name: '5 GB Data Pack', price: 10, type: 'data' },
+  { id: 'data-20gb', name: '20 GB Data Pack', price: 35, type: 'data' },
+  { id: 'data-100gb', name: '100 GB Data Pack', price: 130, type: 'data' },
+  { id: 'port-5', name: '5 Concurrent Ports', price: 52, type: 'port' },
+  { id: 'port-25', name: '25 Concurrent Ports', price: 183, type: 'port' },
+  { id: 'port-100', name: '100 Concurrent Ports', price: 599, type: 'port' },
+  { id: 'isp-1', name: '1 Static ISP IP', price: 15, type: 'isp' },
+  { id: 'isp-10', name: '10 Static ISP IPs', price: 130, type: 'isp' }
+];
+
+function ProxyInventory({ onProductSold }: { onProductSold?: (productName: string, price: number, location: string) => void }) {
+  const { addToCart } = useCart();
+  const [selectedPlan, setSelectedPlan] = useState<typeof PROXY_PLANS[0] | null>(null);
+  const [form, setForm] = useState({ country: '', state: '', street: '', address: '' });
+  const [showApkNotice, setShowApkNotice] = useState(true);
+
+  const handleProxySelect = (plan: typeof PROXY_PLANS[0]) => {
+    setSelectedPlan(plan);
+  };
+
+  const handleCheckout = () => {
+    if (!selectedPlan || !form.country || !form.state || !form.street || !form.address) {
+      alert('Please fill Country, State, Street, and Address before checkout');
+      return;
+    }
+    const product = {
+      id: `proxy-${selectedPlan.id}`,
+      name: `Residential Proxy - ${selectedPlan.name}`,
+      description: `Residential proxy - ${form.country}, ${form.state}, ${form.street}, ${form.address}`,
+      price: selectedPlan.price,
+      category: 'proxies' as const,
+      features: [
+        'Gateway: host:port:username:password',
+        'SOCKS5 & HTTP protocols',
+        'Username/Password Authentication',
+        'Instant delivery',
+        'USA Residential ISP IPs'
+      ],
+      stock: 1,
+      rating: 4.8,
+      reviews: 100,
+      stockOptions: [{ price: selectedPlan.price, balance: 0, stock: 1 }]
+    };
+    addToCart(product);
+    if (onProductSold) {
+      onProductSold(product.name, selectedPlan.price, `${form.country}, ${form.state}`);
+    }
+  };
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Section Header */}
+      <div className="mb-12">
+        <div className="flex items-center gap-2 mb-4">
+          <Globe className="w-4 h-4 text-indigo-400" />
+          <span className="text-indigo-600 font-mono text-sm">proxy.catalog</span>
+        </div>
+        <h2 className="text-2xl sm:text-3xl font-mono text-indigo-400 mb-2">
+          $ ls -la /proxies/
+        </h2>
+        <p className="text-indigo-500 font-mono text-sm">
+          Select a proxy plan, enter your target address, then checkout. Delivered as host:port:username:password.
+        </p>
+      </div>
+
+      {/* SocksDroid APK Notice */}
+      {showApkNotice && (
+        <div className="mb-8 p-5 border border-indigo-500/40 bg-indigo-500/10 rounded-lg flex items-start gap-3">
+          <div className="w-6 h-6 bg-indigo-500 rounded flex items-center justify-center shrink-0">
+            <span className="text-white text-xs font-bold">â¬‡</span>
+          </div>
+          <div>
+            <h3 className="text-indigo-300 font-mono text-sm font-bold mb-1">Download SocksDroid App</h3>
+            <p className="text-indigo-500 font-mono text-xs mb-2">
+              SocksDroid is a SOCKS5 proxy client for Android. Configure your purchased residential proxy with Server IP, Server Port, Username and Password.
+            </p>
+            <Button
+              onClick={() => setShowApkNotice(false)}
+              className="bg-indigo-500 hover:bg-indigo-400 text-black font-mono text-sm px-4 py-2 flex items-center gap-2"
+            >
+              <span className="text-lg">ðŸ“±</span>
+              Download SocksDroid APK
+            </Button>
+          </div>
+        </div>
+      )}
+
+      {/* Proxy Plans */}
+      <div className="mb-8">
+        <h3 className="text-indigo-400 font-mono text-sm mb-3">$ select-proxy-plan --plan=</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {PROXY_PLANS.map((plan) => {
+            const planTypeText =
+              plan.type === 'data' ? 'Pay per GB' : plan.type === 'port' ? 'Concurrent ports' : 'Static IP per month';
+            const planIcon =
+              plan.type === 'data' ? 'ðŸ“¦' : plan.type === 'port' ? 'ðŸ”Œ' : 'ðŸ“¶';
+            return (
+            <button
+              key={plan.id}
+              onClick={() => handleProxySelect(plan)}
+              className="p-4 border rounded-lg transition-all flex flex-col items-start gap-2"
+            >
+              <div className="flex items-center gap-1 mb-1">
+                <span className={selectedPlan?.id === plan.id ? 'text-indigo-400 font-bold' : 'text-indigo-500 font-mono text-sm'}>
+                  {planIcon}
+                </span>
+                <span className="text-indigo-400 font-mono text-xs ml-auto">${plan.price}</span>
+              </div>
+              <span className="text-indigo-300 font-mono text-sm font-medium">{plan.name}</span>
+              <span className="text-indigo-500 font-mono text-xs mt-1">{planTypeText}</span>
+            </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Address Form */}
+      {selectedPlan && (
+        <div className="mb-8 p-6 border border-indigo-500/30 bg-indigo-500/5 rounded-xl">
+          <div className="flex items-center gap-2 mb-4">
+            <Eye className="w-5 h-5 text-indigo-400" />
+            <h3 className="text-indigo-400 font-mono text-lg font-bold">$ configure-proxy --target=</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="col-span-2">
+              <label className="text-indigo-500 font-mono text-xs mb-1 block">Country (e.g. United States)</label>
+              <input
+                className="bg-black border border-indigo-500/40 text-indigo-400 font-mono rounded px-3 py-2 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 w-full"
+                placeholder="e.g. United States"
+                value={form.country}
+                onChange={(e) => setForm({ ...form, country: e.target.value })}
+              />
+            </div>
+            <div className="col-span-2">
+              <label className="text-indigo-500 font-mono text-xs mb-1 block">State</label>
+              <Select
+                value={form.state}
+                onValueChange={(value) => setForm({ ...form, state: value })}
+              >
+                <SelectTrigger className="bg-black border-indigo-500/40 text-indigo-400 font-mono rounded px-3 py-2 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 w-full">
+                  <SelectValue placeholder="Select state..." />
+                </SelectTrigger>
+                <SelectContent className="bg-black border-indigo-500/40 text-indigo-400 font-mono">
+                  {USA_STATES.map((state) => (
+                    <SelectItem key={state} value={state} className="text-indigo-400 font-mono">
+                      {state}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
+              <label className="text-indigo-500 font-mono text-xs mb-1 block">Street</label>
+              <input
+                className="bg-black border border-indigo-500/40 text-indigo-400 font-mono rounded px-3 py-2 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 w-full"
+                placeholder="e.g. 123 Main Street"
+                value={form.street}
+                onChange={(e) => setForm({ ...form, street: e.target.value })}
+              />
+            </div>
+            <div>
+              <label className="text-indigo-500 font-mono text-xs mb-1 block">Specific Address / Apartment</label>
+              <input
+                className="bg-black border border-indigo-500/40 text-indigo-400 font-mono rounded px-3 py-2 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 w-full"
+                placeholder="e.g. Apt 4B"
+                value={form.address}
+                onChange={(e) => setForm({ ...form, address: e.target.value })}
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex justify-end">
+            <Button
+              onClick={handleCheckout}
+              className="bg-indigo-500 hover:bg-indigo-400 text-black font-mono font-bold px-6 py-2 shadow-lg shadow-indigo-500/30"
+            >
+              $ ./checkout.sh --total=${selectedPlan.price}
+            </Button>
+          </div>
+        </div>
+      )}
+
+      {/* Empty State */}
+      {!selectedPlan && (
+        <div className="text-center py-16 border border-indigo-500/20">
+          <p className="text-indigo-500 font-mono">$ echo "Select a proxy plan above to configure your target address"</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function Products({ onProductSold }: { onProductSold?: (productName: string, price: number, location: string) => void }) {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const { ref, isVisible } = useScrollAnimation();
@@ -875,6 +1078,7 @@ export function Products({ onProductSold }: { onProductSold?: (productName: stri
               'accounts': 'border-amber-500 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400',
               'tools': 'border-red-500 bg-red-500/10 hover:bg-red-500/20 text-red-400',
               'fullz': 'border-pink-500 bg-pink-500/10 hover:bg-pink-500/20 text-pink-400',
+              'proxies': 'border-indigo-500 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400'
             };
             const activeColorMap: Record<string, string> = {
               'all': 'bg-blue-500 text-black border-blue-500 shadow-lg shadow-blue-500/50',
@@ -884,6 +1088,7 @@ export function Products({ onProductSold }: { onProductSold?: (productName: stri
               'accounts': 'bg-amber-500 text-black border-amber-500 shadow-lg shadow-amber-500/50',
               'tools': 'bg-red-500 text-black border-red-500 shadow-lg shadow-red-500/50',
               'fullz': 'bg-pink-500 text-black border-pink-500 shadow-lg shadow-pink-500/50',
+              'proxies': 'bg-indigo-500 text-black border-indigo-500 shadow-lg shadow-indigo-500/50'
             };
             const colorClass = categoryColors[category.id] || categoryColors['all'];
             const activeClass = activeColorMap[category.id] || activeColorMap['all'];
@@ -920,6 +1125,8 @@ export function Products({ onProductSold }: { onProductSold?: (productName: stri
         {/* Products Grid */}
         {activeCategory === 'fullz' ? (
           <FullzInventory onProductSold={onProductSold} />
+        ) : activeCategory === 'proxies' ? (
+          <ProxyInventory onProductSold={onProductSold} />
         ) : activeCategory === 'daily-drops' ? (
           <DailyDropsCollection products={filteredProducts} onProductSold={onProductSold} />
         ) : (
@@ -942,4 +1149,3 @@ export function Products({ onProductSold }: { onProductSold?: (productName: stri
   );
 }
 
-export { productRefs };
