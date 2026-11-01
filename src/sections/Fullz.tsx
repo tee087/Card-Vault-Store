@@ -39,7 +39,7 @@ const countryData = [
   {
     id: 'us',
     name: 'United States',
-    flag: '🇺🇸',
+    flag: 'US',
     code: 'US',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['John', 'James', 'Robert', 'Michael', 'William', 'David', 'Richard', 'Joseph', 'Thomas', 'Charles', 'Christopher', 'Daniel', 'Matthew', 'Anthony', 'Donald', 'Mark', 'Paul', 'Steven', 'Andrew', 'Joshua', 'Kenneth', 'Kevin', 'Brian', 'George', 'Edward'];
@@ -86,7 +86,7 @@ const countryData = [
   {
     id: 'eu',
     name: 'European Union',
-    flag: '🇪🇺',
+    flag: 'EU',
     code: 'EU',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['Hans', 'Klaus', 'Franz', 'Wolfgang', 'Heinz', 'Karl', 'Otto', 'Günther', 'Dieter', 'Horst', 'Jürgen', 'Peter', 'Werner', 'Gerhard', 'Walter', 'Heinrich', 'Helmut', 'Fritz', 'Kurt', 'Herbert', 'Johann', 'Rudolf', 'Ernst', 'Willi', 'Alfred'];
@@ -127,7 +127,7 @@ const countryData = [
   {
     id: 'uk',
     name: 'United Kingdom',
-    flag: '🇬🇧',
+    flag: 'UK',
     code: 'UK',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['James', 'John', 'David', 'Michael', 'Christopher', 'Matthew', 'Daniel', 'Andrew', 'Richard', 'Paul', 'Mark', 'Thomas', 'Stephen', 'Anthony', 'Charles', 'Robert', 'William', 'Joseph', 'Edward', 'George', 'Peter', 'Brian', 'Kevin', 'Patrick', 'Alan'];
@@ -168,7 +168,7 @@ const countryData = [
   {
     id: 'ca',
     name: 'Canada',
-    flag: '🇨🇦',
+    flag: 'CA',
     code: 'CA',
     entries: Array.from({ length: 50 }, (_, i) => {
       const firstNames = ['Michael', 'Christopher', 'Matthew', 'David', 'James', 'John', 'Robert', 'Daniel', 'Joseph', 'Andrew', 'Ryan', 'Nicholas', 'Tyler', 'William', 'Jonathan', 'Alexander', 'Brandon', 'Anthony', 'Kevin', 'Thomas', 'Eric', 'Steven', 'Justin', 'Brian', 'Adam'];
@@ -312,7 +312,7 @@ export function Fullz({ onProductSold }: { onProductSold?: (productName: string,
                   : 'border-pink-500/30 bg-black hover:border-pink-400 hover:bg-pink-500/10'
               }`}
             >
-              <span className="text-6xl group-hover:scale-110 transition-transform">{country.flag}</span>
+              <span className="text-pink-400 font-mono font-bold text-xl border border-pink-500/30 px-3 py-1 rounded group-hover:border-pink-400 transition-colors">{country.flag}</span>
               <span className="text-pink-300 font-mono text-sm">{country.name}</span>
               <span className="text-pink-500 font-mono text-xs">{country.entries.length} entries</span>
             </button>
@@ -324,7 +324,7 @@ export function Fullz({ onProductSold }: { onProductSold?: (productName: string,
           <div className="border border-pink-500/30 bg-black/50 rounded-lg overflow-hidden">
             <div className="p-4 border-b border-pink-500/30 bg-pink-500/10">
               <h3 className="text-pink-300 font-mono flex items-center gap-2">
-                <span className="text-2xl">{selectedCountry.flag}</span>
+                <span className="text-pink-400 font-mono font-bold text-lg border border-pink-500/30 px-2 py-0.5 rounded">{selectedCountry.flag}</span>
                 {selectedCountry.name} Fullz Database
                 <span className="text-pink-500 text-sm ml-2">({selectedCountry.entries.length} entries)</span>
               </h3>
