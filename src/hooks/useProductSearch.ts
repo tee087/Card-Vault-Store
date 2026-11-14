@@ -42,7 +42,7 @@ export function useProductSearch(products: Product[], filters: SearchFilters) {
         const matchesCountry = countries.length === 0 || countries.includes(productCountry);
 
         const matchesBrand = brands.length === 0 || 
-          product.name.split('|')[1]?.trim().split(' ')[0] ?? product.name.includes('Card');
+          (product.name.split('|')[1]?.trim().split(' ')[0] ?? product.name.includes('Card'));
 
         return matchesSearch && matchesPrice && matchesBalance && matchesCategory && matchesCountry && matchesBrand;
       })

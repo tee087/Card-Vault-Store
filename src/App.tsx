@@ -126,7 +126,6 @@ function App() {
   useEffect(() => {
     const accepted = checkTermsAccepted();
     setTermsAccepted(accepted);
-    setIsChecking(false);
 
     // Handle hash routing
     const handleHashChange = () => {
