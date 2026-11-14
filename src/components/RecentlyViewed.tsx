@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useRecentlyViewed } from '@/context/RecentlyViewedContext';
 import { useCart } from '@/context/CartContext';
 
-export function RecentlyViewed({ onNavigate }: { onNavigate?: (id: string) => void }) {
+export function RecentlyViewed() {
   const { recentlyViewed } = useRecentlyViewed();
   const { addToCart } = useCart();
 

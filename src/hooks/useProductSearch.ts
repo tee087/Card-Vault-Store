@@ -22,25 +22,27 @@ export function useProductSearch(products: Product[], filters: SearchFilters) {
         const matchesSearch = searchTerm === '' || 
           product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          product.bin?.toLowerCase().includes(searchTerm.toLowerCase());
+          (product.bin?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false);
 
         const matchesPrice = product.price >= minPrice && product.price <= maxPrice;
 
-        const minProdBalance = Math.min(...(product.stockOptions?.map(o => o.balance) || [product.balance || 0]));
-        const maxProdBalance = Math.max(...(product.stockOptions?.map(o => o.balance) || [product.balance || 0]));
+        const defaultBalance = product.balance ?? 0;
+        const minProdBalance = Math.min(...(product.stockOptions?.map(o => o.balance) ?? [defaultBalance]));
+        const maxProdBalance = Math.max(...(product.stockOptions?.map(o => o.balance) ?? [defaultBalance]));
         const matchesBalance = maxProdBalance >= minBalance && minProdBalance <= maxBalance;
 
         const matchesCategory = categories.length === 0 || categories.includes(product.category);
 
-        const productCountry = product.country || product.description.includes('United States') ? 'United States' : 
-                               product.description.includes('Europe') ? 'European Union' :
-                               product.description.includes('United Kingdom') ? 'United Kingdom' :
-                               product.description.includes('Canada') ? 'Canada' :
-                               product.description.includes('Australia') ? 'Australia' : 'Global';
+        const productCountry = product.country ?? 
+          (product.description.includes('United States') ? 'United States' : 
+          product.description.includes('Europe') ? 'European Union' :
+          product.description.includes('United Kingdom') ? 'United Kingdom' :
+          product.description.includes('Canada') ? 'Canada' :
+          product.description.includes('Australia') ? 'Australia' : 'Global');
         const matchesCountry = countries.length === 0 || countries.includes(productCountry);
 
         const matchesBrand = brands.length === 0 || 
-          product.name.split('|')[1]?.trim().split(' ')[0] || product.name.includes('Card');
+          product.name.split('|')[1]?.trim().split(' ')[0] ?? product.name.includes('Card');
 
         return matchesSearch && matchesPrice && matchesBalance && matchesCategory && matchesCountry && matchesBrand;
       })
@@ -49,8 +51,8 @@ export function useProductSearch(products: Product[], filters: SearchFilters) {
           case 'price_asc': return a.price - b.price;
           case 'price_desc': return b.price - a.price;
           case 'stock_desc': {
-            const aStock = a.stockOptions?.reduce((s, o) => s + o.stock, 0) || a.stock;
-            const bStock = b.stockOptions?.reduce((s, o) => s + o.stock, 0) || b.stock;
+            const aStock = a.stockOptions?.reduce((s, o) => s + o.stock, 0) ?? a.stock;
+            const bStock = b.stockOptions?.reduce((s, o) => s + o.stock, 0) ?? b.stock;
             return bStock - aStock;
           }
           case 'name': return a.name.localeCompare(b.name);

@@ -9,9 +9,12 @@ export interface Product {
   id: string;
   name: string;
   description: string;
+  bin?: string;
   price: number;
   originalPrice?: number;
   category: 'cards' | 'ccs' | 'logs' | 'accounts' | 'tools' | 'fullz' | 'daily-drops' | 'spamming-course' | 'hacking-course' | 'proxies' | 'dumps' | 'cvv' | 'rdp' | 'shells' | 'smtp' | 'stealers' | 'docs' | 'drops' | 'giftcards' | 'streaming';
+  country?: string;
+  balance?: number;
   badge?: string;
   features: string[];
   stock: number;

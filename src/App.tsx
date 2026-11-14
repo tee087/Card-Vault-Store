@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { CartProvider } from '@/context/CartContext';
 import { StoreProvider } from '@/context/StoreContext';
 import { FavoritesProvider } from '@/context/FavoritesContext';
@@ -74,7 +74,6 @@ const locations = [
 
 function App() {
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const [isChecking, setIsChecking] = useState(true);
   const [currentPage, setCurrentPage] = useState<string>('home');
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
