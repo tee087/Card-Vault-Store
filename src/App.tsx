@@ -174,13 +174,25 @@ function App() {
     );
   }
 
-  // Show SignUp page
+  // Show SignUp page - allowed without terms acceptance (it's part of sign-up flow)
   if (currentPage === 'signup') {
     return (
       <StoreProvider>
         <SignUp />
       </StoreProvider>
     );
+  }
+
+  // Block if terms not accepted (except for signup which is part of sign-up flow)
+  if (!termsAccepted) {
+    const hash = window.location.hash.replace('#', '');
+    if (hash === 'terms' || hash === 'privacy') {
+      // Allow access to terms/privacy without acceptance
+    } else {
+      // Redirect to terms page first
+      window.location.hash = 'terms';
+      return null;
+    }
   }
 
   // Show Messages page
@@ -231,18 +243,6 @@ function App() {
         </CartProvider>
       </StoreProvider>
     );
-  }
-
-  if (!termsAccepted) {
-    // Check if we're on terms or privacy page - still require acceptance
-    const hash = window.location.hash.replace('#', '');
-    if (hash === 'terms' || hash === 'privacy') {
-      // Allow access to terms/privacy without acceptance
-    } else {
-      // Redirect to terms page first
-      window.location.hash = 'terms';
-      return null;
-    }
   }
 
   return (
