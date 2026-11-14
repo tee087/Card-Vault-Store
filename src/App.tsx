@@ -260,7 +260,7 @@ function App() {
     // Check if we're on terms or privacy page - still require acceptance
     const hash = window.location.hash.replace('#', '');
     if (hash === 'terms' || hash === 'privacy' || hash === 'signup') {
-      // Allow access to terms/privacy/signup without acceptance
+      // Allow access to terms/privacy without acceptance
     } else {
       // Redirect to terms page first
       window.location.hash = 'terms';
