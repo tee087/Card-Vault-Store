@@ -73,88 +73,88 @@ export const products: Product[] = [
   {
     id: 'bin-001',
     name: '414720*9408 | Chase Bank USA N.A.',
-    description: 'VISAK CARD | Classic | United States | Fresh BIN',
-    price: 5,
+    description: 'VISA CARD | Classic | United States | Fresh BIN',
+    price: 63,
     category: 'cards',
     features: ['BIN: 414720', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Chase Bank USA, N.A.', 'Country: United States', 'Fresh Inventory'],
     stock: 50,
     rating: 4.8,
     reviews: 128,
     stockOptions: [
-      { price: 5, balance: 100, stock: 25, quality: 'Standard' },
-      { price: 8, balance: 250, stock: 15, quality: 'Premium' },
-      { price: 15, balance: 500, stock: 10, quality: 'Elite' }
+      { price: 63, balance: 6300, stock: 15, quality: 'Standard' },
+      { price: 126, balance: 12600, stock: 12, quality: 'Premium' },
+      { price: 252, balance: 25200, stock: 10, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-002',
     name: '440066*6611 | Bank of America N.A.',
     description: 'MASTERCARD | Classic | United States | Verified BIN',
-    price: 5,
+    price: 65,
     category: 'cards',
     features: ['BIN: 440066', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Bank of America, N.A.', 'Country: United States', 'Verified Status'],
     stock: 45,
     rating: 4.7,
     reviews: 112,
     stockOptions: [
-      { price: 5, balance: 100, stock: 20, quality: 'Standard' },
-      { price: 7, balance: 250, stock: 12, quality: 'Premium' },
-      { price: 12, balance: 400, stock: 8, quality: 'Elite' }
+      { price: 65, balance: 6500, stock: 12, quality: 'Standard' },
+      { price: 130, balance: 13000, stock: 10, quality: 'Premium' },
+      { price: 260, balance: 26000, stock: 8, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-003',
     name: '426684*4335 | Chase Bank USA N.A.',
     description: 'VISA CARD | Classic | United States | Active BIN',
-    price: 5,
+    price: 67,
     category: 'cards',
     features: ['BIN: 426684', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Chase Bank USA, N.A.', 'Country: United States', 'Active Inventory'],
     stock: 42,
     rating: 4.5,
     reviews: 87,
     stockOptions: [
-      { price: 5, balance: 100, stock: 20, quality: 'Standard' },
-      { price: 9, balance: 250, stock: 12, quality: 'Premium' },
-      { price: 15, balance: 500, stock: 6, quality: 'Elite' }
+      { price: 67, balance: 6700, stock: 12, quality: 'Standard' },
+      { price: 134, balance: 13400, stock: 10, quality: 'Premium' },
+      { price: 268, balance: 26800, stock: 7, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-004',
     name: '410039*4291 | Citibank N.A.',
     description: 'VISA CARD | Classic | United States | Citi Classic',
-    price: 5,
+    price: 69,
     category: 'cards',
     features: ['BIN: 410039', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Citibank, N.A.', 'Country: United States', 'Citi Classic Card'],
     stock: 35,
     rating: 4.4,
     reviews: 78,
     stockOptions: [
-      { price: 5, balance: 100, stock: 18, quality: 'Standard' },
-      { price: 9, balance: 250, stock: 12, quality: 'Premium' },
-      { price: 15, balance: 500, stock: 5, quality: 'Elite' }
+      { price: 69, balance: 6900, stock: 12, quality: 'Standard' },
+      { price: 138, balance: 13800, stock: 10, quality: 'Premium' },
+      { price: 276, balance: 27600, stock: 7, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-005',
     name: '517805*3079 | Capital One Bank USA N.A.',
     description: 'MASTERCARD | Platinum | United States | Capital One Platinum',
-    price: 10,
+    price: 75,
     category: 'cards',
     features: ['BIN: 517805', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Capital One Bank (USA), N.A.', 'Country: United States', 'Capital One Platinum'],
-    stock: 60,
+    stock: 55,
     rating: 4.6,
     reviews: 145,
     stockOptions: [
-      { price: 10, balance: 400, stock: 20, quality: 'Platinum Standard' },
-      { price: 18, balance: 800, stock: 15, quality: 'Platinum Premium' },
-      { price: 30, balance: 1500, stock: 10, quality: 'Platinum Elite' }
+      { price: 75, balance: 7500, stock: 15, quality: 'Platinum Standard' },
+      { price: 150, balance: 15000, stock: 12, quality: 'Platinum Premium' },
+      { price: 300, balance: 30000, stock: 10, quality: 'Platinum Elite' }
     ]
   },
   {
     id: 'bin-006',
     name: '515676*2979 | Capital One Bank USA N.A.',
     description: 'MASTERCARD | World Elite | United States | Capital One World Elite',
-    price: 12,
+    price: 85,
     category: 'cards',
     badge: 'Elite',
     features: ['BIN: 515676', 'Type: Credit', 'Sub Brand: World Elite', 'Issuer: Capital One Bank (USA), N.A.', 'Country: United States', 'Capital One World Elite'],
@@ -162,145 +162,145 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 156,
     stockOptions: [
-      { price: 12, balance: 500, stock: 12, quality: 'World Elite Standard' },
-      { price: 22, balance: 1000, stock: 10, quality: 'World Elite Premium' },
-      { price: 38, balance: 2000, stock: 8, quality: 'World Elite Elite' }
+      { price: 85, balance: 8500, stock: 10, quality: 'World Elite Standard' },
+      { price: 170, balance: 17000, stock: 8, quality: 'World Elite Premium' },
+      { price: 340, balance: 34000, stock: 6, quality: 'World Elite Elite' }
     ]
   },
   {
     id: 'bin-007',
     name: '601100*2276 | Discover Bank',
     description: 'DISCOVER | Personal | United States | Discover it Card',
-    price: 6,
+    price: 70,
     category: 'cards',
     features: ['BIN: 601100', 'Type: Credit', 'Sub Brand: Personal', 'Issuer: Discover Bank', 'Country: United States', 'Discover it Card'],
-    stock: 65,
+    stock: 50,
     rating: 4.7,
     reviews: 134,
     stockOptions: [
-      { price: 6, balance: 300, stock: 25, quality: 'Personal Standard' },
-      { price: 10, balance: 500, stock: 20, quality: 'Personal Premium' },
-      { price: 18, balance: 1000, stock: 15, quality: 'Personal Elite' }
+      { price: 70, balance: 7000, stock: 15, quality: 'Personal Standard' },
+      { price: 140, balance: 14000, stock: 12, quality: 'Personal Premium' },
+      { price: 280, balance: 28000, stock: 10, quality: 'Personal Elite' }
     ]
   },
   {
     id: 'bin-008',
     name: '400022*3539 |Navy F.C.U.',
     description: 'DEBIT CARD | Classic | United States | Navy Debit',
-    price: 4,
+    price: 60,
     category: 'cards',
     features: ['BIN: 400022', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Navy F.C.U.', 'Country: United States', 'Navy Federal Debit'],
-    stock: 55,
+    stock: 52,
     rating: 4.6,
     reviews: 112,
     stockOptions: [
-      { price: 4, balance: 50, stock: 20, quality: 'Navy Debit Standard' },
-      { price: 7, balance: 150, stock: 13, quality: 'Navy Debit Premium' },
-      { price: 12, balance: 300, stock: 8, quality: 'Navy Debit Elite' }
+      { price: 60, balance: 6000, stock: 15, quality: 'Navy Debit Standard' },
+      { price: 120, balance: 12000, stock: 12, quality: 'Navy Debit Premium' },
+      { price: 240, balance: 24000, stock: 10, quality: 'Navy Debit Elite' }
     ]
   },
   {
     id: 'bin-009',
     name: '434256*3532 | Wells Fargo Bank N.A.',
     description: 'DEBIT CARD | Classic | United States | Wells Fargo Everyday',
-    price: 4,
+    price: 58,
     category: 'cards',
     features: ['BIN: 434256', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'Wells Fargo Everyday Checking'],
     stock: 48,
     rating: 4.5,
     reviews: 92,
     stockOptions: [
-      { price: 4, balance: 50, stock: 20, quality: 'Standard' },
-      { price: 8, balance: 150, stock: 14, quality: 'Premium' },
-      { price: 14, balance: 300, stock: 8, quality: 'Elite' }
+      { price: 58, balance: 5800, stock: 15, quality: 'Standard' },
+      { price: 116, balance: 11600, stock: 12, quality: 'Premium' },
+      { price: 232, balance: 23200, stock: 10, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-010',
     name: '438857*3404 | Chase Bank USA N.A.',
     description: 'VISA CARD | Classic | United States | Chase Credit Flex',
-    price: 5,
+    price: 62,
     category: 'cards',
     features: ['BIN: 438857', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Chase Bank USA, N.A.', 'Country: United States', 'Chase Credit Flex'],
     stock: 42,
     rating: 4.4,
     reviews: 89,
     stockOptions: [
-      { price: 5, balance: 100, stock: 20, quality: 'Standard' },
-      { price: 8, balance: 250, stock: 12, quality: 'Premium' },
-      { price: 15, balance: 500, stock: 10, quality: 'Elite' }
+      { price: 62, balance: 6200, stock: 15, quality: 'Standard' },
+      { price: 124, balance: 12400, stock: 12, quality: 'Premium' },
+      { price: 248, balance: 24800, stock: 8, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-011',
     name: '542418*1804 | Citibank N.A.',
     description: 'VISA CARD | Platinum | United States | Citi Platinum',
-    price: 10,
+    price: 78,
     category: 'cards',
     features: ['BIN: 542418', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Citibank N.A.', 'Country: United States', 'Citi Platinum Card'],
-    stock: 36,
+    stock: 40,
     rating: 4.7,
     reviews: 134,
     stockOptions: [
-      { price: 10, balance: 400, stock: 15, quality: 'Platinum Standard' },
-      { price: 18, balance: 800, stock: 12, quality: 'Platinum Premium' },
-      { price: 30, balance: 1500, stock: 9, quality: 'Platinum Elite' }
+      { price: 78, balance: 7800, stock: 12, quality: 'Platinum Standard' },
+      { price: 156, balance: 15600, stock: 10, quality: 'Platinum Premium' },
+      { price: 312, balance: 31200, stock: 8, quality: 'Platinum Elite' }
     ]
   },
   {
     id: 'bin-012',
     name: '483316*1682 | JPMorgan Chase Bank N.A.',
     description: 'DEBIT CARD | Classic | United States | Chase Private Client',
-    price: 4,
+    price: 68,
     category: 'cards',
     features: ['BIN: 483316', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: JPMorgan Chase Bank, N.A.', 'Country: United States', 'Chase Private Client Debit'],
-    stock: 40,
+    stock: 38,
     rating: 4.6,
     reviews: 112,
     stockOptions: [
-      { price: 4, balance: 50, stock: 20, quality: 'Standard' },
-      { price: 8, balance: 150, stock: 12, quality: 'Premium' },
-      { price: 14, balance: 300, stock: 8, quality: 'Elite' }
+      { price: 68, balance: 6800, stock: 12, quality: 'Standard' },
+      { price: 136, balance: 13600, stock: 10, quality: 'Premium' },
+      { price: 272, balance: 27200, stock: 8, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-013',
     name: '535456*1675 | Revolut Ltd',
     description: 'DEBIT CARD | World | Ireland | Revolut International',
-    price: 8,
+    price: 72,
     category: 'cards',
     badge: 'International',
     features: ['BIN: 535456', 'Type: Debit', 'Sub Brand: World', 'Issuer: Revolut Ltd', 'Country: Ireland', 'Revolut International Card'],
-    stock: 38,
+    stock: 36,
     rating: 4.7,
     reviews: 112,
     stockOptions: [
-      { price: 8, balance: 300, stock: 18, quality: 'World Standard' },
-      { price: 15, balance: 600, stock: 12, quality: 'World Premium' },
-      { price: 25, balance: 1200, stock: 8, quality: 'World Elite' }
+      { price: 72, balance: 7200, stock: 12, quality: 'World Standard' },
+      { price: 144, balance: 14400, stock: 10, quality: 'World Premium' },
+      { price: 288, balance: 28800, stock: 8, quality: 'World Elite' }
     ]
   },
   {
     id: 'bin-014',
     name: '481582*1663 | Bank of America N.A.',
     description: 'DEBIT CARD | Classic | United States | BOA Essential Debit',
-    price: 4,
+    price: 59,
     category: 'cards',
     features: ['BIN: 481582', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Bank of America, N.A.', 'Country: United States', 'BOA Essential Debit'],
-    stock: 44,
+    stock: 54,
     rating: 4.4,
     reviews: 78,
     stockOptions: [
-      { price: 4, balance: 50, stock: 20, quality: 'Standard' },
-      { price: 7, balance: 150, stock: 13, quality: 'Premium' },
-      { price: 10, balance: 250, stock: 8, quality: 'Elite' }
+      { price: 59, balance: 5900, stock: 15, quality: 'Standard' },
+      { price: 118, balance: 11800, stock: 12, quality: 'Premium' },
+      { price: 236, balance: 23600, stock: 10, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-015',
     name: '552433*1635 | Bank of America N.A.',
     description: 'MASTERCARD | World | United States | BOA World Elite Mastercard',
-    price: 12,
+    price: 88,
     category: 'cards',
     badge: 'World',
     features: ['BIN: 552433', 'Type: Credit', 'Sub Brand: World', 'Issuer: Bank of America, N.A.', 'Country: United States', 'BOA World Elite'],
@@ -308,48 +308,48 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 145,
     stockOptions: [
-      { price: 12, balance: 500, stock: 12, quality: 'World Standard' },
-      { price: 22, balance: 1000, stock: 10, quality: 'World Premium' },
-      { price: 38, balance: 2000, stock: 10, quality: 'World Elite' }
+      { price: 88, balance: 8800, stock: 10, quality: 'World Standard' },
+      { price: 176, balance: 17600, stock: 8, quality: 'World Premium' },
+      { price: 352, balance: 35200, stock: 6, quality: 'World Elite' }
     ]
   },
   {
     id: 'bin-016',
     name: '434258*1580 | Wells Fargo Bank N.A.',
     description: 'DEBIT CARD | Classic | United States | Wells Fargo Everyday',
-    price: 4,
+    price: 61,
     category: 'cards',
     features: ['BIN: 434258', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'Wells Fargo Everyday Checking'],
     stock: 40,
     rating: 4.5,
     reviews: 95,
     stockOptions: [
-      { price: 4, balance: 50, stock: 18, quality: 'Standard' },
-      { price: 8, balance: 150, stock: 14, quality: 'Premium' },
-      { price: 13, balance: 250, stock: 8, quality: 'Elite' }
+      { price: 61, balance: 6100, stock: 12, quality: 'Standard' },
+      { price: 122, balance: 12200, stock: 10, quality: 'Premium' },
+      { price: 244, balance: 24400, stock: 8, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-017',
     name: '427082*1487 | USAA Savings Bank',
     description: 'VISA CARD | Classic | United States | USAA Military Credit',
-    price: 5,
+    price: 64,
     category: 'cards',
     features: ['BIN: 427082', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: USAA Savings Bank', 'Country: United States', 'USAA Military Card'],
     stock: 38,
     rating: 4.7,
     reviews: 123,
     stockOptions: [
-      { price: 5, balance: 100, stock: 18, quality: 'Standard' },
-      { price: 9, balance: 250, stock: 12, quality: 'Premium' },
-      { price: 16, balance: 500, stock: 6, quality: 'Elite' }
+      { price: 64, balance: 6400, stock: 12, quality: 'Standard' },
+      { price: 128, balance: 12800, stock: 10, quality: 'Premium' },
+      { price: 256, balance: 25600, stock: 8, quality: 'Elite' }
     ]
   },
   {
     id: 'bin-018',
     name: '400023*1461 |Navy F.C.U.',
     description: 'DEBIT CARD | Business | United States | Navy Business',
-    price: 6,
+    price: 76,
     category: 'cards',
     badge: 'Business',
     features: ['BIN: 400023', 'Type: Debit', 'Sub Brand: Business', 'Issuer: Navy F.C.U.', 'Country: United States', 'Navy Federal Business Account'],
@@ -357,16 +357,16 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 108,
     stockOptions: [
-      { price: 6, balance: 100, stock: 15, quality: 'Business Standard' },
-      { price: 12, balance: 300, stock: 12, quality: 'Business Premium' },
-      { price: 20, balance: 600, stock: 8, quality: 'Business Elite' }
+      { price: 76, balance: 7600, stock: 12, quality: 'Business Standard' },
+      { price: 152, balance: 15200, stock: 10, quality: 'Business Premium' },
+      { price: 304, balance: 30400, stock: 8, quality: 'Business Elite' }
     ]
   },
   {
     id: 'bin-019',
     name: '416598*2295 | Revolut Ltd',
     description: 'DEBIT CARD | Infinite | United Kingdom | Revolut Premium',
-    price: 15,
+    price: 95,
     category: 'cards',
     badge: 'Premium',
     features: ['BIN: 416598', 'Type: Debit', 'Sub Brand: Infinite', 'Issuer: Revolut, Ltd.', 'Country: United Kingdom', 'Revolut Premium Infinite'],
@@ -374,25 +374,25 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 156,
     stockOptions: [
-      { price: 15, balance: 600, stock: 12, quality: 'Infinite Standard' },
-      { price: 28, balance: 1200, stock: 10, quality: 'Infinite Premium' },
-      { price: 45, balance: 2500, stock: 6, quality: 'Infinite Elite' }
+      { price: 95, balance: 9500, stock: 10, quality: 'Infinite Standard' },
+      { price: 190, balance: 19000, stock: 8, quality: 'Infinite Premium' },
+      { price: 380, balance: 38000, stock: 6, quality: 'Infinite Elite' }
     ]
   },
   {
     id: 'bin-020',
     name: '601100*2276 | Discover Bank',
     description: 'DISCOVER | Personal | United States | Discover it Card',
-    price: 6,
+    price: 69,
     category: 'cards',
     features: ['BIN: 601100', 'Type: Credit', 'Sub Brand: Personal', 'Issuer: Discover Bank', 'Country: United States', 'Discover it Card'],
-    stock: 60,
+    stock: 48,
     rating: 4.7,
     reviews: 134,
     stockOptions: [
-      { price: 6, balance: 300, stock: 25, quality: 'Personal Standard' },
-      { price: 10, balance: 500, stock: 20, quality: 'Personal Premium' },
-      { price: 18, balance: 1000, stock: 15, quality: 'Personal Elite' }
+      { price: 69, balance: 6900, stock: 15, quality: 'Personal Standard' },
+      { price: 138, balance: 13800, stock: 12, quality: 'Personal Premium' },
+      { price: 276, balance: 27600, stock: 10, quality: 'Personal Elite' }
     ]
   },
   // Cards Category
