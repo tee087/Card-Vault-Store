@@ -30,9 +30,5 @@ export default defineConfig({
         }
       }
     }
-  },
-  esbuild: {
-    removeWhitespace: true,
-    treeShaking: true,
   }
 })

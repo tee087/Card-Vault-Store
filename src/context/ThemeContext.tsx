@@ -30,7 +30,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, [theme]);
 
   useEffect(() => {
-    document.documentElement className = theme === 'dark' ? 'dark' : 'light';
+    document.documentElement.className = theme === 'dark' ? 'dark' : 'light';
   }, [theme]);
 
   return (
