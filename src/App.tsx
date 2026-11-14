@@ -1,6 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import { CartProvider } from '@/context/CartContext';
 import { StoreProvider } from '@/context/StoreContext';
+import { FavoritesProvider } from '@/context/FavoritesContext';
+import { RecentlyViewedProvider } from '@/context/RecentlyViewedContext';
+import { ThemeProvider } from '@/context/ThemeContext';
 import { MatrixRain } from '@/components/MatrixRain';
 import { Navigation } from '@/sections/Navigation';
 import { Hero } from '@/sections/Hero';
@@ -20,6 +23,9 @@ import { Fullz } from '@/sections/Fullz';
 import { SignUp } from '@/sections/SignUp';
 import { Messages } from '@/sections/Messages';
 import { SoldNotification } from '@/components/SoldNotification';
+import { RecentlyViewed } from '@/components/RecentlyViewed';
+import { FavoritesSection } from '@/components/FavoritesSection';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface Notification {
   id: string;
@@ -242,46 +248,51 @@ function App() {
   }
 
   return (
-    <StoreProvider>
-      <CartProvider>
-        <div className="min-h-screen bg-black text-green-500 font-mono relative">
-        {/* Matrix Rain Background */}
-        <MatrixRain />
-        
-        {/* Scanline overlay */}
-        <div className="fixed inset-0 scanline pointer-events-none z-[5]" />
-        
-        {/* CRT flicker */}
-        <div className="fixed inset-0 bg-green-500/[0.02] animate-flicker pointer-events-none z-[5]" />
-        
-        <Navigation />
-        <main className="relative z-10">
-          <Hero />
-          <Products onProductSold={showSoldNotification} />
-          <Features />
-          <Testimonials />
-          <FAQ />
-          <Contact />
-        </main>
-        <Footer />
-        <CartDrawer />
-        <Toaster position="bottom-right" />
-        <Chatbot />
-        
-            {/* Sold Notifications */}
-            {notifications.map((notification) => (
-              <SoldNotification
-                key={notification.id}
-                productName={notification.productName}
-                location={notification.location}
-                price={notification.price}
-                balance={notification.balance}
-                onClose={() => setNotifications(prev => prev.filter(n => n.id !== notification.id))}
-              />
-            ))}
-      </div>
-      </CartProvider>
-    </StoreProvider>
+    <ThemeProvider>
+      <StoreProvider>
+        <FavoritesProvider>
+          <RecentlyViewedProvider>
+            <CartProvider>
+              <div className="min-h-screen bg-black text-green-500 font-mono relative">
+              <MatrixRain />
+              <div className="fixed inset-0 scanline pointer-events-none z-[5]" />
+              <div className="fixed inset-0 bg-green-500/[0.02] animate-flicker pointer-events-none z-[5]" />
+              
+              <Navigation />
+              <div className="absolute top-4 right-4 z-[100]">
+                <ThemeToggle />
+              </div>
+              
+              <main className="relative z-10">
+                <Hero />
+                <Products onProductSold={showSoldNotification} />
+                <Features />
+                <Testimonials />
+                <FAQ />
+                <Contact />
+              </main>
+              <Footer />
+              <CartDrawer />
+              <RecentlyViewed />
+              <FavoritesSection />
+              <Toaster position="bottom-right" />
+              <Chatbot />
+              {notifications.map((notification) => (
+                <SoldNotification
+                  key={notification.id}
+                  productName={notification.productName}
+                  location={notification.location}
+                  price={notification.price}
+                  balance={notification.balance}
+                  onClose={() => setNotifications(prev => prev.filter(n => n.id !== notification.id))}
+                />
+              ))}
+            </div>
+            </CartProvider>
+          </RecentlyViewedProvider>
+        </FavoritesProvider>
+      </StoreProvider>
+    </ThemeProvider>
   );
 }
 
