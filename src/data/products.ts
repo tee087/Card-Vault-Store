@@ -83,7 +83,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 63, balance: 7300, stock: 20, quality: 'Standard' },
       { price: 126, balance: 28500, stock: 15, quality: 'Premium' },
-      { price: 252, balance: 12500, stock: 10, quality: 'Elite' }
+      { price: 252, balance: 12500, stock: 15, quality: 'Elite' }
     ]
   },
   {
@@ -99,7 +99,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 65, balance: 4500, stock: 18, quality: 'Standard' },
       { price: 130, balance: 39800, stock: 14, quality: 'Premium' },
-      { price: 260, balance: 18900, stock: 8, quality: 'Elite' }
+      { price: 260, balance: 18900, stock: 13, quality: 'Elite' }
     ]
   },
   {
@@ -115,7 +115,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 67, balance: 32000, stock: 15, quality: 'Standard' },
       { price: 134, balance: 9850, stock: 14, quality: 'Premium' },
-      { price: 268, balance: 45000, stock: 8, quality: 'Elite' }
+      { price: 268, balance: 45000, stock: 13, quality: 'Elite' }
     ]
   },
   {
@@ -129,9 +129,9 @@ export const products: Product[] = [
     rating: 4.4,
     reviews: 78,
     stockOptions: [
-      { price: 69, balance: 28000, stock: 18, quality: 'Standard' },
+      { price: 69, balance: 28000, stock: 15, quality: 'Standard' },
       { price: 138, balance: 12000, stock: 12, quality: 'Premium' },
-      { price: 276, balance: 38000, stock: 5, quality: 'Elite' }
+      { price: 276, balance: 38000, stock: 8, quality: 'Elite' }
     ]
   },
   {
@@ -147,7 +147,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 75, balance: 42000, stock: 20, quality: 'Platinum Standard' },
       { price: 150, balance: 18500, stock: 15, quality: 'Platinum Premium' },
-      { price: 300, balance: 32000, stock: 10, quality: 'Platinum Elite' }
+      { price: 300, balance: 32000, stock: 20, quality: 'Platinum Elite' }
     ]
   },
   {
@@ -179,8 +179,8 @@ export const products: Product[] = [
     reviews: 134,
     stockOptions: [
       { price: 70, balance: 22000, stock: 25, quality: 'Personal Standard' },
-      { price: 140, balance: 35000, stock: 20, quality: 'Personal Premium' },
-      { price: 280, balance: 15500, stock: 15, quality: 'Personal Elite' }
+      { price: 140, balance: 35000, stock: 15, quality: 'Personal Premium' },
+      { price: 280, balance: 15500, stock: 10, quality: 'Personal Elite' }
     ]
   },
   {
@@ -195,8 +195,8 @@ export const products: Product[] = [
     reviews: 112,
     stockOptions: [
       { price: 60, balance: 47500, stock: 20, quality: 'Navy Debit Standard' },
-      { price: 120, balance: 19000, stock: 13, quality: 'Navy Debit Premium' },
-      { price: 240, balance: 38000, stock: 8, quality: 'Navy Debit Elite' }
+      { price: 120, balance: 19000, stock: 12, quality: 'Navy Debit Premium' },
+      { price: 240, balance: 38000, stock: 20, quality: 'Navy Debit Elite' }
     ]
   },
   {
@@ -212,7 +212,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 58, balance: 33000, stock: 20, quality: 'Standard' },
       { price: 116, balance: 14500, stock: 14, quality: 'Premium' },
-      { price: 232, balance: 47000, stock: 8, quality: 'Elite' }
+      { price: 232, balance: 47000, stock: 14, quality: 'Elite' }
     ]
   },
   {
@@ -244,7 +244,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 78, balance: 28000, stock: 15, quality: 'Platinum Standard' },
       { price: 156, balance: 52000, stock: 12, quality: 'Platinum Premium' },
-      { price: 312, balance: 18000, stock: 9, quality: 'Platinum Elite' }
+      { price: 312, balance: 18000, stock: 13, quality: 'Platinum Elite' }
     ]
   },
   {
@@ -260,7 +260,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 68, balance: 45000, stock: 20, quality: 'Standard' },
       { price: 136, balance: 22000, stock: 12, quality: 'Premium' },
-      { price: 272, balance: 38000, stock: 8, quality: 'Elite' }
+      { price: 272, balance: 38000, stock: 6, quality: 'Elite' }
     ]
   },
   {
@@ -277,7 +277,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 72, balance: 52000, stock: 18, quality: 'World Standard' },
       { price: 144, balance: 19000, stock: 12, quality: 'World Premium' },
-      { price: 288, balance: 41000, stock: 8, quality: 'World Elite' }
+      { price: 288, balance: 41000, stock: 6, quality: 'World Elite' }
     ]
   },
   {
@@ -293,7 +293,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 59, balance: 32000, stock: 20, quality: 'Standard' },
       { price: 118, balance: 48000, stock: 13, quality: 'Premium' },
-      { price: 236, balance: 15000, stock: 8, quality: 'Elite' }
+      { price: 236, balance: 15000, stock: 21, quality: 'Elite' }
     ]
   },
   {
@@ -342,7 +342,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 64, balance: 19000, stock: 18, quality: 'Standard' },
       { price: 128, balance: 51000, stock: 12, quality: 'Premium' },
-      { price: 256, balance: 24000, stock: 6, quality: 'Elite' }
+      { price: 256, balance: 24000, stock: 8, quality: 'Elite' }
     ]
   },
   {
@@ -392,7 +392,7 @@ export const products: Product[] = [
     stockOptions: [
       { price: 69, balance: 55000, stock: 25, quality: 'Personal Standard' },
       { price: 138, balance: 17500, stock: 20, quality: 'Personal Premium' },
-      { price: 276, balance: 39000, stock: 15, quality: 'Personal Elite' }
+      { price: 276, balance: 39000, stock: 3, quality: 'Personal Elite' }
     ]
   },
   // Cards Category
