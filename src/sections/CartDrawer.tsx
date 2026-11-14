@@ -96,20 +96,27 @@ export function CartDrawer() {
       `💵 *Total:* $${paymentDetails.amountUsd.toFixed(2)}\n` +
       `⏰ *Time:* ${new Date().toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })}`;
 
-    const sent = await sendTelegramPhoto(proofFile, caption, {
-      orderId: paymentDetails.orderId,
-      deliveryMethod,
-      deliveryInfo
-    });
+    try {
+      const sent = await sendTelegramPhoto(proofFile, caption, {
+        orderId: paymentDetails.orderId,
+        deliveryMethod,
+        deliveryInfo
+      });
 
-    setProcessing(false);
+      setProcessing(false);
 
-    if (sent) {
-      setProofOpen(false);
-      setPaymentConfirmed('pending');
-      startPolling(paymentDetails.orderId);
-    } else {
-      alert('Failed to send payment proof. Please try again or contact support.');
+      if (sent) {
+        setProofOpen(false);
+        setPaymentConfirmed('pending');
+        startPolling(paymentDetails.orderId);
+      } else {
+        console.error('Telegram photo send returned false');
+        alert('Failed to send payment proof. Please try again or contact support.');
+      }
+    } catch (error) {
+      console.error('Submit proof error:', error);
+      alert('Error submitting proof. Please try again or contact support.');
+      setProcessing(false);
     }
   };
 
