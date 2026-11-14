@@ -19,7 +19,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           react: ['react', 'react-dom'],
-          ui: ['@/components/ui'],
           sections: [
             '@/sections/Products',
             '@/sections/Hero',
