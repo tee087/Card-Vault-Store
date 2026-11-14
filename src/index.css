@@ -4,6 +4,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --animate-duration: 0.5s;
+  --transition-duration: 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-reduced-data: reduce) {
+  .glow-green,
+  .glow-green-strong {
+    box-shadow: none;
+  }
+}
+
+.fast-transition {
+  transition-duration: var(--transition-duration);
+}
+
 @layer base {
   :root {
     --background: 0 0% 0%;

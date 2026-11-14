@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { CartProvider } from '@/context/CartContext';
 import { StoreProvider } from '@/context/StoreContext';
 import { MatrixRain } from '@/components/MatrixRain';
@@ -29,6 +29,43 @@ interface Notification {
   balance: number;
 }
 
+const productsList = [
+  { name: "Visa Gold Card", price: 45 },
+  { name: "Mastercard Platinum", price: 65 },
+  { name: "Amex Black Card", price: 95 },
+  { name: "Discover Card", price: 35 },
+  { name: "CVV Dump 101", price: 55 },
+  { name: "Fresh Base CC", price: 25 },
+  { name: "Linkable CC", price: 75 },
+  { name: "VBV Passed CC", price: 120 },
+  { name: "Bank Log USA", price: 85 },
+  { name: "Chase Bank Log", price: 110 },
+  { name: "Wells Fargo Log", price: 95 },
+  { name: "EU Bank Log", price: 130 },
+  { name: "PayPal Verified", price: 120 },
+  { name: "Amazon Prime Account", price: 25 },
+  { name: "CashApp Verified", price: 65 },
+  { name: "Netflix Premium", price: 15 },
+  { name: "Spotify Lifetime", price: 20 },
+  { name: "Credit Card Fullz", price: 35 },
+  { name: "US Fullz Premium", price: 55 },
+  { name: "EU Fullz Package", price: 70 },
+  { name: "CA Fullz", price: 45 },
+  { name: "Card Checker Pro", price: 40 },
+  { name: "BIN Lookup Tool", price: 30 },
+  { name: "VPN Lifetime", price: 25 },
+  { name: "Socks5 Residential", price: 35 },
+  { name: "Carding Master Course", price: 250 },
+  { name: "Spamming Academy", price: 180 },
+  { name: "Hacking Fundamentals", price: 120 },
+  { name: "Bank Transfer Method", price: 150 }
+];
+
+const locations = [
+  "United States", "Germany", "United Kingdom", "Canada", "Australia",
+  "France", "Netherlands", "Spain", "Italy", "Sweden"
+];
+
 function App() {
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [isChecking, setIsChecking] = useState(true);
@@ -54,83 +91,27 @@ function App() {
     };
   }, []);
 
-  // Live recent purchase notifications (like shadowswipe.cc)
+  const showRandomPurchase = () => {
+    const randomProduct = productsList[Math.floor(Math.random() * productsList.length)];
+    const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+    const id = Date.now().toString();
+    setNotifications(prev => [...prev, { 
+      id, 
+      productName: randomProduct.name,
+      location: randomLocation,
+      price: randomProduct.price, 
+      balance: Math.floor(Math.random() * 5000 + 500)
+    }]);
+    setTimeout(() => {
+      setNotifications(prev => prev.filter(n => n.id !== id));
+    }, 5000);
+  };
+
   useEffect(() => {
-    const products = [
-      // Cards
-      { name: "Visa Gold Card", price: 45 },
-      { name: "Mastercard Platinum", price: 65 },
-      { name: "Amex Black Card", price: 95 },
-      { name: "Discover Card", price: 35 },
-      // CCs
-      { name: "CVV Dump 101", price: 55 },
-      { name: "Fresh Base CC", price: 25 },
-      { name: "Linkable CC", price: 75 },
-      { name: "VBV Passed CC", price: 120 },
-      // Logs
-      { name: "Bank Log USA", price: 85 },
-      { name: "Chase Bank Log", price: 110 },
-      { name: "Wells Fargo Log", price: 95 },
-      { name: "EU Bank Log", price: 130 },
-      // Accounts
-      { name: "PayPal Verified", price: 120 },
-      { name: "Amazon Prime Account", price: 25 },
-      { name: "CashApp Verified", price: 65 },
-      { name: "Netflix Premium", price: 15 },
-      { name: "Spotify Lifetime", price: 20 },
-      // Fullz
-      { name: "Credit Card Fullz", price: 35 },
-      { name: "US Fullz Premium", price: 55 },
-      { name: "EU Fullz Package", price: 70 },
-      { name: "CA Fullz", price: 45 },
-      // Tools
-      { name: "Card Checker Pro", price: 40 },
-      { name: "BIN Lookup Tool", price: 30 },
-      { name: "VPN Lifetime", price: 25 },
-      { name: "Socks5 Residential", price: 35 },
-      // Courses
-      { name: "Carding Master Course", price: 250 },
-      { name: "Spamming Academy", price: 180 },
-      { name: "Hacking Fundamentals", price: 120 },
-      { name: "Bank Transfer Method", price: 150 }
-    ];
-
-    const locations = [
-      "United States", "Germany", "United Kingdom", "Canada", "Australia",
-      "France", "Netherlands", "Spain", "Italy", "Sweden"
-    ];
-
-    const showRandomPurchase = () => {
-      const randomProduct = products[Math.floor(Math.random() * products.length)];
-      const randomLocation = locations[Math.floor(Math.random() * locations.length)];
-      
-       // Create notification with separate product and location
-      const id = Date.now().toString();
-      setNotifications(prev => [...prev, { 
-        id, 
-        productName: randomProduct.name,
-        location: randomLocation,
-        price: randomProduct.price, 
-        balance: Math.floor(Math.random() * 5000 + 500)
-      }]);
-      
-      // Auto-remove after 5 seconds
-      setTimeout(() => {
-        setNotifications(prev => prev.filter(n => n.id !== id));
-      }, 5000);
-    };
-
-    // Show first notification after 8 seconds
-    const firstTimer = setTimeout(() => {
-      showRandomPurchase();
-    }, 8000);
-
-    // Show random notifications every 15-45 seconds
+    const firstTimer = setTimeout(showRandomPurchase, 8000);
     const interval = setInterval(() => {
-      const randomDelay = Math.floor(Math.random() * 30000 + 15000);
-      setTimeout(showRandomPurchase, randomDelay);
+      setTimeout(showRandomPurchase, Math.floor(Math.random() * 30000 + 15000));
     }, 45000);
-
     return () => {
       clearTimeout(firstTimer);
       clearInterval(interval);
@@ -245,14 +226,6 @@ function App() {
           </div>
         </CartProvider>
       </StoreProvider>
-    );
-  }
-
-  if (isChecking) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-green-500 animate-pulse">Loading...</div>
-      </div>
     );
   }
 
