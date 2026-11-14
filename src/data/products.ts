@@ -395,6 +395,657 @@ export const products: Product[] = [
       { price: 276, balance: 39000, stock: 3, quality: 'Personal Elite' }
     ]
   },
+  {
+    id: 'bin-021',
+    name: '426690*792 | Chase Bank USA N.A.',
+    description: 'VISA CARD | Classic | United States | Chase Credit',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 426690', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Chase Bank USA, N.A.', 'Country: United States', 'Chase Classic Credit'],
+    stock: 40,
+    rating: 4.5,
+    reviews: 98,
+    stockOptions: [
+      { price: 65, balance: 38000, stock: 15, quality: 'Standard' },
+      { price: 130, balance: 22000, stock: 14, quality: 'Premium' },
+      { price: 260, balance: 45000, stock: 11, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-022',
+    name: '483316*1682 | JPMorgan Chase Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | Chase Private Client',
+    price: 68,
+    category: 'cards',
+    features: ['BIN: 483316', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: JPMorgan Chase Bank, N.A.', 'Country: United States', 'Chase Private Client Debit'],
+    stock: 38,
+    rating: 4.6,
+    reviews: 112,
+    stockOptions: [
+      { price: 68, balance: 45000, stock: 15, quality: 'Standard' },
+      { price: 136, balance: 28000, stock: 13, quality: 'Premium' },
+      { price: 272, balance: 38000, stock: 10, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-023',
+    name: '554037*1473 | Royal Bank of Canada',
+    description: 'VISA CARD | Infinite | Canada | RBC Avion',
+    price: 95,
+    category: 'cards',
+    badge: 'Premium',
+    features: ['BIN: 554037', 'Type: Credit', 'Sub Brand: Infinite', 'Issuer: Royal Bank of Canada', 'Country: Canada', 'RBC Avion Infinite'],
+    stock: 28,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 52000, stock: 10, quality: 'Infinite Standard' },
+      { price: 190, balance: 48000, stock: 9, quality: 'Infinite Premium' },
+      { price: 380, balance: 22000, stock: 9, quality: 'Infinite Elite' }
+    ]
+  },
+  {
+    id: 'bin-024',
+    name: '542364*2121 | USAA',
+    description: 'VISA CARD | Classic | United States | USAA Insurance',
+    price: 63,
+    category: 'cards',
+    features: ['BIN: 542364', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: USAA', 'Country: United States', 'USAA Insurance Credit Card'],
+    stock: 40,
+    rating: 4.5,
+    reviews: 108,
+    stockOptions: [
+      { price: 63, balance: 18000, stock: 15, quality: 'Standard' },
+      { price: 126, balance: 51000, stock: 13, quality: 'Premium' },
+      { price: 252, balance: 24000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-025',
+    name: '534129*2446 | BMO Harris Bank N.A.',
+    description: 'MASTERCARD | World | United States | BMO Harris Premier',
+    price: 88,
+    category: 'cards',
+    features: ['BIN: 534129', 'Type: Credit', 'Sub Brand: World', 'Issuer: BMO Harris Bank N.A.', 'Country: United States', 'BMO Harris World Premier'],
+    stock: 32,
+    rating: 4.6,
+    reviews: 125,
+    stockOptions: [
+      { price: 88, balance: 50000, stock: 12, quality: 'World Standard' },
+      { price: 176, balance: 44000, stock: 10, quality: 'World Premium' },
+      { price: 352, balance: 16500, stock: 10, quality: 'World Elite' }
+    ]
+  },
+  {
+    id: 'bin-026',
+    name: '517546*453 | Huntington National Bank',
+    description: 'DEBIT CARD | Enhanced | United States | Huntington E-checks',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 517546', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Huntington National Bank', 'Country: United States', 'Huntington E-checks'],
+    stock: 38,
+    rating: 4.4,
+    reviews: 89,
+    stockOptions: [
+      { price: 65, balance: 32000, stock: 15, quality: 'Enhanced Standard' },
+      { price: 130, balance: 18500, stock: 13, quality: 'Enhanced Premium' },
+      { price: 260, balance: 47000, stock: 10, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-027',
+    name: '518941*1851 | Citibank N.A.',
+    description: 'MASTERCARD | World Elite | United States | Citi Prestige',
+    price: 95,
+    category: 'cards',
+    badge: 'Elite',
+    features: ['BIN: 518941', 'Type: Credit', 'Sub Brand: World Elite', 'Issuer: Citibank N.A.', 'Country: United States', 'Citi Prestige World Elite'],
+    stock: 42,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 60000, stock: 15, quality: 'World Elite Standard' },
+      { price: 170, balance: 38000, stock: 14, quality: 'World Elite Premium' },
+      { price: 340, balance: 25000, stock: 13, quality: 'World Elite Elite' }
+    ]
+  },
+  {
+    id: 'bin-028',
+    name: '407305*1026 | Wells Fargo Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | WF Gold Debit',
+    price: 61,
+    category: 'cards',
+    features: ['BIN: 407305', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'Wells Fargo Gold Debit'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 95,
+    stockOptions: [
+      { price: 61, balance: 40000, stock: 18, quality: 'Standard' },
+      { price: 122, balance: 25000, stock: 15, quality: 'Premium' },
+      { price: 244, balance: 50000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-029',
+    name: '416607*938 | Bank of America N.A.',
+    description: 'VISA CARD | Platinum | United States | BOA Travel',
+    price: 78,
+    category: 'cards',
+    features: ['BIN: 416607', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Bank of America, N.A.', 'Country: United States', 'BOA Travel Card'],
+    stock: 38,
+    rating: 4.7,
+    reviews: 134,
+    stockOptions: [
+      { price: 78, balance: 42000, stock: 15, quality: 'Platinum Standard' },
+      { price: 156, balance: 38000, stock: 13, quality: 'Platinum Premium' },
+      { price: 312, balance: 25000, stock: 10, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-030',
+    name: '423223*1063 | Bancorp Bank The',
+    description: 'DEBIT CARD | Enhanced | United States | Prepaid Mastercard',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 423223', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Bancorp Bank, The', 'Country: United States', 'Prepaid Enhanced Card'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 98,
+    stockOptions: [
+      { price: 65, balance: 35000, stock: 18, quality: 'Enhanced Standard' },
+      { price: 130, balance: 50000, stock: 15, quality: 'Enhanced Premium' },
+      { price: 217, balance: 20000, stock: 12, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-031',
+    name: '554037*1473 | Royal Bank of Canada',
+    description: 'VISA CARD | Infinite | Canada | RBC Avion',
+    price: 95,
+    category: 'cards',
+    badge: 'Premium',
+    features: ['BIN: 554037', 'Type: Credit', 'Sub Brand: Infinite', 'Issuer: Royal Bank of Canada', 'Country: Canada', 'RBC Avion Infinite'],
+    stock: 25,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 45000, stock: 10, quality: 'Infinite Standard' },
+      { price: 190, balance: 38000, stock: 9, quality: 'Infinite Premium' },
+      { price: 317, balance: 22000, stock: 6, quality: 'Infinite Elite' }
+    ]
+  },
+  {
+    id: 'bin-032',
+    name: '534129*2446 | BMO Harris Bank N.A.',
+    description: 'MASTERCARD | World | United States | BMO Harris Premier',
+    price: 88,
+    category: 'cards',
+    features: ['BIN: 534129', 'Type: Credit', 'Sub Brand: World', 'Issuer: BMO Harris Bank N.A.', 'Country: United States', 'BMO Harris World Premier'],
+    stock: 32,
+    rating: 4.6,
+    reviews: 125,
+    stockOptions: [
+      { price: 88, balance: 29000, stock: 12, quality: 'World Standard' },
+      { price: 176, balance: 44000, stock: 10, quality: 'World Premium' },
+      { price: 352, balance: 16500, stock: 10, quality: 'World Elite' }
+    ]
+  },
+  {
+    id: 'bin-033',
+    name: '517546*453 | Huntington National Bank',
+    description: 'DEBIT CARD | Enhanced | United States | Huntington E-checks',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 517546', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Huntington National Bank', 'Country: United States', 'Huntington E-checks'],
+    stock: 38,
+    rating: 4.4,
+    reviews: 89,
+    stockOptions: [
+      { price: 65, balance: 32000, stock: 15, quality: 'Enhanced Standard' },
+      { price: 130, balance: 18500, stock: 13, quality: 'Enhanced Premium' },
+      { price: 260, balance: 47000, stock: 10, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-034',
+    name: '518941*1851 | Citibank N.A.',
+    description: 'MASTERCARD | World Elite | United States | Citi Prestige',
+    price: 95,
+    category: 'cards',
+    badge: 'Elite',
+    features: ['BIN: 518941', 'Type: Credit', 'Sub Brand: World Elite', 'Issuer: Citibank N.A.', 'Country: United States', 'Citi Prestige World Elite'],
+    stock: 42,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 60000, stock: 15, quality: 'World Elite Standard' },
+      { price: 170, balance: 38000, stock: 14, quality: 'World Elite Premium' },
+      { price: 340, balance: 25000, stock: 13, quality: 'World Elite Elite' }
+    ]
+  },
+  {
+    id: 'bin-035',
+    name: '407305*1026 | Wells Fargo Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | WF Gold Debit',
+    price: 61,
+    category: 'cards',
+    features: ['BIN: 407305', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'Wells Fargo Gold Debit'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 95,
+    stockOptions: [
+      { price: 61, balance: 40000, stock: 18, quality: 'Standard' },
+      { price: 122, balance: 25000, stock: 15, quality: 'Premium' },
+      { price: 244, balance: 50000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-036',
+    name: '416607*938 | Bank of America N.A.',
+    description: 'VISA CARD | Platinum | United States | BOA Travel',
+    price: 78,
+    category: 'cards',
+    features: ['BIN: 416607', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Bank of America, N.A.', 'Country: United States', 'BOA Travel Card'],
+    stock: 38,
+    rating: 4.7,
+    reviews: 134,
+    stockOptions: [
+      { price: 78, balance: 42000, stock: 15, quality: 'Platinum Standard' },
+      { price: 156, balance: 38000, stock: 13, quality: 'Platinum Premium' },
+      { price: 312, balance: 25000, stock: 10, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-037',
+    name: '423223*1063 | Bancorp Bank The',
+    description: 'DEBIT CARD | Enhanced | United States | Prepaid Mastercard',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 423223', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Bancorp Bank, The', 'Country: United States', 'Prepaid Enhanced Card'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 98,
+    stockOptions: [
+      { price: 65, balance: 35000, stock: 18, quality: 'Enhanced Standard' },
+      { price: 130, balance: 50000, stock: 15, quality: 'Enhanced Premium' },
+      { price: 217, balance: 20000, stock: 12, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-038',
+    name: '554037*1473 | Royal Bank of Canada',
+    description: 'VISA CARD | Infinite | Canada | RBC Avion',
+    price: 95,
+    category: 'cards',
+    badge: 'Premium',
+    features: ['BIN: 554037', 'Type: Credit', 'Sub Brand: Infinite', 'Issuer: Royal Bank of Canada', 'Country: Canada', 'RBC Avion Infinite'],
+    stock: 25,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 45000, stock: 10, quality: 'Infinite Standard' },
+      { price: 190, balance: 38000, stock: 9, quality: 'Infinite Premium' },
+      { price: 317, balance: 22000, stock: 6, quality: 'Infinite Elite' }
+    ]
+  },
+  {
+    id: 'bin-039',
+    name: '534129*2446 | BMO Harris Bank N.A.',
+    description: 'MASTERCARD | World | United States | BMO Harris Premier',
+    price: 88,
+    category: 'cards',
+    features: ['BIN: 534129', 'Type: Credit', 'Sub Brand: World', 'Issuer: BMO Harris Bank N.A.', 'Country: United States', 'BMO Harris World Premier'],
+    stock: 32,
+    rating: 4.6,
+    reviews: 125,
+    stockOptions: [
+      { price: 88, balance: 29000, stock: 12, quality: 'World Standard' },
+      { price: 176, balance: 44000, stock: 10, quality: 'World Premium' },
+      { price: 352, balance: 16500, stock: 10, quality: 'World Elite' }
+    ]
+  },
+  {
+    id: 'bin-040',
+    name: '517546*453 | Huntington National Bank',
+    description: 'DEBIT CARD | Enhanced | United States | Huntington E-checks',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 517546', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Huntington National Bank', 'Country: United States', 'Huntington E-checks'],
+    stock: 38,
+    rating: 4.4,
+    reviews: 89,
+    stockOptions: [
+      { price: 65, balance: 32000, stock: 15, quality: 'Enhanced Standard' },
+      { price: 130, balance: 18500, stock: 13, quality: 'Enhanced Premium' },
+      { price: 260, balance: 47000, stock: 10, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-041',
+    name: '518941*1851 | Citibank N.A.',
+    description: 'MASTERCARD | World Elite | United States | Citi Prestige',
+    price: 95,
+    category: 'cards',
+    badge: 'Elite',
+    features: ['BIN: 518941', 'Type: Credit', 'Sub Brand: World Elite', 'Issuer: Citibank N.A.', 'Country: United States', 'Citi Prestige World Elite'],
+    stock: 42,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 60000, stock: 15, quality: 'World Elite Standard' },
+      { price: 170, balance: 38000, stock: 14, quality: 'World Elite Premium' },
+      { price: 340, balance: 25000, stock: 13, quality: 'World Elite Elite' }
+    ]
+  },
+  {
+    id: 'bin-042',
+    name: '407305*1026 | Wells Fargo Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | WF Gold Debit',
+    price: 61,
+    category: 'cards',
+    features: ['BIN: 407305', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'Wells Fargo Gold Debit'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 95,
+    stockOptions: [
+      { price: 61, balance: 40000, stock: 18, quality: 'Standard' },
+      { price: 122, balance: 25000, stock: 15, quality: 'Premium' },
+      { price: 244, balance: 50000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-043',
+    name: '416607*938 | Bank of America N.A.',
+    description: 'VISA CARD | Platinum | United States | BOA Travel',
+    price: 78,
+    category: 'cards',
+    features: ['BIN: 416607', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Bank of America, N.A.', 'Country: United States', 'BOA Travel Card'],
+    stock: 38,
+    rating: 4.7,
+    reviews: 134,
+    stockOptions: [
+      { price: 78, balance: 42000, stock: 15, quality: 'Platinum Standard' },
+      { price: 156, balance: 38000, stock: 13, quality: 'Platinum Premium' },
+      { price: 312, balance: 25000, stock: 10, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-044',
+    name: '423223*1063 | Bancorp Bank The',
+    description: 'DEBIT CARD | Enhanced | United States | Prepaid Mastercard',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 423223', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Bancorp Bank, The', 'Country: United States', 'Prepaid Enhanced Card'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 98,
+    stockOptions: [
+      { price: 65, balance: 35000, stock: 18, quality: 'Enhanced Standard' },
+      { price: 130, balance: 50000, stock: 15, quality: 'Enhanced Premium' },
+      { price: 217, balance: 20000, stock: 12, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-045',
+    name: '554037*1473 | Royal Bank of Canada',
+    description: 'VISA CARD | Infinite | Canada | RBC Avion',
+    price: 95,
+    category: 'cards',
+    badge: 'Premium',
+    features: ['BIN: 554037', 'Type: Credit', 'Sub Brand: Infinite', 'Issuer: Royal Bank of Canada', 'Country: Canada', 'RBC Avion Infinite'],
+    stock: 25,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 45000, stock: 10, quality: 'Infinite Standard' },
+      { price: 190, balance: 38000, stock: 9, quality: 'Infinite Premium' },
+      { price: 317, balance: 22000, stock: 6, quality: 'Infinite Elite' }
+    ]
+  },
+  {
+    id: 'bin-046',
+    name: '534129*2446 | BMO Harris Bank N.A.',
+    description: 'MASTERCARD | World | United States | BMO Harris Premier',
+    price: 88,
+    category: 'cards',
+    features: ['BIN: 534129', 'Type: Credit', 'Sub Brand: World', 'Issuer: BMO Harris Bank N.A.', 'Country: United States', 'BMO Harris World Premier'],
+    stock: 32,
+    rating: 4.6,
+    reviews: 125,
+    stockOptions: [
+      { price: 88, balance: 29000, stock: 12, quality: 'World Standard' },
+      { price: 176, balance: 44000, stock: 10, quality: 'World Premium' },
+      { price: 352, balance: 16500, stock: 10, quality: 'World Elite' }
+    ]
+  },
+  {
+    id: 'bin-047',
+    name: '517546*453 | Huntington National Bank',
+    description: 'DEBIT CARD | Enhanced | United States | Huntington E-checks',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 517546', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Huntington National Bank', 'Country: United States', 'Huntington E-checks'],
+    stock: 38,
+    rating: 4.4,
+    reviews: 89,
+    stockOptions: [
+      { price: 65, balance: 32000, stock: 15, quality: 'Enhanced Standard' },
+      { price: 130, balance: 18500, stock: 13, quality: 'Enhanced Premium' },
+      { price: 260, balance: 47000, stock: 10, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-048',
+    name: '518941*1851 | Citibank N.A.',
+    description: 'MASTERCARD | World Elite | United States | Citi Prestige',
+    price: 95,
+    category: 'cards',
+    badge: 'Elite',
+    features: ['BIN: 518941', 'Type: Credit', 'Sub Brand: World Elite', 'Issuer: Citibank N.A.', 'Country: United States', 'Citi Prestige World Elite'],
+    stock: 42,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 60000, stock: 15, quality: 'World Elite Standard' },
+      { price: 170, balance: 38000, stock: 14, quality: 'World Elite Premium' },
+      { price: 340, balance: 25000, stock: 13, quality: 'World Elite Elite' }
+    ]
+  },
+  {
+    id: 'bin-049',
+    name: '407305*1026 | Wells Fargo Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | WF Gold Debit',
+    price: 61,
+    category: 'cards',
+    features: ['BIN: 407305', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'Wells Fargo Gold Debit'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 95,
+    stockOptions: [
+      { price: 61, balance: 40000, stock: 18, quality: 'Standard' },
+      { price: 122, balance: 25000, stock: 15, quality: 'Premium' },
+      { price: 244, balance: 50000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-050',
+    name: '416607*938 | Bank of America N.A.',
+    description: 'VISA CARD | Platinum | United States | BOA Travel',
+    price: 78,
+    category: 'cards',
+    features: ['BIN: 416607', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Bank of America, N.A.', 'Country: United States', 'BOA Travel Card'],
+    stock: 38,
+    rating: 4.7,
+    reviews: 134,
+    stockOptions: [
+      { price: 78, balance: 42000, stock: 15, quality: 'Platinum Standard' },
+      { price: 156, balance: 38000, stock: 13, quality: 'Platinum Premium' },
+      { price: 312, balance: 25000, stock: 10, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-051',
+    name: '423223*1063 | Bancorp Bank The',
+    description: 'DEBIT CARD | Enhanced | United States | Prepaid Mastercard',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 423223', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Bancorp Bank, The', 'Country: United States', 'Prepaid Enhanced Card'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 98,
+    stockOptions: [
+      { price: 65, balance: 35000, stock: 18, quality: 'Enhanced Standard' },
+      { price: 130, balance: 50000, stock: 15, quality: 'Enhanced Premium' },
+      { price: 217, balance: 20000, stock: 12, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-052',
+    name: '554037*1473 | Royal Bank of Canada',
+    description: 'VISA CARD | Infinite | Canada | RBC Avion',
+    price: 95,
+    category: 'cards',
+    badge: 'Premium',
+    features: ['BIN: 554037', 'Type: Credit', 'Sub Brand: Infinite', 'Issuer: Royal Bank of Canada', 'Country: Canada', 'RBC Avion Infinite'],
+    stock: 25,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 45000, stock: 10, quality: 'Infinite Standard' },
+      { price: 190, balance: 38000, stock: 9, quality: 'Infinite Premium' },
+      { price: 317, balance: 22000, stock: 6, quality: 'Infinite Elite' }
+    ]
+  },
+  {
+    id: 'bin-053',
+    name: '534129*2446 | BMO Harris Bank N.A.',
+    description: 'MASTERCARD | World | United States | BMO Harris Premier',
+    price: 88,
+    category: 'cards',
+    features: ['BIN: 534129', 'Type: Credit', 'Sub Brand: World', 'Issuer: BMO Harris Bank N.A.', 'Country: United States', 'BMO Harris World Premier'],
+    stock: 32,
+    rating: 4.6,
+    reviews: 125,
+    stockOptions: [
+      { price: 88, balance: 29000, stock: 12, quality: 'World Standard' },
+      { price: 176, balance: 44000, stock: 10, quality: 'World Premium' },
+      { price: 352, balance: 16500, stock: 10, quality: 'World Elite' }
+    ]
+  },
+  {
+    id: 'bin-054',
+    name: '517546*453 | Huntington National Bank',
+    description: 'DEBIT CARD | Enhanced | United States | Huntington E-checks',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 517546', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Huntington National Bank', 'Country: United States', 'Huntington E-checks'],
+    stock: 38,
+    rating: 4.4,
+    reviews: 89,
+    stockOptions: [
+      { price: 65, balance: 32000, stock: 15, quality: 'Enhanced Standard' },
+      { price: 130, balance: 18500, stock: 13, quality: 'Enhanced Premium' },
+      { price: 260, balance: 47000, stock: 10, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-055',
+    name: '518941*1851 | Citibank N.A.',
+    description: 'MASTERCARD | World Elite | United States | Citi Prestige',
+    price: 95,
+    category: 'cards',
+    badge: 'Elite',
+    features: ['BIN: 518941', 'Type: Credit', 'Sub Brand: World Elite', 'Issuer: Citibank N.A.', 'Country: United States', 'Citi Prestige World Elite'],
+    stock: 42,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 60000, stock: 15, quality: 'World Elite Standard' },
+      { price: 170, balance: 38000, stock: 14, quality: 'World Elite Premium' },
+      { price: 340, balance: 25000, stock: 13, quality: 'World Elite Elite' }
+    ]
+  },
+  {
+    id: 'bin-056',
+    name: '407305*1026 | Wells Fargo Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | WF Gold Debit',
+    price: 61,
+    category: 'cards',
+    features: ['BIN: 407305', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'Wells Fargo Gold Debit'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 95,
+    stockOptions: [
+      { price: 61, balance: 40000, stock: 18, quality: 'Standard' },
+      { price: 122, balance: 25000, stock: 15, quality: 'Premium' },
+      { price: 244, balance: 50000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-057',
+    name: '416607*938 | Bank of America N.A.',
+    description: 'VISA CARD | Platinum | United States | BOA Travel',
+    price: 78,
+    category: 'cards',
+    features: ['BIN: 416607', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Bank of America, N.A.', 'Country: United States', 'BOA Travel Card'],
+    stock: 38,
+    rating: 4.7,
+    reviews: 134,
+    stockOptions: [
+      { price: 78, balance: 42000, stock: 15, quality: 'Platinum Standard' },
+      { price: 156, balance: 38000, stock: 13, quality: 'Platinum Premium' },
+      { price: 312, balance: 25000, stock: 10, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-058',
+    name: '423223*1063 | Bancorp Bank The',
+    description: 'DEBIT CARD | Enhanced | United States | Prepaid Mastercard',
+    price: 65,
+    category: 'cards',
+    features: ['BIN: 423223', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Bancorp Bank, The', 'Country: United States', 'Prepaid Enhanced Card'],
+    stock: 45,
+    rating: 4.5,
+    reviews: 98,
+    stockOptions: [
+      { price: 65, balance: 35000, stock: 18, quality: 'Enhanced Standard' },
+      { price: 130, balance: 50000, stock: 15, quality: 'Enhanced Premium' },
+      { price: 217, balance: 20000, stock: 12, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-059',
+    name: '554037*1473 | Royal Bank of Canada',
+    description: 'VISA CARD | Infinite | Canada | RBC Avion',
+    price: 95,
+    category: 'cards',
+    badge: 'Premium',
+    features: ['BIN: 554037', 'Type: Credit', 'Sub Brand: Infinite', 'Issuer: Royal Bank of Canada', 'Country: Canada', 'RBC Avion Infinite'],
+    stock: 25,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 95, balance: 45000, stock: 10, quality: 'Infinite Standard' },
+      { price: 190, balance: 38000, stock: 9, quality: 'Infinite Premium' },
+      { price: 317, balance: 22000, stock: 6, quality: 'Infinite Elite' }
+    ]
+  },
+  {
+    id: 'bin-060',
+    name: '534129*2446 | BMO Harris Bank N.A.',
+    description: 'MASTERCARD | World | United States | BMO Harris Premier',
+    price: 88,
+    category: 'cards',
+    features: ['BIN: 534129', 'Type: Credit', 'Sub Brand: World', 'Issuer: BMO Harris Bank N.A.', 'Country: United States', 'BMO Harris World Premier'],
+    stock: 32,
+    rating: 4.6,
+    reviews: 125,
+    stockOptions: [
+      { price: 88, balance: 29000, stock: 12, quality: 'World Standard' },
+      { price: 176, balance: 44000, stock: 10, quality: 'World Premium' },
+      { price: 352, balance: 16500, stock: 10, quality: 'World Elite' }
+    ]
+  },
   // Cards Category
   {
     id: 'card-1',
