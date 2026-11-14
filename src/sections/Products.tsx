@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+﻿import { useState, useEffect, memo, useCallback, useMemo } from 'react';
 import {
   ShoppingCart, CreditCard, Link, Database,
   UserCircle, Wrench, Terminal, Eye, ChevronRight, Hash, FileText, ChevronUp, ChevronDown, Zap, Globe, Lock, Monitor, Mail, IdCard, UserPlus, Gift, Play, Shield
@@ -11,8 +11,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { categories } from '@/data/products';
 import { useCart } from '@/context/CartContext';
 import { useStore } from '@/context/StoreContext';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import type { Product, Category, StockOption } from '@/types';
+
+const LucideLazyIcon = memo(({ icon: Icon, className = "" }: { icon: any, className?: string }) => {
+  return <Icon className={className} />;
+});
+
+const productRefs: Record<string, HTMLDivElement | null> = {};
 
 const iconMap: Record<string, React.ElementType> = {
   LayoutGrid: Terminal,

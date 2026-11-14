@@ -1,11 +1,10 @@
 import path from "path"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
-import inspect from 'kimi-plugin-inspect-react'
 
 export default defineConfig({
   base: './',
-  plugins: [inspect(), react()],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -14,11 +13,20 @@ export default defineConfig({
   build: {
     minify: 'esbuild',
     sourcemap: false,
+    target: 'es2020',
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          styles: ['src/index.css']
+          react: ['react', 'react-dom'],
+          ui: ['@/components/ui'],
+          sections: [
+            '@/sections/Products',
+            '@/sections/Hero',
+            '@/sections/Navigation',
+            '@/sections/CartDrawer',
+            '@/sections/Footer'
+          ]
         }
       }
     }

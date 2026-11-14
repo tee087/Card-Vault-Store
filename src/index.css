@@ -28,6 +28,18 @@
   transition-duration: var(--transition-duration);
 }
 
+[data-animate] {
+  animation-play-state: running !important;
+}
+
+.slow-animation {
+  animation-duration: 0.3s !important;
+}
+
+.rapid-animation {
+  animation-duration: 0.1s !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 0%;
@@ -743,4 +755,15 @@ input, textarea, select, [contenteditable="true"] {
   75% {
     background-position: 50% 100%;
   }
+}
+
+.skeleton-loader {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
