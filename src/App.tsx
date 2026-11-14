@@ -185,20 +185,8 @@ function App() {
     );
   }
 
-  // Block if terms not accepted (except for signup which is part of sign-up flow)
-  if (!termsAccepted) {
-    const hash = currentHash;
-    if (hash === 'terms' || hash === 'privacy' || hash === 'signup') {
-      // Allow access to terms/privacy/signup without acceptance
-    } else {
-      // Redirect to terms page first
-      window.location.hash = 'terms';
-      return null;
-    }
-  }
-
-  // Show Messages page
-  if (currentPage === 'messages') {
+  // Allow access to messages/fullz without terms acceptance
+  if (currentPage === 'messages' || currentHash === 'messages') {
     return (
       <StoreProvider>
         <Messages />
@@ -206,8 +194,7 @@ function App() {
     );
   }
 
-  // Show FULLZ page
-  if (currentPage === 'fullz') {
+  if (currentPage === 'fullz' || currentHash === 'fullz') {
     return (
       <StoreProvider>
         <CartProvider>
