@@ -156,8 +156,10 @@ function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  const currentHash = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
+
   // Show Terms page
-  if (currentPage === 'terms') {
+  if (currentPage === 'terms' || currentHash === 'terms') {
     return (
       <StoreProvider>
         <Terms />
@@ -166,7 +168,7 @@ function App() {
   }
 
   // Show Privacy page
-  if (currentPage === 'privacy') {
+  if (currentPage === 'privacy' || currentHash === 'privacy') {
     return (
       <StoreProvider>
         <Privacy />
@@ -175,7 +177,7 @@ function App() {
   }
 
   // Show SignUp page - allowed without terms acceptance (it's part of sign-up flow)
-  if (currentPage === 'signup') {
+  if (currentPage === 'signup' || currentHash === 'signup') {
     return (
       <StoreProvider>
         <SignUp />
@@ -185,9 +187,9 @@ function App() {
 
   // Block if terms not accepted (except for signup which is part of sign-up flow)
   if (!termsAccepted) {
-    const hash = window.location.hash.replace('#', '');
-    if (hash === 'terms' || hash === 'privacy') {
-      // Allow access to terms/privacy without acceptance
+    const hash = currentHash;
+    if (hash === 'terms' || hash === 'privacy' || hash === 'signup') {
+      // Allow access to terms/privacy/signup without acceptance
     } else {
       // Redirect to terms page first
       window.location.hash = 'terms';
