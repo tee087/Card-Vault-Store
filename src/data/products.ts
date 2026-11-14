@@ -557,6 +557,496 @@ export const products: Product[] = [
       { price: 217, balance: 20000, stock: 12, quality: 'Enhanced Elite' }
     ]
   },
+  {
+    id: 'bin-031',
+    name: '414520*1 | BC CARD',
+    description: 'VISA CARD | Signature | KOREA, REPUBLIC OF | Korean Credit Card',
+    price: 88,
+    category: 'cards',
+    badge: 'International',
+    features: ['BIN: 414520', 'Type: Credit', 'Sub Brand: Signature', 'Issuer: BC CARD', 'Country: Korea, Republic of', 'Korean Market Card'],
+    stock: 25,
+    rating: 4.7,
+    reviews: 112,
+    stockOptions: [
+      { price: 88, balance: 52000, stock: 10, quality: 'Signature Standard' },
+      { price: 176, balance: 45000, stock: 9, quality: 'Signature Premium' },
+      { price: 352, balance: 28000, stock: 6, quality: 'Signature Elite' }
+    ]
+  },
+  {
+    id: 'bin-032',
+    name: '475419*1 | METABANK',
+    description: 'CREDIT CARD | Signature | United States | MetaBank Signature Card',
+    price: 92,
+    category: 'cards',
+    badge: 'Premium',
+    features: ['BIN: 475419', 'Type: Credit', 'Sub Brand: Signature', 'Issuer: METABANK', 'Country: United States', 'Signature Card'],
+    stock: 28,
+    rating: 4.8,
+    reviews: 145,
+    stockOptions: [
+      { price: 92, balance: 48000, stock: 12, quality: 'Signature Standard' },
+      { price: 184, balance: 42000, stock: 10, quality: 'Signature Premium' },
+      { price: 368, balance: 28000, stock: 6, quality: 'Signature Elite' }
+    ]
+  },
+  {
+    id: 'bin-033',
+    name: '447678*1 | Wells Fargo Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | Wells Fargo Debit',
+    price: 61,
+    category: 'cards',
+    features: ['BIN: 447678', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'WF Debit Classic'],
+    stock: 42,
+    rating: 4.5,
+    reviews: 98,
+    stockOptions: [
+      { price: 61, balance: 38000, stock: 15, quality: 'Standard' },
+      { price: 122, balance: 28000, stock: 14, quality: 'Premium' },
+      { price: 248, balance: 45000, stock: 13, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-034',
+    name: '511301*1 | TRADITIONAL BANK INC.',
+    description: 'DEBIT CARD | Enhanced | United States | Traditional Bank Enhanced',
+    price: 68,
+    category: 'cards',
+    features: ['BIN: 511301', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Traditional Bank Inc.', 'Country: United States', 'Enhanced Card'],
+    stock: 36,
+    rating: 4.4,
+    reviews: 78,
+    stockOptions: [
+      { price: 68, balance: 42000, stock: 14, quality: 'Enhanced Standard' },
+      { price: 136, balance: 28000, stock: 12, quality: 'Enhanced Premium' },
+      { price: 272, balance: 45000, stock: 10, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-035',
+    name: '411074*1 | INTERBANK - BANCO INTERNACIONAL DEL PERU',
+    description: 'DEBIT CARD | Classic | Peru | Peruvian Debit Classic',
+    price: 72,
+    category: 'cards',
+    badge: 'International',
+    features: ['BIN: 411074', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Interbank - Banco Internacional del Peru', 'Country: Peru', 'Peruvian Card'],
+    stock: 35,
+    rating: 4.6,
+    reviews: 89,
+    stockOptions: [
+      { price: 72, balance: 45000, stock: 14, quality: 'Standard' },
+      { price: 144, balance: 38000, stock: 13, quality: 'Premium' },
+      { price: 217, balance: 32000, stock: 8, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-036',
+    name: '435862*1 | (No Bank)',
+    description: 'CREDIT CARD | Classic | United States | Classic Credit Card',
+    price: 64,
+    category: 'cards',
+    features: ['BIN: 435862', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Unknown', 'Country: United States', 'Classic Credit Card'],
+    stock: 38,
+    rating: 4.5,
+    reviews: 87,
+    stockOptions: [
+      { price: 64, balance: 38000, stock: 15, quality: 'Standard' },
+      { price: 128, balance: 28000, stock: 13, quality: 'Premium' },
+      { price: 256, balance: 42000, stock: 10, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-037',
+    name: '429858*1 | MYPOINT C.U.',
+    description: 'CREDIT CARD | Classic | United States | MyPoint Credit Union',
+    price: 59,
+    category: 'cards',
+    features: ['BIN: 429858', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: MyPoint C.U.', 'Country: United States', 'MyPoint Credit Card'],
+    stock: 44,
+    rating: 4.4,
+    reviews: 76,
+    stockOptions: [
+      { price: 59, balance: 35000, stock: 18, quality: 'Standard' },
+      { price: 118, balance: 28000, stock: 14, quality: 'Premium' },
+      { price: 236, balance: 42000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-038',
+    name: '494392*1 | (No Bank)',
+    description: 'DEBIT CARD | Business | United States | Business Debit',
+    price: 76,
+    category: 'cards',
+    badge: 'Business',
+    features: ['BIN: 494392', 'Type: Debit', 'Sub Brand: Business', 'Issuer: Unknown', 'Country: United States', 'Business Debit Card'],
+    stock: 40,
+    rating: 4.7,
+    reviews: 112,
+    stockOptions: [
+      { price: 76, balance: 42000, stock: 15, quality: 'Business Standard' },
+      { price: 152, balance: 28000, stock: 13, quality: 'Business Premium' },
+      { price: 304, balance: 55000, stock: 12, quality: 'Business Elite' }
+    ]
+  },
+  {
+    id: 'bin-039',
+    name: '412452*1 | JPMorgan Chase Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | Chase Private Client Debit',
+    price: 72,
+    category: 'cards',
+    features: ['BIN: 412452', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: JPMorgan Chase Bank, N.A.', 'Country: United States', 'Chase Debit'],
+    stock: 38,
+    rating: 4.6,
+    reviews: 108,
+    stockOptions: [
+      { price: 72, balance: 45000, stock: 15, quality: 'Standard' },
+      { price: 144, balance: 28000, stock: 13, quality: 'Premium' },
+      { price: 288, balance: 42000, stock: 10, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-040',
+    name: '472612*1 | Wells Fargo Bank N.A.',
+    description: 'DEBIT CARD | Classic | United States | Wells Fargo Debit',
+    price: 66,
+    category: 'cards',
+    features: ['BIN: 472612', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Wells Fargo Bank, N.A.', 'Country: United States', 'WF Debit Classic'],
+    stock: 36,
+    rating: 4.5,
+    reviews: 92,
+    stockOptions: [
+      { price: 66, balance: 38000, stock: 15, quality: 'Standard' },
+      { price: 132, balance: 28000, stock: 13, quality: 'Premium' },
+      { price: 264, balance: 45000, stock: 8, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-041',
+    name: '521987*1 | COMPUTER SERVICES, INC.',
+    description: 'DEBIT CARD | Enhanced | United States | CSI Enhanced Debit',
+    price: 68,
+    category: 'cards',
+    features: ['BIN: 521987', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: Computer Services, Inc.', 'Country: United States', 'CSI Debit'],
+    stock: 34,
+    rating: 4.4,
+    reviews: 78,
+    stockOptions: [
+      { price: 68, balance: 35000, stock: 14, quality: 'Enhanced Standard' },
+      { price: 136, balance: 28000, stock: 12, quality: 'Enhanced Premium' },
+      { price: 272, balance: 45000, stock: 8, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-042',
+    name: '510791*1 | FIDELITY INFORMATION SERVICES, INC.',
+    description: 'DEBIT CARD | Standard | United States | Fidelity Standard Debit',
+    price: 59,
+    category: 'cards',
+    features: ['BIN: 510791', 'Type: Debit', 'Sub Brand: Standard', 'Issuer: Fidelity Information Services, Inc.', 'Country: United States', 'Fidelity Debit'],
+    stock: 42,
+    rating: 4.3,
+    reviews: 65,
+    stockOptions: [
+      { price: 59, balance: 32000, stock: 16, quality: 'Standard' },
+      { price: 118, balance: 28000, stock: 14, quality: 'Premium' },
+      { price: 236, balance: 45000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-043',
+    name: '557252*1 | FISERV SOLUTIONS, LLC',
+    description: 'DEBIT CARD | Business | United States | FISERV Business Debit',
+    price: 72,
+    category: 'cards',
+    badge: 'Business',
+    features: ['BIN: 557252', 'Type: Debit', 'Sub Brand: Business', 'Issuer: FISERV Solutions, LLC', 'Country: United States', 'FISERV Business'],
+    stock: 38,
+    rating: 4.6,
+    reviews: 89,
+    stockOptions: [
+      { price: 72, balance: 42000, stock: 15, quality: 'Business Standard' },
+      { price: 144, balance: 28000, stock: 13, quality: 'Business Premium' },
+      { price: 288, balance: 45000, stock: 10, quality: 'Business Elite' }
+    ]
+  },
+  {
+    id: 'bin-044',
+    name: '512027*1 | CAPITAL ONE BANK (USA), NATIONAL ASSOCIATION',
+    description: 'CREDIT CARD | Platinum | United States | Capital One Platinum Credit',
+    price: 82,
+    category: 'cards',
+    badge: 'Platinum',
+    features: ['BIN: 512027', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Capital One Bank (USA), National Association', 'Country: United States', 'Capital One Platinum'],
+    stock: 32,
+    rating: 4.7,
+    reviews: 112,
+    stockOptions: [
+      { price: 82, balance: 45000, stock: 12, quality: 'Platinum Standard' },
+      { price: 164, balance: 28000, stock: 10, quality: 'Platinum Premium' },
+      { price: 328, balance: 42000, stock: 10, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-045',
+    name: '470772*1 | (No Bank)',
+    description: 'CREDIT CARD | Classic | United States | Classic Credit Card',
+    price: 64,
+    category: 'cards',
+    features: ['BIN: 470772', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Unknown', 'Country: United States', 'Classic Credit Card'],
+    stock: 36,
+    rating: 4.5,
+    reviews: 78,
+    stockOptions: [
+      { price: 64, balance: 35000, stock: 15, quality: 'Standard' },
+      { price: 128, balance: 28000, stock: 13, quality: 'Premium' },
+      { price: 256, balance: 42000, stock: 8, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-046',
+    name: '407563*1 | (No Bank)',
+    description: 'CREDIT CARD | Signature | United States | Signature Card',
+    price: 85,
+    category: 'cards',
+    badge: 'Premium',
+    features: ['BIN: 407563', 'Type: Credit', 'Sub Brand: Signature', 'Issuer: Unknown', 'Country: United States', 'Signature Card'],
+    stock: 35,
+    rating: 4.8,
+    reviews: 98,
+    stockOptions: [
+      { price: 85, balance: 48000, stock: 13, quality: 'Signature Standard' },
+      { price: 170, balance: 38000, stock: 11, quality: 'Signature Premium' },
+      { price: 340, balance: 42000, stock: 11, quality: 'Signature Elite' }
+    ]
+  },
+  {
+    id: 'bin-047',
+    name: '403930*1 | MEMBERS FIRST CREDIT UNION OF FLORIDA',
+    description: 'CREDIT CARD | Classic | United States | MFCU Classic Credit',
+    price: 62,
+    category: 'cards',
+    features: ['BIN: 403930', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Members First Credit Union of Florida', 'Country: United States', 'MFCU Card'],
+    stock: 40,
+    rating: 4.5,
+    reviews: 89,
+    stockOptions: [
+      { price: 62, balance: 38000, stock: 16, quality: 'Standard' },
+      { price: 124, balance: 28000, stock: 14, quality: 'Premium' },
+      { price: 248, balance: 45000, stock: 10, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-048',
+    name: '460575*1 | HEALTH EDUCATION F.C.U.',
+    description: 'CREDIT CARD | Classic | United States | Health Ed Federal Credit Union',
+    price: 59,
+    category: 'cards',
+    features: ['BIN: 460575', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Health Education F.C.U.', 'Country: United States', 'HECU Card'],
+    stock: 48,
+    rating: 4.4,
+    reviews: 76,
+    stockOptions: [
+      { price: 59, balance: 35000, stock: 18, quality: 'Standard' },
+      { price: 118, balance: 28000, stock: 15, quality: 'Premium' },
+      { price: 236, balance: 45000, stock: 15, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-049',
+    name: '543386*1 | HUNTINGTON NATIONAL BANK',
+    description: 'CREDIT CARD | Platinum | United States | Huntington Platinum',
+    price: 78,
+    category: 'cards',
+    features: ['BIN: 543386', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Huntington National Bank', 'Country: United States', 'Huntington Platinum'],
+    stock: 32,
+    rating: 4.7,
+    reviews: 112,
+    stockOptions: [
+      { price: 78, balance: 45000, stock: 12, quality: 'Platinum Standard' },
+      { price: 156, balance: 28000, stock: 10, quality: 'Platinum Premium' },
+      { price: 312, balance: 42000, stock: 10, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-050',
+    name: '556043*1 | CITIBANK N.A.',
+    description: 'CREDIT CARD | Professional | United States | Citi Professional',
+    price: 92,
+    category: 'cards',
+    badge: 'Professional',
+    features: ['BIN: 556043', 'Type: Credit', 'Sub Brand: Professional', 'Issuer: Citibank N.A.', 'Country: United States', 'Citi Professional'],
+    stock: 35,
+    rating: 4.8,
+    reviews: 125,
+    stockOptions: [
+      { price: 92, balance: 48000, stock: 12, quality: 'Professional Standard' },
+      { price: 184, balance: 32000, stock: 11, quality: 'Professional Premium' },
+      { price: 368, balance: 45000, stock: 12, quality: 'Professional Elite' }
+    ]
+  },
+  {
+    id: 'bin-051',
+    name: '528844*1 | ECU',
+    description: 'CREDIT CARD | Platinum | United States | ECU Platinum Credit',
+    price: 76,
+    category: 'cards',
+    badge: 'Platinum',
+    features: ['BIN: 528844', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: ECU', 'Country: United States', 'ECU Platinum'],
+    stock: 38,
+    rating: 4.7,
+    reviews: 108,
+    stockOptions: [
+      { price: 76, balance: 42000, stock: 14, quality: 'Platinum Standard' },
+      { price: 152, balance: 28000, stock: 12, quality: 'Platinum Premium' },
+      { price: 304, balance: 45000, stock: 12, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-052',
+    name: '430177*1 | Nationwide Bank',
+    description: 'CREDIT CARD | Classic | United States | Nationwide Classic Credit',
+    price: 63,
+    category: 'cards',
+    features: ['BIN: 430177', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Nationwide Bank', 'Country: United States', 'Nationwide Card'],
+    stock: 35,
+    rating: 4.6,
+    reviews: 89,
+    stockOptions: [
+      { price: 63, balance: 35000, stock: 15, quality: 'Standard' },
+      { price: 126, balance: 28000, stock: 13, quality: 'Premium' },
+      { price: 252, balance: 42000, stock: 7, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-053',
+    name: '426446*1 | Heartland F.C.U.',
+    description: 'CREDIT CARD | Classic | United States | Heartland Federal Credit Union',
+    price: 61,
+    category: 'cards',
+    features: ['BIN: 426446', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Heartland F.C.U.', 'Country: United States', 'Heartland Card'],
+    stock: 38,
+    rating: 4.5,
+    reviews: 78,
+    stockOptions: [
+      { price: 61, balance: 38000, stock: 16, quality: 'Standard' },
+      { price: 122, balance: 25000, stock: 14, quality: 'Premium' },
+      { price: 244, balance: 42000, stock: 8, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-054',
+    name: '559222*1 | FIRST BANK',
+    description: 'CREDIT CARD | World Elite for Business | United States | First Bank Business Elite',
+    price: 88,
+    category: 'cards',
+    badge: 'Business',
+    features: ['BIN: 559222', 'Type: Credit', 'Sub Brand: World Elite for Business', 'Issuer: First Bank', 'Country: United States', 'First Bank Business'],
+    stock: 35,
+    rating: 4.7,
+    reviews: 112,
+    stockOptions: [
+      { price: 88, balance: 45000, stock: 13, quality: 'Business Standard' },
+      { price: 176, balance: 28000, stock: 11, quality: 'Business Premium' },
+      { price: 352, balance: 42000, stock: 11, quality: 'Business Elite' }
+    ]
+  },
+  {
+    id: 'bin-055',
+    name: '549111*1 | CAPITAL ONE, NATIONAL ASSOCIATION',
+    description: 'CREDIT CARD | Platinum | United States | Capital One Platinum Credit',
+    price: 78,
+    category: 'cards',
+    features: ['BIN: 549111', 'Type: Credit', 'Sub Brand: Platinum', 'Issuer: Capital One, National Association', 'Country: United States', 'Capital One Platinum'],
+    stock: 42,
+    rating: 4.6,
+    reviews: 98,
+    stockOptions: [
+      { price: 78, balance: 42000, stock: 15, quality: 'Platinum Standard' },
+      { price: 156, balance: 28000, stock: 13, quality: 'Platinum Premium' },
+      { price: 312, balance: 42000, stock: 14, quality: 'Platinum Elite' }
+    ]
+  },
+  {
+    id: 'bin-056',
+    name: '531203*1 | FISERV SOLUTIONS, LLC',
+    description: 'DEBIT CARD | Enhanced | United States | FISERV Enhanced Debit',
+    price: 70,
+    category: 'cards',
+    features: ['BIN: 531203', 'Type: Debit', 'Sub Brand: Enhanced', 'Issuer: FISERV Solutions, LLC', 'Country: United States', 'FISERV Debit'],
+    stock: 38,
+    rating: 4.4,
+    reviews: 85,
+    stockOptions: [
+      { price: 70, balance: 38000, stock: 15, quality: 'Enhanced Standard' },
+      { price: 140, balance: 28000, stock: 13, quality: 'Enhanced Premium' },
+      { price: 280, balance: 42000, stock: 10, quality: 'Enhanced Elite' }
+    ]
+  },
+  {
+    id: 'bin-057',
+    name: '416161*1 | (No Bank)',
+    description: 'CREDIT CARD | Classic | United States | Classic Credit Card',
+    price: 63,
+    category: 'cards',
+    features: ['BIN: 416161', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Unknown', 'Country: United States', 'Classic Credit Card'],
+    stock: 40,
+    rating: 4.5,
+    reviews: 82,
+    stockOptions: [
+      { price: 63, balance: 35000, stock: 15, quality: 'Standard' },
+      { price: 126, balance: 28000, stock: 14, quality: 'Premium' },
+      { price: 252, balance: 42000, stock: 11, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-058',
+    name: '426380*1 | BORDER F.C.U.',
+    description: 'CREDIT CARD | Classic | United States | Border Federal Credit Union',
+    price: 59,
+    category: 'cards',
+    features: ['BIN: 426380', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: Border F.C.U.', 'Country: United States', 'Border Card'],
+    stock: 38,
+    rating: 4.4,
+    reviews: 74,
+    stockOptions: [
+      { price: 59, balance: 32000, stock: 15, quality: 'Standard' },
+      { price: 118, balance: 28000, stock: 13, quality: 'Premium' },
+      { price: 236, balance: 42000, stock: 10, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-059',
+    name: '411291*1 | UNITED STATES SENATE F.C.U.',
+    description: 'CREDIT CARD | Classic | United States | US Senate Federal Credit Union',
+    price: 61,
+    category: 'cards',
+    features: ['BIN: 411291', 'Type: Credit', 'Sub Brand: Classic', 'Issuer: United States Senate F.C.U.', 'Country: United States', 'SENATE Card'],
+    stock: 38,
+    rating: 4.6,
+    reviews: 88,
+    stockOptions: [
+      { price: 61, balance: 38000, stock: 14, quality: 'Standard' },
+      { price: 122, balance: 25000, stock: 12, quality: 'Premium' },
+      { price: 244, balance: 42000, stock: 12, quality: 'Elite' }
+    ]
+  },
+  {
+    id: 'bin-060',
+    name: '468897*1 | ANDOVER F.C.U.',
+    description: 'DEBIT CARD | Classic | United States | Andover Federal Credit Union',
+    price: 58,
+    category: 'cards',
+    features: ['BIN: 468897', 'Type: Debit', 'Sub Brand: Classic', 'Issuer: Andover F.C.U.', 'Country: United States', 'Andover Debit'],
+    stock: 42,
+    rating: 4.5,
+    reviews: 92,
+    stockOptions: [
+      { price: 58, balance: 35000, stock: 15, quality: 'Standard' },
+      { price: 116, balance: 28000, stock: 14, quality: 'Premium' },
+      { price: 232, balance: 42000, stock: 13, quality: 'Elite' }
+    ]
+  },
   // Cards Category
   {
     id: 'card-1',
