@@ -176,6 +176,24 @@ function App() {
     );
   }
 
+  // Show Terms page
+  if (currentPage === 'terms' || currentHash === 'terms') {
+    return (
+      <StoreProvider>
+        <Terms />
+      </StoreProvider>
+    );
+  }
+
+  // Show Privacy page
+  if (currentPage === 'privacy' || currentHash === 'privacy') {
+    return (
+      <StoreProvider>
+        <Privacy />
+      </StoreProvider>
+    );
+  }
+
   // Show SignUp page - allowed without terms acceptance (it's part of sign-up flow)
   if (currentPage === 'signup' || currentHash === 'signup') {
     return (
@@ -185,7 +203,13 @@ function App() {
     );
   }
 
-  // Allow access to messages/fullz without terms acceptance
+  // Block if terms not accepted
+  if (!termsAccepted) {
+    window.location.hash = 'terms';
+    return null;
+  }
+
+  // Allow access to messages/fullz with terms accepted
   if (currentPage === 'messages' || currentHash === 'messages') {
     return (
       <StoreProvider>
