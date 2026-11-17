@@ -110,13 +110,13 @@ export function Navigation() {
   <div className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-green-900 via-green-800 to-green-900 border-b border-green-500/30 overflow-hidden h-8 flex items-center">
     <div className="whitespace-nowrap animate-marquee">
       <span className="mx-8 text-green-200 text-xs font-mono">
-        [SYSTEM] payments.service: active (running) | delivery.service: active (exited) | guides.service: loaded
+        🔥 TEST RUN CARDS - DM ADMIN VIA TELEGRAM @cardvaultstore 🔥 | AMOUNT FOR A TEST RUN CARD IS $15
       </span>
       <span className="mx-8 text-green-200 text-xs font-mono">
-        [SYSTEM] payments.service: active (running) | delivery.service: active (exited) | guides.service: loaded
+        🔥 TEST RUN CARDS - DM ADMIN VIA TELEGRAM @cardvaultstore 🔥 | AMOUNT FOR A TEST RUN CARD IS $15
       </span>
       <span className="mx-8 text-green-200 text-xs font-mono">
-        [SYSTEM] payments.service: active (running) | delivery.service: active (exited) | guides.service: loaded
+        🔥 TEST RUN CARDS - DM ADMIN VIA TELEGRAM @cardvaultstore 🔥 | AMOUNT FOR A TEST RUN CARD IS $15
       </span>
     </div>
     <style>{`
