@@ -156,9 +156,9 @@ export const products: Product[] = [
     rating: 4.8,
     reviews: 156,
     stockOptions: [
-      { price: 85, balance: 28500, stock: 12, quality: 'World Elite Standard' },
-      { price: 170, balance: 49800, stock: 10, quality: 'World Elite Premium' },
-      { price: 340, balance: 16500, stock: 8, quality: 'World Elite Elite' }
+      { price: 85, balance: 46750, stock: 12, quality: 'World Elite Standard' },
+      { price: 170, balance: 199500, stock: 10, quality: 'World Elite Premium' },
+      { price: 255, balance: 317250, stock: 8, quality: 'World Elite Elite' }
     ]
   },
   {
@@ -172,9 +172,9 @@ export const products: Product[] = [
     rating: 4.7,
     reviews: 134,
     stockOptions: [
-      { price: 70, balance: 22000, stock: 25, quality: 'Personal Standard' },
-      { price: 140, balance: 35000, stock: 15, quality: 'Personal Premium' },
-      { price: 280, balance: 15500, stock: 10, quality: 'Personal Elite' }
+      { price: 70, balance: 38500, stock: 25, quality: 'Personal Standard' },
+      { price: 140, balance: 147000, stock: 15, quality: 'Personal Premium' },
+      { price: 210, balance: 267750, stock: 10, quality: 'Personal Elite' }
     ]
   },
   {
@@ -188,9 +188,9 @@ export const products: Product[] = [
     rating: 4.6,
     reviews: 112,
     stockOptions: [
-      { price: 60, balance: 47500, stock: 20, quality: 'Navy Debit Standard' },
-      { price: 120, balance: 19000, stock: 12, quality: 'Navy Debit Premium' },
-      { price: 240, balance: 38000, stock: 20, quality: 'Navy Debit Elite' }
+      { price: 60, balance: 33000, stock: 20, quality: 'Navy Debit Standard' },
+      { price: 120, balance: 132000, stock: 12, quality: 'Navy Debit Premium' },
+      { price: 180, balance: 247500, stock: 20, quality: 'Navy Debit Elite' }
     ]
   },
   {
@@ -204,9 +204,9 @@ export const products: Product[] = [
     rating: 4.5,
     reviews: 92,
     stockOptions: [
-      { price: 58, balance: 33000, stock: 20, quality: 'Standard' },
-      { price: 116, balance: 14500, stock: 14, quality: 'Premium' },
-      { price: 232, balance: 47000, stock: 14, quality: 'Elite' }
+      { price: 58, balance: 31900, stock: 20, quality: 'Standard' },
+      { price: 116, balance: 143000, stock: 14, quality: 'Premium' },
+      { price: 174, balance: 230500, stock: 14, quality: 'Elite' }
     ]
   },
   {
@@ -220,9 +220,9 @@ export const products: Product[] = [
     rating: 4.4,
     reviews: 89,
     stockOptions: [
-      { price: 62, balance: 41000, stock: 20, quality: 'Standard' },
-      { price: 124, balance: 27500, stock: 12, quality: 'Premium' },
-      { price: 248, balance: 35000, stock: 10, quality: 'Elite' }
+      { price: 62, balance: 34100, stock: 20, quality: 'Standard' },
+      { price: 124, balance: 144600, stock: 12, quality: 'Premium' },
+      { price: 186, balance: 232500, stock: 10, quality: 'Elite' }
     ]
   },
   {
