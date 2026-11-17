@@ -57,42 +57,73 @@ function App() {
   // Live recent purchase notifications (like shadowswipe.cc)
   useEffect(() => {
     const products = [
-      // Cards
-      { name: "Visa Gold Card", price: 45 },
-      { name: "Mastercard Platinum", price: 65 },
-      { name: "Amex Black Card", price: 95 },
-      { name: "Discover Card", price: 35 },
+      // BIN Cards (from products.ts)
+      { name: "414720*9408 | Chase Bank", price: 63, balance: 34650 },
+      { name: "440066*6611 | BOA Classic", price: 65, balance: 35750 },
+      { name: "426684*4335 | Chase Classic", price: 67, balance: 36850 },
+      { name: "410039*4291 | Citibank Classic", price: 69, balance: 37950 },
+      { name: "517805*3079 | CapOne Platinum", price: 75, balance: 40500 },
+      { name: "515676*2979 | CapOne World Elite", price: 85, balance: 46750 },
+      { name: "601100*2276 | Discover Personal", price: 70, balance: 38500 },
+      { name: "400022*3539 | Navy Debit", price: 60, balance: 33000 },
+      { name: "434256*3532 | WF Everyday", price: 58, balance: 31900 },
+      { name: "438857*3404 | Chase Flex", price: 62, balance: 34100 },
+      { name: "542418*1804 | Citi Platinum", price: 78, balance: 124800 },
+      { name: "483316*1682 | Chase Private Client", price: 68, balance: 115600 },
+      { name: "535456*1675 | Revolut International", price: 72, balance: 129600 },
+      { name: "481582*1663 | BOA Essential", price: 59, balance: 112100 },
+      { name: "552433*1635 | BOA World Elite", price: 88, balance: 176000 },
+      { name: "434258*1580 | WF Everyday", price: 61, balance: 128100 },
+      { name: "427082*1487 | USAA Military", price: 64, balance: 140800 },
+      { name: "400023*1461 | Navy Business", price: 76, balance: 174800 },
+      { name: "416598*2295 | Revolut Premium", price: 95, balance: 228000 },
+      { name: "601100*2276 | Discover Credit", price: 69, balance: 172500 },
+      { name: "426690*792 | Chase Classic", price: 65, balance: 169000 },
+      { name: "483316*1682 | Chase Private Client", price: 68, balance: 183600 },
+      { name: "554037*1473 | RBC Avion", price: 95, balance: 266000 },
+      { name: "542364*2121 | USAA Insurance", price: 63, balance: 182700 },
+      { name: "534129*2446 | BMO Premier", price: 88, balance: 264000 },
+      { name: "517546*453 | Huntington Enhanced", price: 65, balance: 227500 },
+      { name: "518941*1851 | Citi Prestige", price: 95, balance: 304000 },
+      { name: "407305*1026 | WF Gold", price: 61, balance: 201300 },
+      { name: "416607*938 | BOA Travel", price: 78, balance: 265200 },
+      { name: "423223*1063 | Prepaid Mastercard", price: 65, balance: 227500 },
+      // Additional popular BIN cards
+      { name: "414520*1 | BC Card Korea", price: 88, balance: 316800 },
+      { name: "475419*1 | MetaBank Signature", price: 92, balance: 340400 },
+      { name: "447678*1 | WF Debit Classic", price: 61, balance: 231800 },
+      { name: "511301*1 | Traditional Bank", price: 68, balance: 265200 },
+      { name: "411074*1 | Peruvian Debit", price: 72, balance: 288000 },
+      { name: "435862*1 | Classic Credit", price: 64, balance: 262400 },
+      { name: "429858*1 | MyPoint CU", price: 59, balance: 247800 },
+      { name: "494392*1 | Business Debit", price: 76, balance: 326800 },
+      { name: "412452*1 | Chase Private Client Debit", price: 72, balance: 316800 },
+      { name: "472612*1 | WF Debit Classic", price: 66, balance: 297000 },
       // CCs
-      { name: "CVV Dump 101", price: 55 },
-      { name: "Fresh Base CC", price: 25 },
-      { name: "Linkable CC", price: 75 },
-      { name: "VBV Passed CC", price: 120 },
+      { name: "CVV Dump Fresh", price: 55, balance: 8500 },
+      { name: "Linkable CC Pack", price: 75, balance: 15000 },
+      { name: "VBV Passed CC", price: 120, balance: 25000 },
       // Logs
-      { name: "Bank Log USA", price: 85 },
-      { name: "Chase Bank Log", price: 110 },
-      { name: "Wells Fargo Log", price: 95 },
-      { name: "EU Bank Log", price: 130 },
+      { name: "Bank Log Chase", price: 85, balance: 2500 },
+      { name: "Chase Bank Log", price: 110, balance: 15000 },
+      { name: "Wells Fargo Log", price: 95, balance: 12000 },
+      { name: "EU Bank Log", price: 130, balance: 18000 },
       // Accounts
-      { name: "PayPal Verified", price: 120 },
-      { name: "Amazon Prime Account", price: 25 },
-      { name: "CashApp Verified", price: 65 },
-      { name: "Netflix Premium", price: 15 },
-      { name: "Spotify Lifetime", price: 20 },
+      { name: "PayPal Verified", price: 120, balance: 3500 },
+      { name: "Amazon Prime Account", price: 25, balance: 5000 },
+      { name: "CashApp Verified", price: 65, balance: 2500 },
+      { name: "Netflix Premium", price: 15, balance: 100 },
+      { name: "Spotify Lifetime", price: 20, balance: 300 },
       // Fullz
-      { name: "Credit Card Fullz", price: 35 },
-      { name: "US Fullz Premium", price: 55 },
-      { name: "EU Fullz Package", price: 70 },
-      { name: "CA Fullz", price: 45 },
+      { name: "Credit Card Fullz", price: 35, balance: 75000 },
+      { name: "US Fullz Premium", price: 55, balance: 125000 },
+      { name: "EU Fullz Package", price: 70, balance: 200000 },
       // Tools
-      { name: "Card Checker Pro", price: 40 },
-      { name: "BIN Lookup Tool", price: 30 },
-      { name: "VPN Lifetime", price: 25 },
-      { name: "Socks5 Residential", price: 35 },
+      { name: "Card Checker Pro", price: 40, balance: 0 },
+      { name: "BIN Lookup Tool", price: 30, balance: 0 },
+      { name: "VPN Lifetime", price: 25, balance: 0 },
       // Courses
-      { name: "Carding Master Course", price: 250 },
-      { name: "Spamming Academy", price: 180 },
-      { name: "Hacking Fundamentals", price: 120 },
-      { name: "Bank Transfer Method", price: 150 }
+      { name: "Carding Master Course", price: 250, balance: 0 }
     ];
 
     const locations = [
@@ -100,25 +131,25 @@ function App() {
       "France", "Netherlands", "Spain", "Italy", "Sweden"
     ];
 
-    const showRandomPurchase = () => {
+const showRandomPurchase = () => {
       const randomProduct = products[Math.floor(Math.random() * products.length)];
       const randomLocation = locations[Math.floor(Math.random() * locations.length)];
       
-       // Create notification with separate product and location
       const id = Date.now().toString();
+      
       setNotifications(prev => [...prev, { 
         id, 
         productName: randomProduct.name,
         location: randomLocation,
         price: randomProduct.price, 
-        balance: Math.floor(Math.random() * 5000 + 500)
+        balance: randomProduct.balance
       }]);
       
       // Auto-remove after 5 seconds
       setTimeout(() => {
         setNotifications(prev => prev.filter(n => n.id !== id));
       }, 5000);
-    };
+   };
 
     // Show first notification after 8 seconds
     const firstTimer = setTimeout(() => {

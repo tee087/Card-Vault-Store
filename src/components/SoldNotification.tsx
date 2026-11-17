@@ -9,7 +9,7 @@ interface SoldNotificationProps {
   onClose: () => void;
 }
 
-export function SoldNotification({ productName, price, location, onClose }: SoldNotificationProps) {
+export function SoldNotification({ productName, price, location, balance, onClose }: SoldNotificationProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleClose = useCallback(() => {
@@ -67,11 +67,17 @@ export function SoldNotification({ productName, price, location, onClose }: Sold
             <span className="text-[#00FF88] font-bold text-sm">${price.toFixed(2)}</span>
           </div>
           
+          {balance > 0 && (
+            <div className="text-xs text-green-400 font-mono">
+              Balance: ${balance.toLocaleString()}
+            </div>
+          )}
+          
           <div className="flex items-center gap-1.5 text-[11px] text-gray-400">
             <MapPin className="w-3 h-3 text-[#FFD700]" />
             <span className="text-gray-400">{location}</span>
             <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse ml-auto" />
-            <span className="text-gray-500">Verified</span>
+            <span className="text-gray-500">Live</span>
           </div>
         </div>
       </div>
