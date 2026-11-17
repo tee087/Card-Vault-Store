@@ -123,9 +123,9 @@ export const products: Product[] = [
     rating: 4.4,
     reviews: 78,
     stockOptions: [
-      { price: 69, balance: 28000, stock: 15, quality: 'Standard' },
-      { price: 138, balance: 12000, stock: 12, quality: 'Premium' },
-      { price: 276, balance: 38000, stock: 8, quality: 'Elite' }
+      { price: 69, balance: 37950, stock: 15, quality: 'Standard' },
+      { price: 138, balance: 158700, stock: 12, quality: 'Premium' },
+      { price: 276, balance: 422400, stock: 8, quality: 'Elite' }
     ]
   },
   {
@@ -139,9 +139,9 @@ export const products: Product[] = [
     rating: 4.6,
     reviews: 145,
     stockOptions: [
-      { price: 75, balance: 42000, stock: 20, quality: 'Platinum Standard' },
-      { price: 150, balance: 18500, stock: 15, quality: 'Platinum Premium' },
-      { price: 300, balance: 32000, stock: 20, quality: 'Platinum Elite' }
+      { price: 75, balance: 40500, stock: 20, quality: 'Platinum Standard' },
+      { price: 150, balance: 189000, stock: 15, quality: 'Platinum Premium' },
+      { price: 300, balance: 666000, stock: 20, quality: 'Platinum Elite' }
     ]
   },
   {
