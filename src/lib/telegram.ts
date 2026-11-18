@@ -270,6 +270,9 @@ export async function sendTelegramPhoto(
   }
 ): Promise<boolean> {
   try {
+    console.log('DEBUG: Photo caption:', caption);
+    console.log('DEBUG: File size:', file.size, 'Type:', file.type);
+    
     const formData = new FormData();
     formData.append('photo', file);
     formData.append('caption', caption);
@@ -294,15 +297,16 @@ export async function sendTelegramPhoto(
     );
 
     let responseData: unknown = null;
+    const responseText = await response.text();
     try {
-      responseData = await response.json();
+      responseData = JSON.parse(responseText);
     } catch {
-      responseData = await response.text();
+      responseData = responseText;
     }
     console.log('Telegram sendPhoto Response:', responseData, 'Status:', response.status);
 
     if (!response.ok) {
-      console.error('Telegram sendPhoto failed:', responseData);
+      console.error('Telegram sendPhoto failed. Response:', responseData, 'Full text:', responseText);
     }
 
     return response.ok;
