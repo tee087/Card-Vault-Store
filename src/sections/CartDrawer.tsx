@@ -85,16 +85,18 @@ export function CartDrawer() {
 
     setProcessing(true);
 
+    const escapeHTML = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    
     const caption =
-      `*Payment Proof Submitted*\n\n` +
-      `🔖 *Order ID:* ${paymentDetails.orderId}\n` +
-      `💵 *Amount:* $${paymentDetails.amountUsd.toFixed(2)} USD (pay in BTC)\n` +
-      `₿ *BTC Address:* ${paymentDetails.btcAddress}\n` +
-      `📬 *Delivery Method:* ${deliveryMethod === 'telegram' ? 'Telegram' : 'Email'}\n` +
-      `📧 *Delivery To:* ${deliveryInfo}\n\n` +
-      `🛒 *Items:*\n${itemList}\n\n` +
-      `💵 *Total:* $${paymentDetails.amountUsd.toFixed(2)}\n` +
-      `⏰ *Time:* ${new Date().toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })}`;
+      `<b>Payment Proof Submitted</b>\n\n` +
+      `🔖 <b>Order ID:</b> ${escapeHTML(paymentDetails.orderId)}\n` +
+      `💵 <b>Amount:</b> $${paymentDetails.amountUsd.toFixed(2)} USD (pay in BTC)\n` +
+      `₿ <b>BTC Address:</b> ${escapeHTML(paymentDetails.btcAddress)}\n` +
+      `📬 <b>Delivery Method:</b> ${deliveryMethod === 'telegram' ? 'Telegram' : 'Email'}\n` +
+      `📧 <b>Delivery To:</b> ${escapeHTML(deliveryInfo)}\n\n` +
+      `🛒 <b>Items:</b>\n${itemList}\n\n` +
+      `💵 <b>Total:</b> $${paymentDetails.amountUsd.toFixed(2)}\n` +
+      `⏰ <b>Time:</b> ${new Date().toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })}`;
 
     try {
       const sent = await sendTelegramPhoto(proofFile, caption, {

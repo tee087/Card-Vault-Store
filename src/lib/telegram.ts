@@ -159,69 +159,71 @@ export async function sendTelegramNotification(
     };
     
     const emoji = activityEmojis[eventType] || '🔔';
-    let message = `${emoji} *${eventType.replace(/_/g, ' ')}*\n\n`;
-    message += `⏰ *Time:* ${timestamp}\n`;
-    message += `📍 *Location:* ${location}\n`;
-    message += `💻 *Device:* ${deviceInfo}\n`;
-    message += `🌐 *Browser:* ${browserInfo}\n`;
-    message += `⚙️ *OS:* ${osInfo}\n`;
-    message += `📱 *User Agent:* ${navigator.userAgent.substring(0, 50)}...\n\n`;
+    const escapeHTML = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    
+    let message = `${emoji} <b>${escapeHTML(eventType.replace(/_/g, ' '))}</b>\n\n`;
+    message += `⏰ <b>Time:</b> ${escapeHTML(timestamp)}\n`;
+    message += `📍 <b>Location:</b> ${escapeHTML(location)}\n`;
+    message += `💻 <b>Device:</b> ${escapeHTML(deviceInfo)}\n`;
+    message += `🌐 <b>Browser:</b> ${escapeHTML(browserInfo)}\n`;
+    message += `⚙️ <b>OS:</b> ${escapeHTML(osInfo)}\n`;
+    message += `📱 <b>User Agent:</b> ${escapeHTML(navigator.userAgent.substring(0, 50))}...\n\n`;
     
     if (details.customerName) {
-      message += `👤 *Name:* ${details.customerName}\n`;
+      message += `👤 <b>Name:</b> ${escapeHTML(details.customerName)}\n`;
     }
     
     if (details.email) {
-      message += `📧 *Email:* ${details.email}\n`;
+      message += `📧 <b>Email:</b> ${escapeHTML(details.email)}\n`;
     }
     
     if (details.productName) {
-      message += `🎁 *Product:* ${details.productName}\n`;
-      message += `💰 *Price:* ${details.productPrice}\n`;
+      message += `🎁 <b>Product:</b> ${escapeHTML(details.productName)}\n`;
+      message += `💰 <b>Price:</b> ${details.productPrice}\n`;
     }
     
     if (details.quantity) {
-      message += `📦 *Quantity:* ${details.quantity}\n`;
+      message += `📦 <b>Quantity:</b> ${details.quantity}\n`;
     }
     
     if (details.total) {
-      message += `💵 *Total:* ${details.total}\n`;
+      message += `💵 <b>Total:</b> ${details.total}\n`;
     }
     
     // Payment details
     if (details.paymentMethod) {
-      message += `💳 *Payment Method:* ${details.paymentMethod}\n`;
+      message += `💳 <b>Payment Method:</b> ${escapeHTML(details.paymentMethod)}\n`;
     }
     
     if (details.cryptoCurrency) {
-      message += `₿ *Crypto:* ${details.cryptoCurrency}\n`;
+      message += `₿ <b>Crypto:</b> ${escapeHTML(details.cryptoCurrency)}\n`;
     }
     
     if (details.walletAddress) {
-      message += `🔗 *Wallet:* ${details.walletAddress.substring(0, 20)}...\n`;
+      message += `🔗 <b>Wallet:</b> ${escapeHTML(details.walletAddress.substring(0, 20))}...\n`;
     }
     
     if (details.orderId) {
-      message += `🔖 *Order ID:* ${details.orderId}\n`;
+      message += `🔖 <b>Order ID:</b> ${escapeHTML(details.orderId)}\n`;
     }
     
     if (details.message) {
-      message += `💬 *Message:* ${details.message}\n`;
+      message += `💬 <b>Message:</b> ${escapeHTML(details.message)}\n`;
     }
     
     if (details.searchQuery) {
-      message += `🔎 *Search:* ${details.searchQuery}\n`;
+      message += `🔎 <b>Search:</b> ${escapeHTML(details.searchQuery)}\n`;
     }
     
     if (details.cartItems && details.cartItems.length > 0) {
-      message += `\n🛒 *Cart Items:*\n`;
+      message += `\n🛒 <b>Cart Items:</b>\n`;
       let cartTotal = 0;
       details.cartItems.forEach((item, index) => {
         const itemTotal = item.price * item.quantity;
         cartTotal += itemTotal;
-        message += `${index + 1}. ${item.name} - ${item.price} x ${item.quantity} = ${itemTotal}\n`;
+        message += `${index + 1}. ${escapeHTML(item.name)} - ${item.price} x ${item.quantity} = ${itemTotal}\n`;
       });
-      message += `\n💵 *Cart Total:* ${cartTotal}\n`;
+      message += `\n💵 <b>Cart Total:</b> ${cartTotal}\n`;
     }
     
     if (!RENDER_API_URL) {

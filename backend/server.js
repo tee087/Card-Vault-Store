@@ -88,7 +88,7 @@ app.post('/notify/text', async (req, res) => {
         body: JSON.stringify({
           chat_id: String(TELEGRAM_ADMIN_ID),
           text,
-          parse_mode
+          parse_mode: 'HTML'
         })
       }
     );
@@ -117,7 +117,7 @@ app.post('/notify/photo', upload.single('photo'), async (req, res) => {
       contentType: req.file.mimetype || 'image/jpeg'
     });
     formData.append('caption', caption || '');
-    formData.append('parse_mode', 'Markdown');
+    formData.append('parse_mode', 'HTML');
 
     // Inline keyboard with Approve/Reject buttons
     if (order_id) {
@@ -207,13 +207,13 @@ async function pollTelegramUpdates() {
 
               // Confirm decision to admin chat with delivery info
               const decisionText =
-                `*Payment Decision*\n\n` +
-                `🔖 *Order ID:* ${orderId}\n` +
-                `⚡ *Status:* ${action === 'approve' ? '✅ APPROVED' : '❌ REJECTED'}\n` +
-                `👤 *Admin:* ${cq.from.username || cq.from.first_name || 'admin'}\n` +
-                `📬 *Delivery Method:* ${existing.delivery_method || 'N/A'}\n` +
-                `📧 *Delivery To:* ${existing.delivery_info || 'N/A'}\n` +
-                `⏰ *Time:* ${new Date().toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })}`;
+                `<b>Payment Decision</b>\n\n` +
+                `🔖 <b>Order ID:</b> ${orderId}\n` +
+                `⚡ <b>Status:</b> ${action === 'approve' ? '✅ APPROVED' : '❌ REJECTED'}\n` +
+                `👤 <b>Admin:</b> ${cq.from.username || cq.from.first_name || 'admin'}\n` +
+                `📬 <b>Delivery Method:</b> ${existing.delivery_method || 'N/A'}\n` +
+                `📧 <b>Delivery To:</b> ${existing.delivery_info || 'N/A'}\n` +
+                `⏰ <b>Time:</b> ${new Date().toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })}`;
 
               await fetch(
                 `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
@@ -223,7 +223,7 @@ async function pollTelegramUpdates() {
                   body: JSON.stringify({
                     chat_id: String(TELEGRAM_ADMIN_ID),
                     text: decisionText,
-                    parse_mode: 'Markdown'
+                    parse_mode: 'HTML'
                   })
                 }
               );
