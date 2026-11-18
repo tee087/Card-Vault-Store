@@ -74,10 +74,10 @@ export const products: Product[] = [
     stock: 50,
     rating: 4.8,
     reviews: 128,
-        stockOptions: [
-      { price: 63, balance: 25326, stock: 25, quality: 'Standard' },
-      { price: 126, balance: 101934, stock: 20, quality: 'Premium' },
-      { price: 189, balance: 256284, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 63, balance: 5922, stock: 25, quality: 'Standard' },
+      { price: 126, balance: 12726, stock: 20, quality: 'Premium' },
+      { price: 189, balance: 37989, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -90,10 +90,10 @@ export const products: Product[] = [
     stock: 45,
     rating: 4.7,
     reviews: 112,
-        stockOptions: [
-      { price: 65, balance: 28275, stock: 23, quality: 'Standard' },
-      { price: 130, balance: 108160, stock: 18, quality: 'Premium' },
-      { price: 195, balance: 234000, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 65, balance: 4290, stock: 23, quality: 'Standard' },
+      { price: 130, balance: 14170, stock: 18, quality: 'Premium' },
+      { price: 195, balance: 46995, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -106,10 +106,10 @@ export const products: Product[] = [
     stock: 42,
     rating: 4.5,
     reviews: 87,
-        stockOptions: [
-      { price: 67, balance: 25259, stock: 21, quality: 'Standard' },
-      { price: 134, balance: 128774, stock: 17, quality: 'Premium' },
-      { price: 201, balance: 302505, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 67, balance: 5092, stock: 21, quality: 'Standard' },
+      { price: 134, balance: 16884, stock: 17, quality: 'Premium' },
+      { price: 201, balance: 29949, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -122,10 +122,10 @@ export const products: Product[] = [
     stock: 35,
     rating: 4.4,
     reviews: 78,
-        stockOptions: [
-      { price: 69, balance: 33948, stock: 18, quality: 'Standard' },
-      { price: 138, balance: 110676, stock: 14, quality: 'Premium' },
-      { price: 207, balance: 316503, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 69, balance: 4071, stock: 18, quality: 'Standard' },
+      { price: 138, balance: 21942, stock: 14, quality: 'Premium' },
+      { price: 207, balance: 57753, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -138,10 +138,10 @@ export const products: Product[] = [
     stock: 55,
     rating: 4.6,
     reviews: 145,
-        stockOptions: [
-      { price: 75, balance: 37800, stock: 28, quality: 'Standard' },
-      { price: 150, balance: 155700, stock: 22, quality: 'Premium' },
-      { price: 225, balance: 263250, stock: 6, quality: 'Elite' }
+          stockOptions: [
+      { price: 75, balance: 7200, stock: 28, quality: 'Standard' },
+      { price: 150, balance: 21450, stock: 22, quality: 'Premium' },
+      { price: 225, balance: 32850, stock: 6, quality: 'Elite' }
     ]
   },
   {
@@ -155,10 +155,10 @@ export const products: Product[] = [
     stock: 30,
     rating: 4.8,
     reviews: 156,
-        stockOptions: [
-      { price: 85, balance: 36295, stock: 15, quality: 'Standard' },
-      { price: 170, balance: 149600, stock: 12, quality: 'Premium' },
-      { price: 255, balance: 307275, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 85, balance: 6120, stock: 15, quality: 'Standard' },
+      { price: 170, balance: 16490, stock: 12, quality: 'Premium' },
+      { price: 255, balance: 80580, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -171,10 +171,10 @@ export const products: Product[] = [
     stock: 50,
     rating: 4.7,
     reviews: 134,
-        stockOptions: [
-      { price: 70, balance: 34370, stock: 25, quality: 'Standard' },
-      { price: 140, balance: 112000, stock: 20, quality: 'Premium' },
-      { price: 210, balance: 251790, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 70, balance: 6930, stock: 25, quality: 'Standard' },
+      { price: 140, balance: 14560, stock: 20, quality: 'Premium' },
+      { price: 210, balance: 50820, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -187,10 +187,10 @@ export const products: Product[] = [
     stock: 52,
     rating: 4.6,
     reviews: 112,
-        stockOptions: [
-      { price: 60, balance: 23940, stock: 26, quality: 'Standard' },
-      { price: 120, balance: 121200, stock: 21, quality: 'Premium' },
-      { price: 180, balance: 219240, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 60, balance: 3480, stock: 26, quality: 'Standard' },
+      { price: 120, balance: 12000, stock: 21, quality: 'Premium' },
+      { price: 180, balance: 38340, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -203,10 +203,10 @@ export const products: Product[] = [
     stock: 48,
     rating: 4.5,
     reviews: 92,
-        stockOptions: [
-      { price: 58, balance: 29406, stock: 24, quality: 'Standard' },
-      { price: 116, balance: 104516, stock: 19, quality: 'Premium' },
-      { price: 174, balance: 223068, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 58, balance: 3828, stock: 24, quality: 'Standard' },
+      { price: 116, balance: 21228, stock: 19, quality: 'Premium' },
+      { price: 174, balance: 48372, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -219,10 +219,10 @@ export const products: Product[] = [
     stock: 42,
     rating: 4.4,
     reviews: 89,
-        stockOptions: [
-      { price: 62, balance: 23126, stock: 21, quality: 'Standard' },
-      { price: 124, balance: 109740, stock: 17, quality: 'Premium' },
-      { price: 186, balance: 260400, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 62, balance: 5952, stock: 21, quality: 'Standard' },
+      { price: 124, balance: 14756, stock: 17, quality: 'Premium' },
+      { price: 186, balance: 55056, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -235,10 +235,10 @@ export const products: Product[] = [
     stock: 40,
     rating: 4.7,
     reviews: 134,
-        stockOptions: [
-      { price: 78, balance: 28392, stock: 20, quality: 'Standard' },
-      { price: 156, balance: 152568, stock: 16, quality: 'Premium' },
-      { price: 234, balance: 301158, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 78, balance: 4914, stock: 20, quality: 'Standard' },
+      { price: 156, balance: 17628, stock: 16, quality: 'Premium' },
+      { price: 234, balance: 69498, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -251,10 +251,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.6,
     reviews: 112,
-        stockOptions: [
-      { price: 68, balance: 29784, stock: 19, quality: 'Standard' },
-      { price: 136, balance: 134232, stock: 15, quality: 'Premium' },
-      { price: 204, balance: 240108, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 68, balance: 6800, stock: 19, quality: 'Standard' },
+      { price: 136, balance: 15368, stock: 15, quality: 'Premium' },
+      { price: 204, balance: 44268, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -268,10 +268,10 @@ export const products: Product[] = [
     stock: 36,
     rating: 4.7,
     reviews: 112,
-        stockOptions: [
-      { price: 72, balance: 35424, stock: 18, quality: 'Standard' },
-      { price: 144, balance: 128448, stock: 14, quality: 'Premium' },
-      { price: 216, balance: 254880, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 72, balance: 6624, stock: 18, quality: 'Standard' },
+      { price: 144, balance: 14688, stock: 14, quality: 'Premium' },
+      { price: 216, balance: 55728, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -284,10 +284,10 @@ export const products: Product[] = [
     stock: 54,
     rating: 4.4,
     reviews: 78,
-        stockOptions: [
-      { price: 59, balance: 32332, stock: 27, quality: 'Standard' },
-      { price: 118, balance: 107026, stock: 22, quality: 'Premium' },
-      { price: 177, balance: 225852, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 59, balance: 5900, stock: 27, quality: 'Standard' },
+      { price: 118, balance: 18526, stock: 22, quality: 'Premium' },
+      { price: 177, balance: 27789, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -301,10 +301,10 @@ export const products: Product[] = [
     stock: 32,
     rating: 4.8,
     reviews: 145,
-        stockOptions: [
-      { price: 88, balance: 34760, stock: 16, quality: 'Standard' },
-      { price: 176, balance: 161568, stock: 13, quality: 'Premium' },
-      { price: 264, balance: 372504, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 88, balance: 4752, stock: 16, quality: 'Standard' },
+      { price: 176, balance: 29392, stock: 13, quality: 'Premium' },
+      { price: 264, balance: 88968, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -317,10 +317,10 @@ export const products: Product[] = [
     stock: 40,
     rating: 4.5,
     reviews: 95,
-        stockOptions: [
-      { price: 61, balance: 22692, stock: 20, quality: 'Standard' },
-      { price: 122, balance: 100040, stock: 16, quality: 'Premium' },
-      { price: 183, balance: 243390, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 61, balance: 4514, stock: 20, quality: 'Standard' },
+      { price: 122, balance: 21838, stock: 16, quality: 'Premium' },
+      { price: 183, balance: 28731, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -333,10 +333,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.7,
     reviews: 123,
-        stockOptions: [
-      { price: 64, balance: 23040, stock: 19, quality: 'Standard' },
-      { price: 128, balance: 125184, stock: 15, quality: 'Premium' },
-      { price: 192, balance: 245952, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 64, balance: 6272, stock: 19, quality: 'Standard' },
+      { price: 128, balance: 24960, stock: 15, quality: 'Premium' },
+      { price: 192, balance: 30528, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -350,10 +350,10 @@ export const products: Product[] = [
     stock: 35,
     rating: 4.8,
     reviews: 108,
-        stockOptions: [
-      { price: 76, balance: 41420, stock: 18, quality: 'Standard' },
-      { price: 152, balance: 118408, stock: 14, quality: 'Premium' },
-      { price: 228, balance: 342684, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 76, balance: 6992, stock: 18, quality: 'Standard' },
+      { price: 152, balance: 25384, stock: 14, quality: 'Premium' },
+      { price: 228, balance: 42864, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -367,10 +367,10 @@ export const products: Product[] = [
     stock: 28,
     rating: 4.9,
     reviews: 156,
-        stockOptions: [
-      { price: 95, balance: 43795, stock: 14, quality: 'Standard' },
-      { price: 190, balance: 187340, stock: 11, quality: 'Premium' },
-      { price: 285, balance: 346560, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 95, balance: 4940, stock: 14, quality: 'Standard' },
+      { price: 190, balance: 19760, stock: 11, quality: 'Premium' },
+      { price: 285, balance: 89775, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -383,10 +383,10 @@ export const products: Product[] = [
     stock: 48,
     rating: 4.7,
     reviews: 134,
-        stockOptions: [
-      { price: 69, balance: 26151, stock: 24, quality: 'Standard' },
-      { price: 138, balance: 124752, stock: 19, quality: 'Premium' },
-      { price: 207, balance: 250056, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 69, balance: 5520, stock: 24, quality: 'Standard' },
+      { price: 138, balance: 23598, stock: 19, quality: 'Premium' },
+      { price: 207, balance: 46368, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -399,10 +399,10 @@ export const products: Product[] = [
     stock: 40,
     rating: 4.5,
     reviews: 98,
-        stockOptions: [
-      { price: 65, balance: 28730, stock: 20, quality: 'Standard' },
-      { price: 130, balance: 124280, stock: 16, quality: 'Premium' },
-      { price: 195, balance: 227760, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 65, balance: 5330, stock: 20, quality: 'Standard' },
+      { price: 130, balance: 13390, stock: 16, quality: 'Premium' },
+      { price: 195, balance: 42120, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -415,10 +415,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.6,
     reviews: 112,
-        stockOptions: [
-      { price: 68, balance: 34544, stock: 19, quality: 'Standard' },
-      { price: 136, balance: 123352, stock: 15, quality: 'Premium' },
-      { price: 204, balance: 304776, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 68, balance: 5440, stock: 19, quality: 'Standard' },
+      { price: 136, balance: 27200, stock: 15, quality: 'Premium' },
+      { price: 204, balance: 44268, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -432,10 +432,10 @@ export const products: Product[] = [
     stock: 28,
     rating: 4.8,
     reviews: 145,
-        stockOptions: [
-      { price: 95, balance: 47405, stock: 14, quality: 'Standard' },
-      { price: 190, balance: 159220, stock: 11, quality: 'Premium' },
-      { price: 285, balance: 437190, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 95, balance: 6745, stock: 14, quality: 'Standard' },
+      { price: 190, balance: 27740, stock: 11, quality: 'Premium' },
+      { price: 285, balance: 73530, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -448,10 +448,10 @@ export const products: Product[] = [
     stock: 40,
     rating: 4.5,
     reviews: 108,
-        stockOptions: [
-      { price: 63, balance: 27531, stock: 20, quality: 'Standard' },
-      { price: 126, balance: 130032, stock: 16, quality: 'Premium' },
-      { price: 189, balance: 276696, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 63, balance: 5796, stock: 20, quality: 'Standard' },
+      { price: 126, balance: 13986, stock: 16, quality: 'Premium' },
+      { price: 189, balance: 37422, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -464,10 +464,10 @@ export const products: Product[] = [
     stock: 32,
     rating: 4.6,
     reviews: 125,
-        stockOptions: [
-      { price: 88, balance: 46552, stock: 16, quality: 'Standard' },
-      { price: 176, balance: 164384, stock: 13, quality: 'Premium' },
-      { price: 264, balance: 359040, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 88, balance: 6424, stock: 16, quality: 'Standard' },
+      { price: 176, balance: 32208, stock: 13, quality: 'Premium' },
+      { price: 264, balance: 87648, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -480,10 +480,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.4,
     reviews: 89,
-        stockOptions: [
-      { price: 65, balance: 28405, stock: 19, quality: 'Standard' },
-      { price: 130, balance: 108420, stock: 15, quality: 'Premium' },
-      { price: 195, balance: 277680, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 65, balance: 3380, stock: 19, quality: 'Standard' },
+      { price: 130, balance: 25740, stock: 15, quality: 'Premium' },
+      { price: 195, balance: 58305, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -497,10 +497,10 @@ export const products: Product[] = [
     stock: 42,
     rating: 4.8,
     reviews: 145,
-        stockOptions: [
-      { price: 95, balance: 50635, stock: 21, quality: 'Standard' },
-      { price: 190, balance: 162640, stock: 17, quality: 'Premium' },
-      { price: 285, balance: 424650, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 95, balance: 6365, stock: 21, quality: 'Standard' },
+      { price: 190, balance: 21090, stock: 17, quality: 'Premium' },
+      { price: 285, balance: 43320, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -513,10 +513,10 @@ export const products: Product[] = [
     stock: 45,
     rating: 4.5,
     reviews: 95,
-        stockOptions: [
-      { price: 61, balance: 33428, stock: 23, quality: 'Standard' },
-      { price: 122, balance: 111142, stock: 18, quality: 'Premium' },
-      { price: 183, balance: 281088, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 61, balance: 4087, stock: 23, quality: 'Standard' },
+      { price: 122, balance: 17690, stock: 18, quality: 'Premium' },
+      { price: 183, balance: 48861, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -529,10 +529,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.7,
     reviews: 134,
-        stockOptions: [
-      { price: 78, balance: 32604, stock: 19, quality: 'Standard' },
-      { price: 156, balance: 150540, stock: 15, quality: 'Premium' },
-      { price: 234, balance: 351702, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 78, balance: 7644, stock: 19, quality: 'Standard' },
+      { price: 156, balance: 20592, stock: 15, quality: 'Premium' },
+      { price: 234, balance: 31590, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -545,10 +545,10 @@ export const products: Product[] = [
     stock: 45,
     rating: 4.5,
     reviews: 98,
-        stockOptions: [
-      { price: 65, balance: 29185, stock: 23, quality: 'Standard' },
-      { price: 130, balance: 122590, stock: 18, quality: 'Premium' },
-      { price: 195, balance: 265785, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 65, balance: 5720, stock: 23, quality: 'Standard' },
+      { price: 130, balance: 22620, stock: 18, quality: 'Premium' },
+      { price: 195, balance: 44265, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -562,10 +562,10 @@ export const products: Product[] = [
     stock: 25,
     rating: 4.7,
     reviews: 112,
-        stockOptions: [
-      { price: 88, balance: 30800, stock: 13, quality: 'Standard' },
-      { price: 176, balance: 135872, stock: 10, quality: 'Premium' },
-      { price: 264, balance: 346632, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 88, balance: 7656, stock: 13, quality: 'Standard' },
+      { price: 176, balance: 17600, stock: 10, quality: 'Premium' },
+      { price: 264, balance: 49104, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -579,10 +579,10 @@ export const products: Product[] = [
     stock: 28,
     rating: 4.8,
     reviews: 145,
-        stockOptions: [
-      { price: 92, balance: 44988, stock: 14, quality: 'Standard' },
-      { price: 184, balance: 191176, stock: 11, quality: 'Premium' },
-      { price: 276, balance: 385848, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 92, balance: 8280, stock: 14, quality: 'Standard' },
+      { price: 184, balance: 20792, stock: 11, quality: 'Premium' },
+      { price: 276, balance: 51612, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -595,10 +595,10 @@ export const products: Product[] = [
     stock: 42,
     rating: 4.5,
     reviews: 98,
-        stockOptions: [
-      { price: 61, balance: 29524, stock: 21, quality: 'Standard' },
-      { price: 122, balance: 105530, stock: 17, quality: 'Premium' },
-      { price: 183, balance: 279441, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 61, balance: 5246, stock: 21, quality: 'Standard' },
+      { price: 122, balance: 15372, stock: 17, quality: 'Premium' },
+      { price: 183, balance: 49593, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -611,10 +611,10 @@ export const products: Product[] = [
     stock: 36,
     rating: 4.4,
     reviews: 78,
-        stockOptions: [
-      { price: 68, balance: 31416, stock: 18, quality: 'Standard' },
-      { price: 136, balance: 139400, stock: 14, quality: 'Premium' },
-      { price: 204, balance: 270300, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 68, balance: 4828, stock: 18, quality: 'Standard' },
+      { price: 136, balance: 26248, stock: 14, quality: 'Premium' },
+      { price: 204, balance: 63648, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -628,10 +628,10 @@ export const products: Product[] = [
     stock: 35,
     rating: 4.6,
     reviews: 89,
-        stockOptions: [
-      { price: 72, balance: 35568, stock: 18, quality: 'Standard' },
-      { price: 144, balance: 119952, stock: 14, quality: 'Premium' },
-      { price: 216, balance: 255528, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 72, balance: 3672, stock: 18, quality: 'Standard' },
+      { price: 144, balance: 27792, stock: 14, quality: 'Premium' },
+      { price: 216, balance: 61776, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -644,10 +644,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.5,
     reviews: 87,
-        stockOptions: [
-      { price: 64, balance: 22848, stock: 19, quality: 'Standard' },
-      { price: 128, balance: 127104, stock: 15, quality: 'Premium' },
-      { price: 192, balance: 235776, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 64, balance: 6080, stock: 19, quality: 'Standard' },
+      { price: 128, balance: 18304, stock: 15, quality: 'Premium' },
+      { price: 192, balance: 42624, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -660,10 +660,10 @@ export const products: Product[] = [
     stock: 44,
     rating: 4.4,
     reviews: 76,
-        stockOptions: [
-      { price: 59, balance: 23128, stock: 22, quality: 'Standard' },
-      { price: 118, balance: 98648, stock: 18, quality: 'Premium' },
-      { price: 177, balance: 247269, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 59, balance: 5900, stock: 22, quality: 'Standard' },
+      { price: 118, balance: 22892, stock: 18, quality: 'Premium' },
+      { price: 177, balance: 47259, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -677,10 +677,10 @@ export const products: Product[] = [
     stock: 40,
     rating: 4.7,
     reviews: 112,
-        stockOptions: [
-      { price: 76, balance: 35492, stock: 20, quality: 'Standard' },
-      { price: 152, balance: 152152, stock: 16, quality: 'Premium' },
-      { price: 228, balance: 314184, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 76, balance: 5472, stock: 20, quality: 'Standard' },
+      { price: 152, balance: 23712, stock: 16, quality: 'Premium' },
+      { price: 228, balance: 60876, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -693,10 +693,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.6,
     reviews: 108,
-        stockOptions: [
-      { price: 72, balance: 28872, stock: 19, quality: 'Standard' },
-      { price: 144, balance: 118800, stock: 15, quality: 'Premium' },
-      { price: 216, balance: 276480, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 72, balance: 6768, stock: 19, quality: 'Standard' },
+      { price: 144, balance: 24912, stock: 15, quality: 'Premium' },
+      { price: 216, balance: 47520, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -709,10 +709,10 @@ export const products: Product[] = [
     stock: 36,
     rating: 4.5,
     reviews: 92,
-        stockOptions: [
-      { price: 66, balance: 26730, stock: 18, quality: 'Standard' },
-      { price: 132, balance: 101376, stock: 14, quality: 'Premium' },
-      { price: 198, balance: 266706, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 66, balance: 6204, stock: 18, quality: 'Standard' },
+      { price: 132, balance: 19272, stock: 14, quality: 'Premium' },
+      { price: 198, balance: 48708, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -725,10 +725,10 @@ export const products: Product[] = [
     stock: 34,
     rating: 4.4,
     reviews: 78,
-        stockOptions: [
-      { price: 68, balance: 24616, stock: 17, quality: 'Standard' },
-      { price: 136, balance: 133552, stock: 14, quality: 'Premium' },
-      { price: 204, balance: 311100, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 68, balance: 6664, stock: 17, quality: 'Standard' },
+      { price: 136, balance: 23664, stock: 14, quality: 'Premium' },
+      { price: 204, balance: 65688, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -741,10 +741,10 @@ export const products: Product[] = [
     stock: 42,
     rating: 4.3,
     reviews: 65,
-        stockOptions: [
-      { price: 59, balance: 31683, stock: 21, quality: 'Standard' },
-      { price: 118, balance: 119180, stock: 17, quality: 'Premium' },
-      { price: 177, balance: 259305, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 59, balance: 4956, stock: 21, quality: 'Standard' },
+      { price: 118, balance: 18172, stock: 17, quality: 'Premium' },
+      { price: 177, balance: 51153, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -758,10 +758,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.6,
     reviews: 89,
-        stockOptions: [
-      { price: 72, balance: 37152, stock: 19, quality: 'Standard' },
-      { price: 144, balance: 133488, stock: 15, quality: 'Premium' },
-      { price: 216, balance: 275832, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 72, balance: 5544, stock: 19, quality: 'Standard' },
+      { price: 144, balance: 17280, stock: 15, quality: 'Premium' },
+      { price: 216, balance: 30456, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -775,10 +775,10 @@ export const products: Product[] = [
     stock: 32,
     rating: 4.7,
     reviews: 112,
-        stockOptions: [
-      { price: 82, balance: 40344, stock: 16, quality: 'Standard' },
-      { price: 164, balance: 138088, stock: 13, quality: 'Premium' },
-      { price: 246, balance: 371214, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 82, balance: 7298, stock: 16, quality: 'Standard' },
+      { price: 164, balance: 21320, stock: 13, quality: 'Premium' },
+      { price: 246, balance: 71832, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -791,10 +791,10 @@ export const products: Product[] = [
     stock: 36,
     rating: 4.5,
     reviews: 78,
-        stockOptions: [
-      { price: 64, balance: 31040, stock: 18, quality: 'Standard' },
-      { price: 128, balance: 134016, stock: 14, quality: 'Premium' },
-      { price: 192, balance: 236352, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 64, balance: 6016, stock: 18, quality: 'Standard' },
+      { price: 128, balance: 24576, stock: 14, quality: 'Premium' },
+      { price: 192, balance: 42816, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -808,10 +808,10 @@ export const products: Product[] = [
     stock: 35,
     rating: 4.8,
     reviews: 98,
-        stockOptions: [
-      { price: 85, balance: 42840, stock: 18, quality: 'Standard' },
-      { price: 170, balance: 175270, stock: 14, quality: 'Premium' },
-      { price: 255, balance: 350370, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 85, balance: 4930, stock: 18, quality: 'Standard' },
+      { price: 170, balance: 31790, stock: 14, quality: 'Premium' },
+      { price: 255, balance: 40800, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -824,10 +824,10 @@ export const products: Product[] = [
     stock: 40,
     rating: 4.5,
     reviews: 89,
-        stockOptions: [
-      { price: 62, balance: 27838, stock: 20, quality: 'Standard' },
-      { price: 124, balance: 129332, stock: 16, quality: 'Premium' },
-      { price: 186, balance: 251100, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 62, balance: 5890, stock: 20, quality: 'Standard' },
+      { price: 124, balance: 22072, stock: 16, quality: 'Premium' },
+      { price: 186, balance: 63612, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -840,10 +840,10 @@ export const products: Product[] = [
     stock: 48,
     rating: 4.4,
     reviews: 76,
-        stockOptions: [
-      { price: 59, balance: 25370, stock: 24, quality: 'Standard' },
-      { price: 118, balance: 92512, stock: 19, quality: 'Premium' },
-      { price: 177, balance: 233640, stock: 5, quality: 'Elite' }
+          stockOptions: [
+      { price: 59, balance: 4307, stock: 24, quality: 'Standard' },
+      { price: 118, balance: 18998, stock: 19, quality: 'Premium' },
+      { price: 177, balance: 32391, stock: 5, quality: 'Elite' }
     ]
   },
   {
@@ -856,10 +856,10 @@ export const products: Product[] = [
     stock: 32,
     rating: 4.7,
     reviews: 112,
-        stockOptions: [
-      { price: 78, balance: 36582, stock: 16, quality: 'Standard' },
-      { price: 156, balance: 130884, stock: 13, quality: 'Premium' },
-      { price: 234, balance: 295776, stock: 3, quality: 'Elite' }
+          stockOptions: [
+      { price: 78, balance: 4524, stock: 16, quality: 'Standard' },
+      { price: 156, balance: 30888, stock: 13, quality: 'Premium' },
+      { price: 234, balance: 59436, stock: 3, quality: 'Elite' }
     ]
   },
   {
@@ -873,10 +873,10 @@ export const products: Product[] = [
     stock: 35,
     rating: 4.8,
     reviews: 125,
-        stockOptions: [
-      { price: 92, balance: 38916, stock: 18, quality: 'Standard' },
-      { price: 184, balance: 184736, stock: 14, quality: 'Premium' },
-      { price: 276, balance: 346656, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 92, balance: 5980, stock: 18, quality: 'Standard' },
+      { price: 184, balance: 19504, stock: 14, quality: 'Premium' },
+      { price: 276, balance: 63204, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -890,10 +890,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.7,
     reviews: 108,
-        stockOptions: [
-      { price: 76, balance: 38760, stock: 19, quality: 'Standard' },
-      { price: 152, balance: 128440, stock: 15, quality: 'Premium' },
-      { price: 228, balance: 272916, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 76, balance: 5928, stock: 19, quality: 'Standard' },
+      { price: 152, balance: 29336, stock: 15, quality: 'Premium' },
+      { price: 228, balance: 73416, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -906,10 +906,10 @@ export const products: Product[] = [
     stock: 35,
     rating: 4.6,
     reviews: 89,
-        stockOptions: [
-      { price: 63, balance: 34335, stock: 18, quality: 'Standard' },
-      { price: 126, balance: 113022, stock: 14, quality: 'Premium' },
-      { price: 189, balance: 288981, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 63, balance: 6237, stock: 18, quality: 'Standard' },
+      { price: 126, balance: 18396, stock: 14, quality: 'Premium' },
+      { price: 189, balance: 50274, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -922,10 +922,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.5,
     reviews: 78,
-        stockOptions: [
-      { price: 61, balance: 22875, stock: 19, quality: 'Standard' },
-      { price: 122, balance: 124684, stock: 15, quality: 'Premium' },
-      { price: 183, balance: 229665, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 61, balance: 4697, stock: 19, quality: 'Standard' },
+      { price: 122, balance: 18910, stock: 15, quality: 'Premium' },
+      { price: 183, balance: 33672, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -939,10 +939,10 @@ export const products: Product[] = [
     stock: 35,
     rating: 4.7,
     reviews: 112,
-        stockOptions: [
-      { price: 88, balance: 43296, stock: 18, quality: 'Standard' },
-      { price: 176, balance: 161744, stock: 14, quality: 'Premium' },
-      { price: 264, balance: 379368, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 88, balance: 6160, stock: 18, quality: 'Standard' },
+      { price: 176, balance: 33792, stock: 14, quality: 'Premium' },
+      { price: 264, balance: 74976, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -955,10 +955,10 @@ export const products: Product[] = [
     stock: 42,
     rating: 4.6,
     reviews: 98,
-        stockOptions: [
-      { price: 78, balance: 30186, stock: 21, quality: 'Standard' },
-      { price: 156, balance: 160836, stock: 17, quality: 'Premium' },
-      { price: 234, balance: 311922, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 78, balance: 4680, stock: 21, quality: 'Standard' },
+      { price: 156, balance: 16536, stock: 17, quality: 'Premium' },
+      { price: 234, balance: 57096, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -971,10 +971,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.4,
     reviews: 85,
-        stockOptions: [
-      { price: 70, balance: 34300, stock: 19, quality: 'Standard' },
-      { price: 140, balance: 141820, stock: 15, quality: 'Premium' },
-      { price: 210, balance: 249900, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 70, balance: 3710, stock: 19, quality: 'Standard' },
+      { price: 140, balance: 17500, stock: 15, quality: 'Premium' },
+      { price: 210, balance: 31920, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -987,10 +987,10 @@ export const products: Product[] = [
     stock: 40,
     rating: 4.5,
     reviews: 82,
-        stockOptions: [
-      { price: 63, balance: 31248, stock: 20, quality: 'Standard' },
-      { price: 126, balance: 113274, stock: 16, quality: 'Premium' },
-      { price: 189, balance: 221130, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 63, balance: 5796, stock: 20, quality: 'Standard' },
+      { price: 126, balance: 21420, stock: 16, quality: 'Premium' },
+      { price: 189, balance: 45360, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -1003,10 +1003,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.4,
     reviews: 74,
-        stockOptions: [
-      { price: 59, balance: 29854, stock: 19, quality: 'Standard' },
-      { price: 118, balance: 88736, stock: 15, quality: 'Premium' },
-      { price: 177, balance: 223197, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 59, balance: 5546, stock: 19, quality: 'Standard' },
+      { price: 118, balance: 16874, stock: 15, quality: 'Premium' },
+      { price: 177, balance: 28674, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -1019,10 +1019,10 @@ export const products: Product[] = [
     stock: 38,
     rating: 4.6,
     reviews: 88,
-        stockOptions: [
-      { price: 61, balance: 28975, stock: 19, quality: 'Standard' },
-      { price: 122, balance: 121146, stock: 15, quality: 'Premium' },
-      { price: 183, balance: 238083, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 61, balance: 5490, stock: 19, quality: 'Standard' },
+      { price: 122, balance: 19032, stock: 15, quality: 'Premium' },
+      { price: 183, balance: 60573, stock: 4, quality: 'Elite' }
     ]
   },
   {
@@ -1035,10 +1035,10 @@ export const products: Product[] = [
     stock: 42,
     rating: 4.5,
     reviews: 92,
-        stockOptions: [
-      { price: 58, balance: 20590, stock: 21, quality: 'Standard' },
-      { price: 116, balance: 87580, stock: 17, quality: 'Premium' },
-      { price: 174, balance: 241686, stock: 4, quality: 'Elite' }
+          stockOptions: [
+      { price: 58, balance: 5742, stock: 21, quality: 'Standard' },
+      { price: 116, balance: 19720, stock: 17, quality: 'Premium' },
+      { price: 174, balance: 51504, stock: 4, quality: 'Elite' }
     ]
   },
   // Cards Category
