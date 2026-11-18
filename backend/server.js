@@ -37,7 +37,8 @@ app.use(helmet());
 app.use(cors({
   origin: process.env.ALLOWED_ORIGIN || '*',
   methods: ['POST', 'GET'],
-  allowedHeaders: ['Content-Type']
+  exposedHeaders: ['*'],
+  credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
 
