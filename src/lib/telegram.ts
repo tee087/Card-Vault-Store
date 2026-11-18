@@ -299,7 +299,11 @@ export async function sendTelegramPhoto(
     } catch {
       responseData = await response.text();
     }
-    console.log('Telegram sendPhoto Response:', responseData);
+    console.log('Telegram sendPhoto Response:', responseData, 'Status:', response.status);
+
+    if (!response.ok) {
+      console.error('Telegram sendPhoto failed:', responseData);
+    }
 
     return response.ok;
   } catch (error) {

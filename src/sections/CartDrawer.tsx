@@ -37,7 +37,8 @@ export function CartDrawer() {
     };
   }, [pollTimer]);
 
-  const itemList = items.map((item, i) => `${i + 1}. ${item.name} - $${item.price.toFixed(2)} x ${item.quantity}`).join('\n');
+  const escapeHTML = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const itemList = items.map((item, i) => `${i + 1}. ${escapeHTML(item.name)} - $${item.price.toFixed(2)} x ${item.quantity}`).join('\n');
 
   // Validation: checkout requires usage type for cards/ccs and cashout checkbox for applicable items
   const requiresUsageType = useMemo(() => items.some(i => i.category === 'cards' || i.category === 'ccs'), [items]);
@@ -85,8 +86,6 @@ export function CartDrawer() {
 
     setProcessing(true);
 
-    const escapeHTML = (text: string) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    
     const caption =
       `<b>Payment Proof Submitted</b>\n\n` +
       `🔖 <b>Order ID:</b> ${escapeHTML(paymentDetails.orderId)}\n` +
