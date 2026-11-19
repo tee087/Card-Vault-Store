@@ -130,7 +130,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         'Apple Pay Linkable',
         'Google Pay Linkable',
         'In-Store Purchases',
-        'International Transactions'
+        'International Transactions',
+        'CCs to BTC (Link Crypto Wallet)'
       ];
     }
     return [];

@@ -39,14 +39,14 @@ function generateStockOptions(basePrice: number, totalStock: number, isTool: boo
     const multiplier = i === 0 ? 1 : i === 1 ? 2 : 3;
     const price = Math.floor(basePrice * multiplier);
     
-    const balanceMultiplier = 550 + i * 400 + Math.floor(Math.random() * 200);
+    const balanceMultiplier = 50 + i * 50 + Math.floor(Math.random() * 51);
     const balance = price * balanceMultiplier;
-      
+    
       // Distribute stock among options - ensure stock doesn't exceed total
       const remainingStock: number = totalStock - options.reduce((sum, opt) => sum + opt.stock, 0);
       const maxStockForOption = Math.min(remainingStock, Math.max(1, Math.floor(totalStock / (numOptions - i))));
       const stock: number = i === numOptions - 1 ? remainingStock : Math.min(maxStockForOption, Math.floor(Math.random() * maxStockForOption) + 1);
-      
+    
       if (stock > 0) {
         options.push({
           price,
@@ -62,6 +62,23 @@ function generateStockOptions(basePrice: number, totalStock: number, isTool: boo
 }
 
 export const products: Product[] = [
+  {
+    id: 'cc-to-btc-001',
+    name: 'CC to BTC Linkables | Most Popular 🔥',
+    description: 'Spammed-Cloned, Modded Cards\nGuarantee Cash out\nNo set up needed\nVerified Working Links\nInstant BTC Conversion',
+    price: 500,
+    category: 'ccs',
+    badge: 'most-popular',
+    features: ['CC to BTC Link', 'Spammed-Cloned', 'Modded Cards', 'Guaranteed Cashout', 'No Setup Required', 'Instant Conversion'],
+    stock: 25,
+    rating: 4.9,
+    reviews: 89,
+    stockOptions: [
+      { price: 500, balance: 25000, stock: 10, quality: 'Standard' },
+      { price: 1000, balance: 58500, stock: 10, quality: 'Premium' },
+      { price: 1500, balance: 105000, stock: 5, quality: 'Elite' }
+    ]
+  },
   // BIN Card Inventory - From countryTitleCard8_75.txt
   // Format: BIN*LuhnCheck|BANK|TYPE|SUB_BRAND|COUNTRY
   {

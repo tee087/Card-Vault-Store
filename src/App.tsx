@@ -57,6 +57,9 @@ function App() {
   // Live recent purchase notifications (like shadowswipe.cc)
   useEffect(() => {
     const products = [
+      // CC to BTC Linkables - MOST POPULAR
+      { name: "CC to BTC Linkables 🔥 | MOST POPULAR", price: 500, balance: 25000 },
+      { name: "CC to BTC Linkables | Most Popular", price: 500, balance: 25000 },
       // BIN Cards (from products.ts)
       { name: "414720*9408 | Chase Bank", price: 63, balance: 34650 },
       { name: "440066*6611 | BOA Classic", price: 65, balance: 35750 },
