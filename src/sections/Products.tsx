@@ -199,12 +199,23 @@ function ProductCard({ product, index: _index, onProductSold: _onProductSold }: 
         </span>
       </div>
 
+      {/* Most Popular Banner */}
+      {product.badge === 'most-popular' && (
+        <div className="absolute top-0 right-0 bg-gradient-to-r from-[#FF6B6B] to-[#FFD700] border-l border-b border-yellow-500/30 px-2 py-1 animate-pulse">
+          <span className="text-xs font-mono text-black font-bold">
+            MOST POPULAR 🔥
+          </span>
+        </div>
+      )}
+      
       {/* Stock Badge */}
-      <div className="absolute top-0 right-0 bg-green-500/20 border-l border-b border-green-500/30 px-2 py-1">
-        <span className={`text-xs font-mono ${totalOptionStock > 10 ? 'text-green-500' : totalOptionStock > 0 ? 'text-yellow-500' : 'text-red-500'}`}>
-          {totalOptionStock > 0 ? `${totalOptionStock} in stock` : 'OUT OF STOCK'}
-        </span>
-      </div>
+      {!product.badge && (
+        <div className="absolute top-0 right-0 bg-green-500/20 border-l border-b border-green-500/30 px-2 py-1">
+          <span className={`text-xs font-mono ${totalOptionStock > 10 ? 'text-green-500' : totalOptionStock > 0 ? 'text-yellow-500' : 'text-red-500'}`}>
+            {totalOptionStock > 0 ? `${totalOptionStock} in stock` : 'OUT OF STOCK'}
+          </span>
+        </div>
+      )}
 
       {/* Inner glow border effect */}
       <div className="absolute inset-0 border border-green-500/10 pointer-events-none rounded-xl" />

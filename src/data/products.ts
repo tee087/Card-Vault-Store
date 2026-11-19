@@ -62,15 +62,15 @@ function generateStockOptions(basePrice: number, totalStock: number, isTool: boo
 }
 
 export const products: Product[] = [
-  {
+{
     id: 'cc-to-btc-001',
-    name: 'CC to BTC Linkables | Most Popular 🔥',
+    name: 'CC to BTC Linkables',
     description: 'Spammed-Cloned, Modded Cards\nGuarantee Cash out\nNo set up needed\nVerified Working Links\nInstant BTC Conversion',
     price: 500,
     category: 'ccs',
     badge: 'most-popular',
     features: ['CC to BTC Link', 'Spammed-Cloned', 'Modded Cards', 'Guaranteed Cashout', 'No Setup Required', 'Instant Conversion'],
-    stock: 42,
+    stock: 25,
     rating: 4.9,
     reviews: 89,
     stockOptions: [
