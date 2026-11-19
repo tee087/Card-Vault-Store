@@ -70,13 +70,17 @@ export const products: Product[] = [
     category: 'ccs',
     badge: 'most-popular',
     features: ['CC to BTC Link', 'Spammed-Cloned', 'Modded Cards', 'Guaranteed Cashout', 'No Setup Required', 'Instant Conversion'],
-    stock: 25,
+    stock: 42,
     rating: 4.9,
     reviews: 89,
     stockOptions: [
-      { price: 500, balance: 25000, stock: 10, quality: 'Standard' },
-      { price: 1000, balance: 58500, stock: 10, quality: 'Premium' },
-      { price: 1500, balance: 105000, stock: 5, quality: 'Elite' }
+      { price: 500, balance: 25000, stock: 15, quality: 'Standard' },
+      { price: 900, balance: 45450, stock: 12, quality: 'Bonus' },
+      { price: 1300, balance: 66850, stock: 8, quality: 'Premium' },
+      { price: 1800, balance: 91800, stock: 5, quality: 'Elite' },
+      { price: 2500, balance: 127500, stock: 3, quality: 'Platinum' },
+      { price: 3500, balance: 178500, stock: 2, quality: 'Diamond' },
+      { price: 5000, balance: 255000, stock: 1, quality: 'Elite+' }
     ]
   },
   // BIN Card Inventory - From countryTitleCard8_75.txt
